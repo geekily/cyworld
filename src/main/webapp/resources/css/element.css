@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.icon {
+    display: block;
+    overflow: hidden;
+    background: url(../img/common/img_common.png) no-repeat 0 0;
+}
+
+.icon.required {
+    display: inline-block;
+    overflow: hidden;
+    width: 7px;
+    height: 7px;
+    margin-right: 3px;
+    background-position: -280px 0;
+    vertical-align: middle;
+    text-indent: 999px;
+}

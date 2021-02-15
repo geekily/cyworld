@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.newBoard">	
+		<select id="getMyListCount" parameterType="String" resultType="Integer">
+		select count(*) from(
+			select A.*, ROW_NUMBER() OVER(order by created desc) rnum FROM (
+				select num,SUBJECT,userId,to_char('board') type,created from cyboard
+				UNION ALL
+				select num,CONTENT as subject,userId,to_char('guest') type,created from CYGUESTBOOK
+				UNION ALL
+				select num,subject,userId,to_char('picture') type,created from CYPICTURE
+				UNION ALL
+				select num,subject,userId,to_char('video') type,created from CYVIDEO
+			) A
+		)where userId = #{userId}
+	</select>
+
+
+	<select id="getMyList" parameterType="map" resultType="com.cyworld.dto.CyNewBoardDTO">
+		select * from(
+			select A.*, ROW_NUMBER() OVER(order by created desc) rnum FROM (
+				select num,SUBJECT,userId,to_char('board') type,created from cyboard
+				UNION ALL
+				select num,CONTENT as subject,userId,to_char('guest') type,created from CYGUESTBOOK
+				UNION ALL
+				select num,subject,userId,to_char('picture') type,created from CYPICTURE
+				UNION ALL
+				select num,subject,userId,to_char('video') type,created from CYVIDEO
+			) A
+		) 
+		<choose>
+		<when test="length == 4">where <![CDATA[rnum <6]]> and userId = #{userId}</when>
+		<when test="length == 1">where <![CDATA[rnum <6]]> and userId = #{userId} and type = #{0}</when>
+		<when test="length == 2">where <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{0}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{1})</when>
+		<when test="length == 3">where <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{0}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{1}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{2})</when>
+		<otherwise> where <![CDATA[rnum <6]]> and userId = #{userId} </otherwise>		
+		</choose>
+	</select>	
+	
+	<select id="getUserList" parameterType="map" resultType="com.cyworld.dto.CyNewBoardDTO">
+		select * from(
+			select A.*, ROW_NUMBER() OVER(order by created desc) rnum FROM (
+				select CC.num,CC.SUBJECT,CC.userId,to_char('board') type,CC.CREATED from cyboard CC inner join (select folderName from CYBOARDMENU where USERID = #{userId} and <![CDATA[type >= #{type}]]>) B on CC.folderName = B.folderName
+				UNION ALL
+				select num,CONTENT as subject,userId,to_char('guest') type,created from CYGUESTBOOK where (userId = #{userId} and secret = 0) or (userId = #{userId} and memberId = #{me} and secret = 1)
+				UNION ALL
+				select CC.num,CC.SUBJECT,CC.userId,to_char('picture') type,CC.CREATED from CYPICTURE CC inner join (select folderName from CYPICTUREBOARD where USERID = #{userId} and <![CDATA[privacy >= #{type}]]>) B on CC.folderName = B.folderName
+				UNION ALL
+				select CC.num,CC.SUBJECT,CC.userId,to_char('video') type,CC.CREATED from CYVIDEO CC inner join (select folderName from CYVIDEOBOARD where USERID = #{userId} and <![CDATA[privacy >= #{type}]]>) B on CC.folderName = B.folderName
+			) A
+		) 
+		<choose>
+		<when test="length == 4">where <![CDATA[rnum <6]]> and userId = #{userId}</when>
+		<when test="length == 1">where <![CDATA[rnum <6]]> and userId = #{userId} and type = #{0}</when>
+		<when test="length == 2">where <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{0}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{1})</when>
+		<when test="length == 3">where <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{0}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{1}) or <![CDATA[(rnum <6]]> and userId = #{userId} and type = #{2})</when>
+		<otherwise> where <![CDATA[rnum <6]]> and userId = #{userId} </otherwise>		
+		</choose>
+	</select>	
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.profile">	
+
+	<select id="getContent" parameterType="String" resultType="com.cyworld.dto.CyProfileDTO">
+		select userId, content from cyProfile where userId = #{userId}
+	</select>
+	
+	<update id="updateContent" parameterType="com.cyworld.dto.CyProfileDTO">
+		update cyProfile set content = #{content} where userId = #{userId}
+	</update>
+	
+	<insert id="insertContent" parameterType="com.cyworld.dto.CyProfileDTO">
+		insert into cyProfile (userId, content) values (#{userId}, #{content})
+	</insert>
+</mapper>

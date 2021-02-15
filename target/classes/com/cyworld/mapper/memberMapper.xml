@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.member">	
+	<select id="getMember" parameterType="map" resultType="com.cyworld.dto.CyMemberDTO">
+		select userId1, userValue1, userId2, userValue2 from cymember 
+		where (userId1 = #{userId} and userId2 = #{userId2}) or
+		(userId1 = #{userId2} and userId2 = #{userId} )
+	</select>
+	
+	<select id="getMemberList" parameterType="String" resultType="com.cyworld.dto.CyMemberDTO">
+		select userId1, userValue1, userId2, userValue2 from cymember where userId1 = #{userId} or userId2 = #{userId}
+	</select>
+	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyMemberDTO">
+		insert into cymember (userId1, userValue1, userId2, userValue2) values 
+		(#{userId1}, #{userValue1}, #{userId2}, #{userValue2} )
+	</insert>
+	
+	<delete id="deleteMember" parameterType="map">
+		delete cyMember where (userId1 = #{myId} and userId2 = #{userId}) or (userId1 = #{userId} and userId2 = #{myId}) 
+	</delete>
+</mapper>

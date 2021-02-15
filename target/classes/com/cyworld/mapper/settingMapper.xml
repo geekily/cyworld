@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="setting">
+
+<select id="getMenuAvailable" parameterType="String" resultType="com.cyworld.dto.CyMenuDTO">
+	select userId,menu1,menu2,menu3,menu4,menu5,menu6,menu7,menuBackgroundColor,menuFontColor,menuBorderColor 
+	from cyMenu where userId=#{userId}
+</select>
+
+<update id="updateMenuAvailable" parameterType="map">
+	update cyMenu set menu3=#{menu3},menu4=#{menu4},menu5=#{menu5},menu6=#{menu6},
+	menuBackgroundColor=#{menuBackgroundColor},menuFontColor=#{menuFontColor},menuBorderColor=#{menuBorderColor} where userId=#{userId}
+</update>
+
+</mapper>

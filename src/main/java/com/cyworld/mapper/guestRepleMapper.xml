@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.guestReple">	
+	<select id="getDataList" parameterType="Integer" resultType="com.cyworld.dto.CyGuestRepleDTO">
+		select num, guestNum, userId, userName, content, created from cyguestreple where guestNum = #{num} order by created
+	</select>
+	
+	<select id="getMaxNum" resultType="String">
+		select nvl(max(num),0) from cyGuestReple
+	</select>
+	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyGuestRepleDTO">
+		insert into cyGuestReple (num,guestNum,userId,userName,content,created) values 
+		(${num},#{guestNum},#{userId},#{userName},#{content},sysdate)
+	</insert>
+	
+	<delete id="deleteData" parameterType="Integer">
+		delete cyGuestReple where num = #{num}	
+	</delete>
+	
+	<delete id="deleteAllData" parameterType="Integer">
+		delete cyGuestReple where guestNum = #{num}
+	</delete>
+</mapper>

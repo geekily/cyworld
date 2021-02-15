@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.user">	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyUserDTO">
+		insert into cyuser (userId, userPw, userName, userGender, userDotory, userBirth, toDay, totalDay, checkDay, presentList) values (#{userId}, #{userPw}, #{userName}, #{userGender}, #{userDotory}, #{userBirth} , 0 , 0 , sysdate, 0)
+	</insert>
+	
+	<select id="getData" parameterType="map" resultType="com.cyworld.dto.CyUserDTO">
+		select userId, userPw, userName, userGender, userDotory, to_char(userBirth,'YYYY-MM-DD') userBirth, toDay, totalDay, to_char(checkDay,'YYYY-MM-DD') checkDay from cyuser where userId = #{userId} and userPw = #{userPw}
+	</select>
+	
+	<select id="getUserList" parameterType="String" resultType="String">
+		select userId from cyuser where userId != #{userId}
+	</select>
+	
+	<select id="getName" parameterType="String" resultType="String">
+		select userName from cyuser where userId = #{userId}
+	</select>
+	
+	<select id="getUserData" parameterType="String" resultType="com.cyworld.dto.CyUserDTO">
+		select userId, userPw, userName, userGender, userDotory, to_char(userBirth,'YYYY-MM-DD') userBirth, toDay, totalDay, to_char(checkDay,'YYYY-MM-DD') checkDay from cyuser where userId = #{userId}
+	</select>
+	
+	<update id="hitCount" parameterType="String">
+		update cyUser set today = today + 1 , totalday = totalday + 1 , checkday = sysdate where userId = #{userId }
+	</update>
+	
+	<update id="hitInit" parameterType="String">
+		update cyUser set today = 0 , checkday = sysdate where userId = #{userId}
+	</update>
+	
+	<!-- 12-28 예리 추가 - cyusingminimi랑 연동하려고! -->
+	<select id="getAllCyuser" resultType="String">
+		select userId from cyuser
+	</select>
+	
+	<!-- 12-30 예리 추가 - 회원 도토리 개수 조회 -->
+	<select id="getDotory" parameterType="String" resultType="Integer">
+		select userdotory from cyuser where userId = #{userId}
+	</select>
+	
+	<!-- 01-04 예리 추가 - 아이디 중복확인 -->
+	<select id="idCheck" parameterType="String" resultType="Integer">
+		select count(*) cnt from cyuser where userId = #{userId}	
+	</select>
+	
+	<!-- 01-05 예리 추가 - Today hit수 출력 -->
+	<select id="getToday" parameterType="String" resultType="Integer">
+		select today from cyuser where userId = #{userId}	
+	</select>
+	
+	<!-- 01-06 예리 추가 -->
+	<insert id="insertMenu" parameterType="String">
+		insert into cymenu values (#{userId}, '0', '0', '0', '0', '0', '0', '0', '238db3', '000000', '000000')	
+	</insert>
+	
+	<!--  01-08 현종 추가 -->
+	<select id="presentList" parameterType="String" resultType="Integer">
+		select PRESENTLIST from cyuser where userId = #{userId}
+	</select>
+	
+	
+	<select id="getPreList" parameterType="String" resultType="com.cyworld.dto.CyPresentDTO">
+		select userId, presentNum from PRESENT where userId=#{userId}
+	</select>
+	
+	
+	<select id="getMyItem" parameterType="hashMap" resultType="com.cyworld.dto.CyMyItemDTO">
+		select cymyitem.num, cymyitem.type, cymyitem.buyer, cyitemshop.itemName from cymyitem, cyitemshop
+		where cymyitem.num = cyitemshop.num and cymyitem.userId=#{userId} and (${sql})
+	</select>
+	
+	
+	<update id="updatePresentList" parameterType="com.cyworld.dto.CyPresentDTO">
+		update cyuser set PRESENTLIST = PRESENTLIST-#{presentNum} where userId = #{userId}
+	</update>
+	
+	<delete id="deletePresentList" parameterType="hashMap">
+		delete from present where userId=#{userId} and (${sql})
+	</delete>
+	
+	<!--  01-13 의빈 추가 -->
+	<update id="updatePw" parameterType="map">
+		update cyUser set userPw=#{userPw} where userId = #{userId }
+	</update>
+	
+	<select id="getCheck" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyUser where userId = #{userId} and userPw = #{userPw}
+	</select>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<mappers>
+		<mapper resource="com/cyworld/mapper/introMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/userMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/usingItemMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/pictureBoardMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/itemshopMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/memberMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/guestMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/guestRepleMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/memberBoardMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/memberListMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/boardMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/boardRepleMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/settingMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/newBoardMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/videoBoardMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/myItemMapper.xml"/>
+		<mapper resource="com/cyworld/mapper/profileMapper.xml"/>
+	</mappers>
+</configuration>

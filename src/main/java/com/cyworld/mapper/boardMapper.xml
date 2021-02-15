@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.board">	
+
+	<select id="getFolderMenuList" parameterType="map" resultType="com.cyworld.dto.CyBoardMenuDTO">
+		select num, userId, folderName, type from cyboardmenu where userId = #{userId} and <![CDATA[type >= #{type}]]> order by num asc
+	</select>
+		
+	<select id="getCount" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyboard where userId = #{userId} and folderName = #{folderName}
+	</select>
+	
+	<select id="getNum" resultType="Integer">
+		select nvl(max(num),0) from cyboard
+	</select>
+	
+	<select id="getBoardList" parameterType="map" resultType="com.cyworld.dto.CyBoardDTO">
+		select num, userId, userName, subject, folderName, content, saveFileName, originalFileName, to_char(created,'YYYY-MM-DD') created , hitCount from 
+		(select A.num, A.userId, A.userName, A.subject, A.folderName, A.content, A.saveFileName, A.originalFileName, A.created, A.hitCount, ROW_NUMBER() OVER(ORDER BY CREATED DESC) rnum from cyboard A where userId= #{userId} and folderName = #{folderName} )
+		where rnum between #{start} and #{end}
+	</select>
+
+	<insert id="insertData" parameterType="com.cyworld.dto.CyBoardDTO">
+		insert into cyboard (num, userId, userName, subject, folderName, content, saveFileName, originalFileName, created, hitCount, originalNum) values 
+		(#{num}, #{userId}, #{userName}, #{subject}, #{folderName}, #{content}, #{saveFileName}, #{originalFileName}, sysdate, 0, #{originalNum} )	
+	</insert>
+	
+	<select id="getFolderNum" resultType="Integer">
+		select nvl(max(num),0) from cyboardmenu
+	</select>
+	
+	<insert id="insertFolder" parameterType="map">
+		insert into cyboardmenu (num, userId, folderName, type) values (#{num}, #{userId}, #{folderName}, #{type} )
+	</insert>
+
+	<update id="updateFolder" parameterType="map">
+		update cyboardmenu set folderName = #{newFolderName}, type = #{type} where num = #{num}
+	</update>
+
+	<update id="updateBoardFolder" parameterType="map">
+		update cyboard set folderName = #{newFolderName} where userId = #{userId} and folderName = #{oldFolderName}
+	</update>
+	
+	<delete id="deleteFolder" parameterType="Integer">
+		delete cyboardMenu where num = #{num}	
+	</delete>
+
+	<delete id="deleteBoardFolder" parameterType="map">
+		delete cyboard where userId = #{userId} and folderName = #{folderName}
+	</delete>
+
+	<select id="getBoardNumList" parameterType="map" resultType="Integer">
+		select num from cyboard where userId = #{userId} and folderName = #{folderName}
+	</select>
+	
+	<delete id="deleteBoardReple" parameterType="Integer">
+		delete cyboardReple where guestNum = #{guestNum}
+	</delete>
+
+	<select id="getData" parameterType="Integer" resultType="com.cyworld.dto.CyBoardDTO">
+		select num, userId, userName, subject, folderName, content, saveFileName, originalFileName, created, hitCount from cyboard where num = #{num }
+	</select>
+
+	<update id="moveFile" parameterType="map">
+		update cyboard set folderName = #{newFolderName} where num = #{num}	
+	</update>
+
+	<delete id="deleteBoard" parameterType="Integer">
+		delete cyBoard where num = #{num}	
+	</delete>
+
+	<update id="hitCountUp" parameterType="Integer">
+		update cyboard set hitCount = hitCount+1 where num = #{num}
+	</update>
+	
+	<select id="getNowCount" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyboard A inner join (select FOLDERNAME from cyBoardMenu where userid=#{userId} and <![CDATA[type >= #{type}]]>) B on (A.folderName = B.folderName) and (A.created >= #{nowDay}) and (A.userId = #{userId})
+	</select>
+	
+	<select id="getTotalCount" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyboard A inner join (select FOLDERNAME from cyBoardMenu where userid=#{userId} and <![CDATA[type >= #{type}]]>) B on (A.folderName = B.folderName) and (A.userId = #{userId})
+	</select>	
+	
+	<select id="selectNumList" parameterType="Integer" resultType="Integer">
+		select num from cyboard where originalNum = #{num}
+	</select>
+	
+	<delete id="deleteAllReple" parameterType="Integer">
+		delete cyboardReple where guestNum = #{num}
+	</delete>
+	
+	<delete id="deleteAllBoard" parameterType="Integer">
+		delete cyboard where originalNum = #{num}
+	</delete>
+	
+	<select id="getOriNum" parameterType="Integer" resultType="Integer">
+		select originalNum from cyboard where num = #{num}
+	</select>
+</mapper>

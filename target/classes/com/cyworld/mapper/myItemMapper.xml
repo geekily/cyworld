@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.myItem">	
+	<select id="getItemList" parameterType="map" resultType="com.cyworld.dto.CyMyItemDTO">
+		select userId, type, saveFileName, originalFileName, buydate, num, buyer from cymyitem where userId = #{userId} and type = #{type}
+	</select>
+	
+	<select id="getItemName" parameterType="Integer" resultType="String">
+		select ItemName from cyItemshop where num = #{num}
+	</select>
+	
+	<select id="getNotUsingSong" parameterType="map" resultType="String">
+		select * from (select originalFileName from cyMyItem where userId=#{userId} and type = #{type}) minus
+		(select originalFileName from cyUsingSongs where userId=#{userId})
+	</select>
+</mapper>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.itemshop">
+
+
+	<select id="maxNum" resultType="int">
+		select nvl(max(num),0) from cyitemshop
+	</select>
+	
+	<select id="getDataCount" parameterType="hashMap" resultType="int">
+		select nvl(count(*),0) from cyitemshop
+		where ${searchKey} like '%' || #{searchValue} || '%'
+	</select>
+
+	
+	<select id="getReadData" parameterType="int" resultType="com.cyworld.dto.CyitemshopDTO">
+		select num, itemName, type , saveFileName , originalFileName, itemPrice
+		from cyitemshop where num=#{num}
+	</select>
+	
+	
+	<!-- 전체 데이터 -->
+	<select id="getLists" parameterType="hashMap" resultType="com.cyworld.dto.CyitemshopDTO">
+		select * from (
+		select rownum rnum, data.* from(
+		select num, itemName, type, saveFileName, originalFileName, itemPrice
+		from cyitemshop where ${searchKey} like '%' || #{searchValue} || '%'
+		order by num desc) data)
+	</select>
+
+	
+	<!-- 타입 데이터 -->
+	<select id="getTypeData" parameterType="hashMap" resultType="com.cyworld.dto.CyitemshopDTO">
+		select * from (
+		select rownum rnum, data.* from(
+		select num, itemName, type, saveFileName, originalFileName, itemPrice 
+		from cyitemshop where type like '%' || #{type} || '%'
+		order by num desc) data)
+		<![CDATA[
+		where rnum>=#{start} and rnum<=#{end}
+		]]>
+	</select>
+	
+	
+	<!-- 특정 데이터 -->
+	<select id="getSearchData" parameterType="hashMap" resultType="com.cyworld.dto.CyitemshopDTO">
+		select * from (
+		select rownum rnum, data.* from(
+		select num, itemName, type, saveFileName, originalFileName, itemPrice 
+		from cyitemshop where itemName like '%' || #{itemName} || '%'
+		order by num desc) data)
+		<![CDATA[
+		where rnum>=#{start} and rnum<=#{end}
+		]]>
+	</select>
+	
+	
+	<!-- 특정 + 타입 데이터 -->
+	<select id="getSearchTypeData" resultType="com.cyworld.dto.CyitemshopDTO" parameterType="hashMap">
+		select * from (
+		select rownum rnum, data.* from( 
+		select num, itemName, type, saveFileName, originalFileName, itemPrice 
+		from cyitemshop where itemName like '%' || #{itemName} || '%' and type like '%' || #{type} || '%'
+		order by num desc) data)
+		<![CDATA[
+		where rnum>=#{start} and rnum<=#{end}
+		]]>
+	</select>
+	
+	<!-- 모든 데이터 카테고리 구분 없이 랜덤 출력하기 -->
+	<select id="getListsRandom" resultType="com.cyworld.dto.CyitemshopDTO" >
+		select * from (
+		select * from cyitemshop
+		where type = #{type}
+		order by DBMS_RANDOM.RANDOM
+		)
+	</select>
+	
+	
+	<!-- type데이터가 없을때 랜덤 출력 -->
+	<select id="getListsRandoms" resultType="com.cyworld.dto.CyitemshopDTO" >
+		select * from (
+		select * from cyitemshop
+		order by DBMS_RANDOM.RANDOM
+		)
+	</select>
+	
+	<!-- 회원검색(Ajax) -->
+	<select id="getSearch" resultType="com.cyworld.dto.CyUserDTO">
+		select userid, username from CYUSER where upper(username) like upper(#{userKeyword}||'%')
+	</select>
+	<!-- 2021-01-04 추가 -->
+	
+	<!-- 친구검색(Ajax) -->
+	<select id="getFriend" resultType="com.cyworld.dto.CyMemberDTO">
+		select * from CYMEMBER where 
+		upper(userId1) like upper(#{friendId}||'%')
+		or 
+		upper(userId2) like upper(#{friendId}||'%')
+	</select>
+	
+	<!-- 선물가게 장바구니 조회 -->
+	<select id="getCart" resultType="com.cyworld.dto.CyCartDTO">
+		select rownum sort_num, userId, itemName, itemPrice, type , saveFileName, originalFileName , num
+		from cyCart where userId = #{userId}
+	</select>
+	
+	<!-- 중복데이터 검사 -->
+	<select id="cartCheck" resultType="com.cyworld.dto.CyCartDTO" parameterType="hashMap">
+		select userId, itemName from cyCart where userId=#{userId} and itemName=#{itemName}
+	</select>
+	
+	<!-- 선물가게 장바구니 담기 -->
+	<insert id="insertCart" parameterType="com.cyworld.dto.CyCartDTO">
+		insert into cyCart(userId, itemName, itemPrice, type , saveFileName, originalFileName, num)
+		values (#{userId}, #{itemName}, #{itemPrice}, #{type}, #{saveFileName}, #{originalFileName}, #{num})
+	</insert>
+	
+	<!-- 선물가게 장바구니 삭제 -->
+	<delete id="deleteCart" parameterType="hashMap">
+		delete cyCart where num = #{num} and userId = #{userId}
+	</delete>
+	
+	
+	<!-- 장바구니 데이터 조회 / 보유 도토리 -->
+	<select id="selectCart" resultType="com.cyworld.dto.CyCartDTO" parameterType="hashMap">
+		select CYCART.userId userId, CYCART.itemName itemName, CYCART.itemPrice itemPrice, CYCART.type type, 
+		CYCART.saveFileName saveFileName, CYCART.originalFileName originalFileName, CYCART.num num, 
+		CYUSER.userdotory userdotory from CYCART, CYUSER
+		where CYCART.userid = cyuser.userid and CYCART.userId = #{userId} and 
+		(${sql})
+	</select>
+	
+	<!-- 구입목록 -->
+	<select id="buyCart" resultType="com.cyworld.dto.CyCartDTO" parameterType="hashMap">
+		select * from cyCart where userId=#{userId} and (${sql})
+	</select>
+	
+	<!-- 구입후 장바구니 삭제 -->
+ 
+	<delete id="buyDeleteCart" parameterType="hashMap">
+		delete cycart where userid = #{userId} and (${sql})
+	</delete>
+
+	<!-- 개인 상품구매시 DB등록 -->
+	<insert id="buyMyList" parameterType="com.cyworld.dto.CyMyItemDTO">
+		insert into cyMyItem(userId, type, saveFileName, originalFileName, buyDate, num, buyer) values
+		(#{userId}, #{type}, #{saveFileName}, #{originalFileName}, sysdate, #{num}, #{buyer})
+	</insert>
+	
+	
+	<!-- 선물하기 DB등록 -->
+	<insert id="buyfriendList" parameterType="com.cyworld.dto.CyMyItemDTO">
+		insert into cyMyItem(userId, type, saveFileName, originalFileName, buyDate, num, buyer) values
+		(#{userId}, #{type}, #{saveFileName}, #{originalFileName}, sysdate, #{num}, #{buyer})
+	</insert>
+	
+	
+	<!-- 상품구매후 도토리량 감소 -->
+	<update id="updateDotory" parameterType="map">
+		update cyUser set userDotory = #{price} where userId = #{userId}
+	</update>
+	
+	
+	<!-- 내 아이템 중복 구매 확인 -->
+	<select id="checkMyItem" resultType="com.cyworld.dto.CyitemshopDTO" >
+		select userId, type, saveFileName, originalFileName, buydate, num, buyer 
+		from cyMyItem where userId = #{userId} and num = #{num}
+	</select>
+	
+	
+	<!-- 구매시 중복아이템 삭제확인 -->
+	<delete id="checkDeleteCart" parameterType="hashMap">
+		delete cycart where userid = #{userId} and (${sql})
+	</delete>
+	
+	
+	<!-- 구매하기 아이템 / 보유 도토리 -->
+	<select id="buyItem" resultType="com.cyworld.dto.CyCartDTO" parameterType="hashMap">
+		select CYITEMSHOP.num, CYITEMSHOP.itemName, CYITEMSHOP.itemPrice, CYITEMSHOP.type, 
+		CYITEMSHOP.saveFileName, CYITEMSHOP.originalFileName, CYUSER.userId, CYUSER.userDotory
+		from CYITEMSHOP, CYUSER where CYUSER.userId = #{userId} and CYITEMSHOP.num = #{num}
+	</select>
+	
+	
+	<!-- 특정아이템 조회 -->
+	<select id="buyTypeCheck" resultType="com.cyworld.dto.CyitemshopDTO">
+	select num, itemName, type, saveFileName, originalFileName, itemPrice from cyItemShop where num = #{num}
+	</select>
+	
+	<!-- 01-08 현종 추가 -->
+	<!-- 선물함 증가 -->
+	<update id="presentPlus" parameterType="String">
+		update cyuser set PRESENTLIST = PRESENTLIST+1 where userId = #{friendId}
+	</update>
+	
+	
+	<!-- 선물함 증가 -->
+	<insert id="present" parameterType="com.cyworld.dto.CyPresentDTO">
+		insert into PRESENT(userId, presentNum) values
+		(#{userId}, #{presentNum})
+	</insert>
+	
+	<!-- 20210109 임의빈 : 아이템이름으로 Data 가져오기 -->
+	<select id="getDataByItemName" parameterType="String" resultType="com.cyworld.dto.CyitemshopDTO">
+		select saveFileName,originalFileName from cyItemShop where itemName like '%' || #{itemName} || '%'
+	</select>
+	
+		<!-- 01-11 현종 추가 -->
+	<!-- Ajax 아이템 찾기 -->
+	<select id="getSearchItem" resultType="com.cyworld.dto.CyitemshopDTO" parameterType="String">
+		select num, type, itemName from CYITEMSHOP where upper(itemName) like upper('%'||#{itemName}||'%')
+	</select>
+	
+	<!-- Ajax 아이템 번호 찾기 -->
+	<select id="getSearchNum" parameterType="String" resultType="int">
+		select num from CYITEMSHOP where itemName = #{itemName}
+	</select>
+	
+	
+</mapper>

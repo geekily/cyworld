@@ -1,0 +1,9583 @@
+@charset "utf-8";
+
+/* ****************************************************************
+	상품 상세
+**************************************************************** */
+
+/* 상세 공통 */
+.pdTit {
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+/* 상단설명 */
+.prdtDtlSum {
+	
+}
+
+.prdtDtlSum:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.prdtDtlSum .prdtDtlSumLeft {
+	float: left;
+	width: 420px;
+}
+
+.prdtDtlSum .prdtDtlSumRight {
+	float: right;
+	width: 580px;
+}
+
+/* 상세이미지 */
+.prdtDtlSum .pdImgArea {
+	
+}
+
+/* 상세 딱지 아이콘 */
+.prdtDtlSum .pdImgArea .tgIconWrap {
+	overflow: hidden;
+	border-left: 1px solid #e5e5e5;
+}
+
+.prdtDtlSum .pdImgArea .tgIconWrap span.icoTag {
+	float: left;
+	width: 83px;
+	height: 28px;
+	border-top: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	text-align: center;
+}
+
+.prdtDtlSum .pdImgArea .tgIconWrap span:first-child {
+	width: 82px;
+}
+
+.prdtDtlSum .pdImgArea .tgIconWrap span {
+	display: block;
+	line-height: 28px;
+}
+
+.prdtDtlSum .pdImgArea .tgIconWrap span.typeA {
+	color: #f78330;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgWrap {
+	width: 418px;
+	height: 418px;
+	margin: 0 0 10px;
+	border: 1px solid #e5e5e5;
+	position: relative;
+} /*171025수정*/
+.prdtDtlSum .pdImgArea .prdtImgWrap img {
+	width: 418px;
+	height: 418px;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList {
+	position: relative;
+	overflow: hidden;
+	width: 421px;
+	height: 100px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/bg_prdtImgList.png") repeat-x 0 0;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 428px;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList li {
+	float: left;
+	width: 98px;
+	height: 98px;
+	margin-right: 7px;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList li img {
+	width: 98px;
+	height: 98px;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList .btnWrap a {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList .btnWrap a.btnPrev {
+	left: 0;
+}
+
+.prdtDtlSum .pdImgArea .prdtImgList .btnWrap a.btnNext {
+	right: 0;
+}
+
+/* 공유 */
+.prdtDtlSum .shareArea {
+	padding: 10px 0;
+	border-bottom: 2px solid #666;
+}
+
+.prdtDtlSum .shareArea .tit {
+	float: left;
+	color: #333;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+.prdtDtlSum .shareArea ul {
+	float: right;
+}
+
+/* 후기 */
+.prdtDtlSum .pdReviewArea {
+	padding: 0 0 10px;
+}
+
+.prdtDtlSum .pdReviewArea .titArea {
+	overflow: hidden;
+	padding: 9px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.prdtDtlSum .pdReviewArea .titArea p.pdTit {
+	float: left;
+	line-height: 28px;
+}
+
+.prdtDtlSum .pdReviewArea .titArea .btnA {
+	float: right;
+	width: 60px;
+}
+
+.prdtDtlSum .pdReviewArea ul {
+	padding: 7px 0 12px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.prdtDtlSum .pdReviewArea ul li {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	padding: 4px 0 0;
+}
+
+.prdtDtlSum .pdReviewArea ul li>div {
+	display: table-cell;
+	width: 65px;
+	vertical-align: middle;
+}
+
+.prdtDtlSum .pdReviewArea ul li div.tit {
+	overflow: hidden;
+	width: 230px;
+} /*200423수정*/
+.prdtDtlSum .pdReviewArea ul li .tit a, .prdtDtlSum .pdReviewArea ul li .tit img
+	{
+	float: left;
+}
+
+.prdtDtlSum .pdReviewArea ul li .tit a {
+	display: inline-block;
+	position: relative;
+	max-width: 300px;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.prdtDtlSum .pdReviewArea ul li .tit a:hover {
+	text-decoration: underline;
+}
+
+.prdtDtlSum .pdReviewArea ul li .tit img {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.prdtDtlSum .pdReviewArea ul li .tit img.iconNew {
+	margin-top: 4px;
+}
+
+/* 상단 정보 */
+.prdtDtlSum .pdInfoArea {
+	position: relative;
+}
+
+.prdtDtlSum .pdInfoArea .prdtCode {
+	position: relative;
+	height: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") no-repeat 0 0;
+}
+
+.prdtDtlSum .pdInfoArea .prdtCode dl {
+	position: absolute;
+	top: -3px;
+	right: 0;
+	overflow: hidden;
+	width: auto;
+	padding: 0 0 0 8px;
+	background: #fff;
+	color: #333;
+}
+
+.prdtDtlSum .pdInfoArea .prdtCode dt {
+	float: left;
+	margin-right: 5px;
+}
+
+.prdtDtlSum .pdInfoArea .prdtCode dd {
+	float: left;
+}
+
+.prdtDtlSum .pdInfoArea .prdtTitWrap {
+	margin: 15px 0 6px 0;
+	line-height: 1.25;
+}
+
+.prdtDtlSum .pdInfoArea .prdtTitWrap .prdtCmnt {
+	margin-bottom: 3px;
+	font-size: 15px;
+	color: #999;
+}
+
+.prdtDtlSum .pdInfoArea .prdtTitWrap h2.prdtTit {
+	margin-right: 90px;
+	font-size: 27px;
+	color: #333;
+	font-weight: 600;
+}
+
+.prdtDtlSum .pdInfoArea .dpIconWrap {
+	margin: 0 0 10px 0;
+}
+
+.prdtDtlSum .pdInfoArea .dpIconWrap .icoDisplay {
+	
+}
+
+.prdtDtlSum .prdtInfoWrap {
+	border-top: 2px solid #666;
+}
+
+.prdtDtlSum .prdtInfoWrap dl {
+	display: table;
+	border-top: 1px solid #eaeaea;
+}
+
+.prdtDtlSum .prdtInfoWrap dl dt {
+	display: table-cell;
+	width: 110px;
+	padding: 11px 0;
+	font-weight: 600;
+	vertical-align: top;
+}
+
+.prdtDtlSum .prdtInfoWrap dl dd {
+	display: table-cell;
+	width: 470px;
+	vertical-align: middle;
+}
+
+.prdtDtlSum .prdtInfoWrap dl dd .cardList {
+	padding: 5px 0;
+}
+
+.prdtDtlSum .prdtInfoWrap dl dd .cardList li {
+	margin: 3px 0;
+}
+
+.prdtDtlSum .prdtInfoWrap dl dd .cardList li:before {
+	content: '- ';
+}
+
+.prdtDtlSum .price {
+	color: #333;
+	font-size: 13px;
+}
+
+.prdtDtlSum .price strong {
+	color: #333;
+	font-size: 17px;
+	font-weight: bold; /*font-family:arial, sans-serif;*/
+}
+
+.prdtDtlSum .primecost {
+	font-size: 11px;
+	color: #999;
+	text-decoration: line-through;
+}
+
+/* 영양분석표 */
+.nutritionWrap {
+	position: absolute;
+	top: 39px;
+	right: 0;
+	z-index: 99;
+} /*200814수정*/
+.nutritionBtn {
+	
+}
+
+.nutritionLy {
+	position: absolute;
+	top: 27px;
+	right: 0;
+	width: 340px;
+	padding: 15px 20px 20px;
+	border: 2px solid #cdcdcd;
+	background: #fff;
+}
+
+.nutritionLy .lyTit {
+	padding: 0 0 5px 0;
+	border-bottom: 2px solid #666;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.nutritionLy .lyCont {
+	
+}
+
+.nutritionLy .lyCont .selectPrdt {
+	overflow: hidden;
+	padding: 6px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.nutritionLy .lyCont .selectPrdt label {
+	float: left;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+.nutritionLy .lyCont .selectPrdt .selBox {
+	float: right;
+}
+
+.nutritionLy .lyCont .prdtWrap {
+	
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo {
+	display: table;
+	margin: 10px 0;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo>div {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo .img {
+	width: 142px;
+	height: 142px;
+	border: 1px solid #e5e5e5;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo img {
+	width: 142px;
+	height: 142px;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo div.tit {
+	padding-left: 20px;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo div.tit p.tit {
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo div.tit p.cmnt {
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo2 {
+	overflow: hidden;
+	padding: 6px 10px;
+	background: #efefef;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo2 p {
+	float: right;
+	color: #666;
+}
+
+.nutritionLy .lyCont .prdtWrap .prdtInfo2 p:first-child {
+	float: left;
+	color: #333;
+}
+
+.nutritionLy .lyCont .prdtWrap .nutritionTbl {
+	margin-bottom: 10px;
+}
+
+.nutritionLy .lyCont .prdtWrap .nutritionTbl th {
+	padding: 6px 0 6px 15px;
+	border-bottom: 1px solid #eaeaea;
+	color: #333;
+	font-weight: normal;
+	text-align: left;
+}
+
+.nutritionLy .lyCont .prdtWrap .nutritionTbl td {
+	padding: 6px 20px 6px 0;
+	border-bottom: 1px solid #eaeaea;
+	color: #666;
+	text-align: right;
+}
+
+.nutritionLy .closeLyBtn {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+/* 할인쿠폰 170206추가 */
+.saleWrap {
+	top: 162px;
+	left: 0;
+	z-index: 301;
+	width: 380px;
+}
+
+.saleTb th {
+	border-bottom: 1px solid #eaeaea;
+	color: #333;
+	padding: 7px 0 8px;
+	background-color: #f9f9f9;
+}
+
+.saleTb td {
+	border-bottom: 1px solid #eaeaea;
+	padding: 10px 5px;
+}
+
+.saleTb ul {
+	margin: 10px 0 0 5px;
+}
+
+.saleTb ul li {
+	font-size: 11px;
+	line-height: 20px;
+}
+
+.saleTb ul li a {
+	font-weight: bold;
+	color: #333;
+}
+
+/*장바구니 이동 선택 팝업 171025추가*/
+.cartPop {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	text-align: center;
+	z-index: 310;
+	width: 230px;
+}
+
+/* 주문 */
+.prdtDtlSum .pdOrderArea {
+	
+}
+
+.pdOrderTab {
+	position: relative;
+	height: 45px;
+}
+
+.pdOrderTab ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.pdOrderTab li {
+	float: left;
+	width: 210px;
+	margin-right: 5px;
+}
+
+.pdOrderTab li a {
+	display: block;
+	height: 44px;
+	border: 1px solid #d7d7d7;
+	background: #efefef;
+	color: #333;
+	font-size: 17px;
+	line-height: 43px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.pdOrderTab li.on a {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.pdOrderTab .cmnt {
+	position: absolute;
+	bottom: 2px;
+	right: 0;
+	color: #333;
+	font-size: 11px;
+}
+
+.pdOrderTab .cmnt .mgT3 {
+	margin-top: 3px;
+}
+
+.pdOrderWrap {
+	padding: 25px 25px 29px;
+	border: 1px solid #d7d7d7;
+}
+
+.pdOrderWrap h3 {
+	width: 60px;
+	color: #333 !important;
+} /*180704추가*/
+
+/* 상품옵션 선택 */
+.pdOrderWrap .selectOption {
+	position: relative;
+} /*180704수정*/
+.selectOption {
+	position: absolute;
+	top: -30px;
+	left: 70px;
+	width: 459px;
+	height: 18px;
+	z-index: 99;
+} /*200814수정*/
+.selectOption .selectOptionBtn {
+	display: block;
+	height: 35px;
+	padding: 0 24px 0 10px;
+	border: 1px solid #d7d7d7;
+	background: #f9f9f9 url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_common.png") no-repeat 100%
+		-120px;
+	line-height: 35px;
+	background-size: 146% auto;
+} /*180704수정*/
+.selectOption .optionList {
+	display: none;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	width: 442px;
+	height: 156px;
+	overflow-y: scroll;
+	padding: 5px 7px;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	border-top: none;
+	z-index: 300;
+} /*190102수정*/
+.selectOption .optionList li .optionWrap {
+	display: table;
+	width: 100%;
+}
+
+.selectOption .optionList li .optionWrap>span {
+	display: table-cell;
+	padding: 4px 10px;
+}
+
+.selectOption .optionList li .optionWrap .optionName {
+	
+}
+
+.selectOption .optionList li .optionWrap .optionPrice {
+	text-align: right;
+}
+
+.selectOption .optionList li .optionWrap .optionPrice .discnt,
+	.selectOption .optionList li .optionWrap .optionPrice .price {
+	color: #666;
+	font-size: 12px;
+	font-weight: normal;
+} /* 170207수정 */
+.selectOption .optionList li:hover {
+	background: #ff9d4f;
+	color: #fff;
+} /* 170207수정 */
+.selectOption .optionList li:hover .optionWrap .optionName,
+	.selectOption .optionList li:hover .optionWrap .optionPrice .discnt,
+	.selectOption .optionList li:hover .optionWrap .optionPrice .price {
+	color: #fff;
+}
+
+.selectOption .optionList li.soldOut .optionWrap {
+	cursor: default;
+	color: #999;
+} /* 품절 */
+.selectOption .optionList li.soldOut:hover .optionWrap {
+	background: #fff;
+}
+
+.selectOption .optionList li.soldOut:hover .optionWrap .optionName {
+	color: #999;
+}
+
+.selectOption.active .selectOptionBtn {
+	height: 35px;
+	padding: 0 24px 0 9px;
+	border: 1px solid #d7d7d7;
+	background-position: 100% -121px;
+	line-height: 35px;
+} /* 180711수정 */
+.selectOption.active .optionList {
+	display: block;
+}
+
+/* 선택된 상품 */
+.pdOrderWrap .selectedItem {
+	margin: 0 0 10px;
+	padding: 10px 15px;
+	border: 1px solid #eaeaea;
+}
+
+/*2016-04-07 추가 세트 상품 내용 수직 배치 가운데로*/
+.pdOrderWrap .selectedItemMiddle {
+	padding: 8px 15px 16px;
+}
+
+.pdOrderWrap .selectedItem ul {
+	
+}
+
+.pdOrderWrap .selectedItem ul li {
+	display: table;
+	margin-top: 5px;
+}
+
+.pdOrderWrap .selectedItem ul li:first-child {
+	margin-top: 0;
+}
+
+.pdOrderWrap .selectedItem ul li>div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.pdOrderWrap .selectedItem ul li div.itemName {
+	width: 345px;
+	line-height: 15px;
+}
+
+.pdOrderWrap .selectedItem ul li div.itemQuantity {
+	width: 57px;
+}
+
+.pdOrderWrap .selectedItem ul li div.itemPrice {
+	width: 83px;
+	padding-right: 5px;
+	font-size: 12px;
+	text-align: right;
+}
+
+.pdOrderWrap .selectedItem ul li div.itemPrice span, .pdOrderWrap .selectedItem ul li div.itemPrice strong
+	{
+	font-size: 12px;
+}
+
+.pdOrderWrap .selectedItem ul li div.itemDelete {
+	width: 11px;
+}
+
+/* 배송일 */
+.pdOrderWrap .deliveryDate {
+	position: relative;
+	padding: 10px 15px;
+	background: #efefef;
+}
+
+.pdOrderWrap .deliveryDate .deliDate dl {
+	display: table;
+	width: 100%;
+}
+
+.pdOrderWrap .deliveryDate .deliDate dl dt {
+	display: table-cell;
+	width: 65px;
+	padding-top: 7px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.pdOrderWrap .deliveryDate .deliDate dl dd {
+	display: table-cell;
+	width: 430px;
+	padding-top: 7px;
+	color: #333;
+	font-weight: bold;
+	vertical-align: middle;
+} /* 170207수정 */
+.pdOrderWrap .deliveryDate .deliDate dl:first-child dt, .pdOrderWrap .deliveryDate .deliDate dl:first-child dd
+	{
+	padding-top: 0;
+}
+
+.pdOrderWrap .deliveryDate .cmnt {
+	margin-top: 3px;
+	font-size: 11px;
+}
+
+.pdOrderWrap .deliveryDate.type2 {
+	padding: 0;
+	background: #fff;
+}
+
+.pdOrderWrap .deliveryDate.type2 .deliDate dl dt {
+	width: 75px;
+}
+
+.pdOrderWrap .deliveryDate.type2 .deliDate dl dd {
+	width: 450px;
+}
+
+.pdOrderWrap .deliveryDate .selectDate {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+.pdOrderWrap .deliveryDate .selectDate input.date {
+	background-position: 100% -30px;
+}
+
+.pdOrderWrap .deliveryDate .cmnt {
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+
+.pdOrderWrap .deliveryDate dd .cmnt {
+	font-size: 11px;
+	color: #999;
+	font-weight: normal;
+}
+
+/* 요일선택 */
+.pdOrderWrap .deliveryDate .selectWeekday {
+	overflow: hidden;
+	display: inline-block;
+	width: 165px;
+	vertical-align: middle;
+}
+
+/* 총금액 */
+.pdOrderWrap .totalPrice {
+	margin: 10px 0 0;
+	color: #333;
+	text-align: right;
+	font-size: 15px;
+	font-weight: 600;
+	position: relative;
+} /*171025수정*/
+.pdOrderWrap .totalPrice .price {
+	color: #333;
+	font-size: 12px;
+}
+
+.pdOrderWrap .totalPrice .price strong {
+	color: #f9732e;
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.pdOrderWrap .totalPrice .buyCount {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 12px;
+	color: #333;
+} /*171025추가*/
+
+/* ## 품절 ## */
+.soldOutNotice {
+	height: 71px;
+	background: #f9732e;
+	color: #fff;
+	text-align: center;
+}
+
+.soldOutNotice .soldOutTxt {
+	display: inline-block;
+	overflow: hidden;
+	width: 208px;
+	height: 21px;
+	margin-top: 25px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") no-repeat 0 -100px;
+	text-indent: -999em;
+}
+
+.selectOption.soldOut {
+	opacity: 0.8;
+}
+
+.selectOption.soldOut .selectOptionBtn {
+	color: #bdbdbd;
+	cursor: default;
+}
+
+.selectOption.soldOut .optionList {
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	width: 449px;
+	padding: 5px 7px;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	border-top: none;
+}
+
+.soldOut .selectedItem.soldOut .note {
+	padding: 10px 0;
+	color: #999;
+}
+
+.soldOut .selectedItem.soldOut .note strong {
+	color: #f9732e;
+}
+
+.soldOut .btnCart, .soldOut .btnBuy, .soldOut button.btnCart, .soldOut button.btnBuy,
+	.soldOut button[disabled] {
+	background-color: #bdbdbd;
+	cursor: default;
+}
+
+/* ## 타임세일 ## */
+.timeSaleWrap {
+	position: relative;
+	height: 30px;
+	padding: 21px 0 20px 223px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") #77cded no-repeat 0
+		-140px;
+}
+
+.timeSaleWrap .tit {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.timeSaleWrap .timeCounter {
+	
+}
+
+.timeSaleWrap .timeRemaining {
+	position: absolute;
+	top: 50%;
+	left: 462px;
+	margin-top: -9px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.timeSaleWrap .timeRemaining strong {
+	color: #f4ff8b;
+}
+
+/* ## 세트상품 ## */
+.pdOrderWrap.set .quantWrap {
+	margin-bottom: 10px;
+}
+
+.pdOrderWrap.set .quantWrap .itemQuant {
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pdOrderWrap.set .selectedItem ul li {
+	margin-top: 10px;
+}
+
+/* 관련상품 리스트 */
+.relatedPrdtList {
+	margin: 15px 0 15px;
+	padding: 10px;
+	border: 1px solid #eaeaea;
+} /*20171108 수정*/
+.relatedPrdtList ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.relatedPrdtList li {
+	float: left;
+	width: 186px;
+	margin-left: 17px;
+}
+
+.relatedPrdtList li:first-child {
+	margin-left: 0;
+}
+
+.relatedPrdtList li .itemWrap .itemImg img {
+	width: 186px;
+	height: 186px;
+}
+
+.relatedPrdtList li .itemTit {
+	margin: 13px 0 3px;
+	color: #333;
+	line-height: 1.25;
+	font-weight: 600;
+	text-align: center;
+}
+
+.relatedPrdtList li .itemTit a {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.relatedPrdtList li .itemTit a:hover {
+	text-decoration: underline;
+}
+
+.relatedPrdtList li .itemPrice {
+	text-align: center;
+	line-height: 1.3
+}
+
+.relatedPrdtList li .itemPrice .primecost {
+	color: #999;
+}
+
+.relatedPrdtList li .itemPrice .price {
+	color: #333;
+	font-weight: bold;
+}
+
+/* 배너 */
+.prdtDtlBanner {
+	padding-top: 10px;
+} /*20171107추가*/
+.prdtDtlBannerWrap {
+	height: 130px;
+	margin-bottom: 35px;
+}
+
+/* 하단설명 */
+.prdtDtlExp {
+	
+}
+
+.prdtDtlExp .prdtDtlSection {
+	margin: 0 0 45px;
+	padding-top: 45px;
+}
+
+.prdtDtlExp .prdtDtlTab {
+	overflow: hidden;
+	height: 40px;
+	margin: 0 0 30px;
+} /*190329수정*/
+.prdtDtlExp .prdtDtlTab ul {
+	overflow: hidden;
+}
+
+.prdtDtlExp .prdtDtlTab li {
+	float: left;
+	width: 208px;
+	border-bottom: 2px solid #666;
+}
+
+.prdtDtlExp .prdtDtlTab li:first-child {
+	border-left: 1px solid #bbb;
+}
+
+.prdtDtlExp .prdtDtlTab li.on {
+	width: 204px;
+	margin-left: -1px;
+	border: 2px solid #666;
+	border-bottom: 2px solid #fff;
+}
+
+.prdtDtlExp .prdtDtlTab li:first-child.on {
+	margin-left: 0;
+}
+
+.prdtDtlExp .prdtDtlTab li a {
+	display: block;
+	height: 37px;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	background: #ebebeb;
+	color: #666;
+	font-size: 14px;
+	text-align: center;
+	line-height: 37px;
+}
+
+.prdtDtlExp .prdtDtlTab li.on a {
+	height: 40px;
+	border: none;
+	background: #fff;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.prdtDtlExp .prdtDtlCont {
+	
+}
+
+.prdtDtlExp .prdtDtlCont .titWrap {
+	margin: 10px 0;
+}
+
+.prdtDtlExp .prdtDtlCont .titWrap .subTit {
+	color: #333;
+	font-size: 14px;
+}
+
+.prdtDtlExp .prdtDtlCont .titWrap .btnA {
+	width: 60px;
+}
+
+.prdtDtlExp .detailInfo {
+	
+} /*상세설명*/
+/* 레시피 */
+.prdtDtlExp .detailInfo .pdRecipeList {
+	margin: 20px 0 0;
+	padding: 20px 21px 20px 20px;
+	border: 1px solid #e5e5e5;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li {
+	float: left;
+	width: 238px;
+	margin-left: 15px;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li:first-child {
+	margin-left: 0;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li p.img img {
+	width: 238px;
+	height: 142px;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li p.tit {
+	margin: 8px 0 6px;
+	color: #333;
+	font-size: 15px;
+	line-height: 1.25;
+	font-weight: 600;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li p.tit a {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li p.tit a:hover {
+	text-decoration: underline;
+}
+
+.prdtDtlExp .detailInfo .pdRecipeList li p.cmnt {
+	overflow: hidden;
+	max-height: 32px;
+	color: #999;
+	font-size: 12px;
+	line-height: 1.25;
+}
+
+/*시식후기*/
+.prdtDtlExp .detailReview {
+	
+}
+
+.prdtDtlExp .detailReview .cmntBox02 {
+	margin: 0 0 30px;
+	text-align: center;
+}
+
+.prdtDtlExp .detailReview .cmntBox02 p {
+	color: #999;
+	font-size: 14px;
+}
+
+.prdtDtlExp .detailReview .cmntBox02 p:first-child {
+	color: #333;
+	font-size: 20px;
+}
+
+.prdtDtlExp .detailReview .cmntBox02 p+p {
+	margin-top: 5px;
+}
+
+.prdtDtlExp .listViewTbl td.tit {
+	padding-left: 25px;
+}
+
+.prdtDtlExp .detailQnA {
+	
+} /*QnA*/
+.prdtDtlExp .cmntBox {
+	margin: 0 0 30px;
+	padding: 13px 27px;
+	border-top: 1px solid #f2f2f2;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.prdtDtlExp .cmntBox p {
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon01.png") no-repeat 0 50%;
+}
+
+.prdtDtlExp .detailNotice {
+	
+} /*정보고시*/
+.tblInfo {
+	border-top: 2px solid #eaeaea;
+	border-bottom: 2px solid #eaeaea;
+}
+
+.tblInfo th {
+	padding: 10px 25px 9px 25px;
+	border-top: 1px solid #eaeaea;
+	background: #f2f2f2;
+	font-size: 11px;
+	text-align: left;
+}
+
+.tblInfo td {
+	padding: 8px 15px 8px 15px;
+	border-top: 1px solid #eaeaea;
+	font-size: 11px;
+	line-height: 180%;
+}
+
+.tblInfo tr:first-child th, .tblInfo tr:first-child td {
+	border-top: none;
+}
+
+.prdtDtlExp .detailReturn {
+	
+} /*환불,교환*/
+.prdtDtlExp .detailReturn .infoList {
+	border-top: 1px solid #eaeaea;
+}
+
+.prdtDtlExp .detailReturn .infoList dl {
+	display: table;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt {
+	display: table-cell;
+	width: 140px;
+	padding-left: 30px;
+	vertical-align: middle;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg {
+	width: 93px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg .ico {
+	display: block;
+	overflow: hidden;
+	width: 93px;
+	height: 93px;
+	margin-bottom: 5px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") no-repeat 0 -500px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg .ico.r02 {
+	background-position: -100px -500px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg .ico.r03 {
+	background-position: -200px -500px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg .ico.r04 {
+	background-position: -300px -500px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dt .titImg .tit {
+	display: block;
+	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd {
+	display: table-cell;
+	width: 870px;
+	padding: 18px 0;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul {
+	
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul li {
+	margin-top: 5px;
+	padding-left: 13px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 2px 7px;
+	font-size: 11px;
+	line-height: 19px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul li.tit {
+	padding-left: 0;
+	background: none;
+	color: #3b9c00;
+	font-weight: bold;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul li:first-child {
+	margin-top: 0;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul li.tit+li {
+	margin-top: 3px;
+}
+
+.prdtDtlExp .detailReturn .infoList dl dd ul+ul {
+	margin-top: 10px;
+}
+
+.chkSecret {
+	margin-top: 10px;
+}
+
+span.chk {
+	
+}
+
+span.chk input {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+/* ***** 기획전 ***** */
+.titWrap .selBox {
+	font-size: 13px;
+}
+
+.titPrjt {
+	display: table;
+	width: 100%;
+	margin: 0 0 10px;
+	padding: 10px 0;
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.titPrjt .tit {
+	display: table-cell;
+	font-size: 17px;
+	line-height: 28px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.titPrjt .tit span {
+	color: #f9732e;
+}
+
+.titPrjt .period {
+	display: table-cell;
+	width: 350px;
+	color: #999;
+	font-size: 13px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.titPrjt .shareArea {
+	display: table-cell;
+	width: 130px;
+	vertical-align: middle;
+}
+
+.prjtBannerWrap {
+	margin-bottom: 20px;
+}
+
+.bannerWrap+.titWrap.type02 {
+	margin-top: 17px;
+}
+
+/* 상품 리스트 : 타임세일전 */
+.prdtListTimeSale {
+	
+}
+
+.prdtListTimeSale ul {
+	
+}
+
+.prdtListTimeSale ul li {
+	margin-top: 30px;
+	border: 1px solid #eaeaea;
+}
+
+.prdtListTimeSale ul li:first-child {
+	margin-top: 0;
+}
+
+.prdtListTimeSale .itemWrap {
+	overflow: hidden;
+}
+
+.prdtListTimeSale .itemWrap .itmeImgArea {
+	position: relative;
+	float: left;
+	width: 650px;
+}
+
+.prdtListTimeSale .itemWrap .itmeImgArea .itemImg {
+	
+}
+
+.prdtListTimeSale .itemWrap .itmeImgArea .itemImg .discountWrap {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+} /*180528수정*/
+.discountWrap {
+	display: inline-block;
+	overflow: hidden;
+	width: 72px;
+	height: 80px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtList.png") no-repeat 0 0;
+	color: #fff;
+} /*190716수정*/
+.discountWrap .discount {
+	display: block;
+	margin-top: 18px;
+	font-size: 20px;
+	line-height: 42px;
+	text-align: center;
+} /*180530수정*/
+.discountWrap .discount strong {
+	font-size: 36px;
+} /*180528수정*/
+.discountWrap_thumb {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+} /*180528수정*/
+.prdtImgWrap .player {
+	width: 85px;
+	height: 85px;
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+} /*180530추가*/
+.player span.player_btn {
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_play.png") no-repeat;
+	width: 85px;
+	height: 85px;
+	text-indent: -9999px;
+	display: inline-block;
+	background-size: 100%;
+} /*180530추가*/
+a .player {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	bottom: 3px;
+	right: 5px;
+	display: block !important;
+} /*180601수정*/
+.player span.player_btn_sale {
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_play.png") no-repeat;
+	width: 70px;
+	height: 70px;
+	text-indent: -9999px;
+	display: inline-block;
+	background-size: 100%;
+} /*180601수정*/
+.prdtListTimeSale .itemWrap .itmeImgArea .itemImg .tgIconWrap {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+}
+
+.prdtListTimeSale .tgIconWrap {
+	height: 30px;
+	margin-top: -30px;
+	padding-right: 15px;
+}
+
+.prdtListTimeSale .tgIconWrap .icoTag {
+	display: block;
+	color: #333;
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: 600;
+	text-align: right;
+}
+
+.prdtListTimeSale .tgIconWrap .icoTag strong {
+	color: #f9732e;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea {
+	float: right;
+	width: 309px;
+	padding: 30px 39px;
+} /* 170623수정 */
+.prdtListTimeSale .itemWrap .itemInfoArea .itemInfo {
+	margin-bottom: 20px;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemTit {
+	
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemTit .cmnt {
+	overflow: hidden;
+	height: 27px;
+	margin-top: 7px;
+	color: #999;
+	font-size: 17px;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemTit .name {
+	overflow: hidden;
+	height: 27px;
+	margin-top: 7px;
+	color: #333;
+	font-size: 28px;
+	line-height: 24px;
+} /*190128수정*/
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice {
+	margin-top: 30px;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap dl {
+	display: table;
+	width: 100%;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap dt {
+	display: table-cell;
+	width: 90px;
+	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap dd {
+	display: table-cell;
+	width: 219px;
+	padding: 2px 0;
+	color: #333;
+	font-size: 15px;
+	text-align: right;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap .primecost,
+	.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap .primecost strong
+	{
+	color: #999;
+	font-weight: normal;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap .price strong
+	{
+	color: #fe3501;
+	font-size: 32px;
+	line-height: 35px;
+	letter-spacing: -2px;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .priceWrap .prdtNum strong
+	{
+	color: #f9732e;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .state {
+	height: 40px;
+	padding: 25px;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.prdtListTimeSale .itemWrap .itemInfoArea .itemPrice .state .soldOut {
+	color: #fe3501;
+}
+
+.prdtListTimeSale .orderBtnWrap {
+	margin-top: 25px;
+	padding-top: 18px;
+	border-top: 2px dashed #d7d7d7;
+}
+
+.prdtListTimeSale .orderBtnWrap .btnDetail {
+	
+}
+
+.prdtListTimeSale .orderBtnWrap .btnCart {
+	
+}
+
+.prdtListTimeSale .btnCart {
+	display: inline-block;
+	width: 126px;
+	height: 19px;
+	padding: 13px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") #f9732e no-repeat 100%
+		-48px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 19px;
+	font-weight: 600;
+}
+
+.prdtListTimeSale .btnDetail {
+	display: inline-block;
+	width: 126px;
+	height: 19px;
+	padding: 13px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtDtl.png") #494949 no-repeat 100%
+		-48px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 19px;
+	font-weight: 600;
+}
+
+.prdtListTimeSale button.btnCart {
+	width: 152px;
+	height: 45px;
+	text-align: left;
+}
+
+.prdtListTimeSale button.btnDetail {
+	width: 152px;
+	height: 45px;
+	text-align: left;
+}
+
+.prdtListTimeSale button[disabled] {
+	background-color: #bdbdbd !important;
+	color: #fff !important;
+}
+
+/* 상품 리스트 : 베스트10 */
+.prdtList.bestPrdt {
+	margin-top: 10px;
+}
+
+.prdtList.bestPrdt ul li .itemWrap .itemImg .bestIcon {
+	position: absolute;
+	top: 0;
+	left: 13px;
+}
+
+.bestIcon {
+	display: block;
+	overflow: hidden;
+	width: 42px;
+	height: 49px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtList.png") no-repeat 0 -120px;
+}
+
+.bestIcon span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.bestIcon.best1 {
+	background-position: 0 -120px;
+}
+
+.bestIcon.best2 {
+	background-position: -50px -120px;
+}
+
+.bestIcon.best3 {
+	background-position: -100px -120px;
+}
+
+.bestIcon.best4 {
+	background-position: -150px -120px;
+}
+
+.bestIcon.best5 {
+	background-position: -200px -120px;
+}
+
+.bestIcon.best6 {
+	background-position: -250px -120px;
+}
+
+.bestIcon.best7 {
+	background-position: -300px -120px;
+}
+
+.bestIcon.best8 {
+	background-position: -350px -120px;
+}
+
+.bestIcon.best9 {
+	background-position: -400px -120px;
+}
+
+.bestIcon.best10 {
+	background-position: -450px -120px;
+}
+
+.bestIcon.best {
+	width: 44px;
+	height: 40px;
+	background-position: 100% 0;
+}
+
+.titPrjt .period .timeCounter {
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.noProject {
+	width: 1040px;
+	padding: 100px 0;
+	border-width: 1px 0;
+	text-align: center;
+}
+
+.noProject p {
+	color: #333;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.noProject p.cmnt {
+	margin-top: 30px;
+	color: #666;
+	font-size: 15px;
+	line-height: 1.4;
+	font-weight: normal;
+}
+
+/* 휴면계정, 이벤트완료 170307추가*/
+.noProject1 {
+	width: 620px;
+	padding: 50px 90px 50px 170px;
+	border: 1px solid #e4e4e4;
+	box-sizing: border-box;
+	margin: 50px auto 0;
+}
+
+.noProject1.dormant {
+	background: url(https://www.goobnemall.com/static-root/resources/pc/img/2017/img_dormant.png) no-repeat 75px 40px;
+}
+
+.noProject1 p {
+	color: #333;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.noProject1 .infoTxt {
+	margin-top: 20px;
+	color: #666;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.noProject1.eventDone {
+	background: url(https://www.goobnemall.com/static-root/resources/pc/img/2017/img_eventDone.png) no-repeat 75px 40px;
+}
+
+/* ****************************************************************
+	장바구니
+**************************************************************** */
+.cartStep {
+	overflow: hidden;
+}
+
+.cartStep:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.cartStep li {
+	float: left;
+	height: 32px;
+	margin-right: 10px;
+	padding-right: 27px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_cart.png") no-repeat 100% 3px;
+	color: #bdbdbd;
+}
+
+.cartStep li.last {
+	margin-right: 0;
+	padding-right: 0;
+	background: none;
+}
+
+.cartStep li .step span {
+	color: #bdbdbd;
+	font-size: 30px;
+	line-height: 32px; bold;
+	font-weight: bold;
+}
+
+.cartStep li .step strong {
+	color: #bdbdbd;
+	font-size: 12px;
+	line-height: 28px; bold;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.cartStep li.on {
+	background-position: 100% -32px;
+}
+
+.cartStep li.on .step span {
+	color: #3b9c00;
+}
+
+.cartStep li.on .step strong {
+	color: #333;
+}
+
+.cartTab {
+	margin: 0 0 40px;
+	border-bottom: 2px solid #666;
+	position: relative;
+}
+
+.cartTab ul {
+	height: 38px;
+}
+
+.cartTab ul li {
+	float: left;
+}
+
+.cartTab ul li a {
+	display: block;
+	width: 205px;
+	height: 37px;
+	margin: 0;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	background: #ebebeb;
+	font-size: 14px;
+	line-height: 37px;
+	text-align: center;
+}
+
+.cartTab ul li a strong {
+	color: #f9732e;
+	font-weight: normal;
+}
+
+.cartTab ul li:first-child a {
+	border-left: 1px solid #bbb;
+}
+
+.cartTab ul li.on {
+	
+}
+
+.cartTab ul li.on a {
+	height: 38px;
+	margin-left: -1px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	border-left: 2px solid #666;
+	background: #fff;
+	color: #333;
+	font-size: 17px;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+.cartTab ul li.on a strong {
+	font-weight: 600;
+}
+
+.cartTab ul li:first-child.on a {
+	margin-left: 0;
+}
+
+.haveSNB .cartTab {
+	margin-bottom: 20px;
+}
+
+.cartTab .noti01 {
+	position: absolute;
+	bottom: 8px;
+	right: 0;
+}
+
+.cartTbl {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.cartTbl table {
+	
+}
+
+.cartTbl table thead th {
+	padding: 11px 0;
+	background: #f4f4f4;
+	color: #333;
+	text-align: center;
+}
+
+.cartTbl table tbody td {
+	padding: 10px 5px;
+	border-top: 1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+	color: #333;
+	text-align: center;
+}
+
+.cartTbl table tbody tr td:first-child {
+	border-left: none;
+}
+
+.cartTbl table tbody td.item {
+	padding: 10px 0 10px 20px;
+	border-left: none; /* 선택상품 */
+}
+
+.cartTbl table tbody td .btnD {
+	margin-top: 5px;
+	min-width: 73px;
+	padding: 6px 5px;
+}
+
+.cartTbl table tbody td .btnD:first-child {
+	margin-top: 0px;
+}
+
+.cartTbl table tbody td.alR {
+	padding-right: 0;
+}
+
+.cartTbl .itemWrap {
+	display: table;
+	width: 100%;
+}
+
+.cartTbl .itemWrap .imgArea {
+	display: table-cell;
+	width: 80px;
+	padding-right: 19px;
+	vertical-align: middle;
+}
+
+.cartTbl .itemWrap .imgArea img {
+	width: 80px;
+	height: 80px;
+}
+
+.cartTbl .itemWrap .infoArea {
+	display: table-cell;
+	vertical-align: top;
+	text-align: left;
+}
+
+.cartTbl .itemWrap .infoArea .itemTit {
+	padding: 6px 0 16px 0;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+
+.cartTbl .itemWrap .infoArea .selectedItem {
+	width: 100%;
+	border-top: 1px solid #dfdfdf;
+}
+
+.cartTbl .itemWrap .infoArea .selectedItem ul li {
+	display: table;
+	width: 100%;
+	border-top: 1px dotted #dfdfdf;
+}
+
+.cartTbl .itemWrap .infoArea .selectedItem ul li>div {
+	display: table-cell;
+	padding: 3px 0;
+	vertical-align: middle;
+}
+
+.cartTbl .itemWrap .infoArea .selectedItem li:first-child {
+	border-top: none;
+}
+
+.cartTbl .selectedItem ul li div.itemName { /*width:345px;*/
+	color: #999;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.cartTbl .selectedItem ul li div.itemName .status {
+	display: inline-block;
+	margin-left: 4px;
+	padding-left: 6px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+	color: #fc000a;
+}
+
+.cartTbl .selectedItem ul li div.itemQuantity {
+	width: 100px;
+}
+
+.cartTbl .selectedItem ul li div.itemQuantity .itemQuant {
+	display: inline-block;
+}
+
+.cartTbl .selectedItem ul li div.itemPrice {
+	width: 80px;
+	padding-right: 5px !important;
+	font-size: 12px;
+	text-align: right;
+}
+
+.cartTbl .selectedItem ul li div.itemPrice span, .cartTbl .selectedItem ul li div.itemPrice strong
+	{
+	font-size: 12px;
+}
+
+.cartTbl .selectedItem ul li div.itemDelete {
+	width: 20px;
+	padding-left: 5px;
+}
+
+.cartTbl .selectedItem ul li.read {
+	
+}
+
+.cartTbl .selectedItem ul li.read div.itemName {
+	width: 470px;
+}
+
+.cartTbl .selectedItem ul li.read div.itemQuantity {
+	width: 100px;
+	text-align: right;
+}
+
+.cartTbl .selectedItem ul li.read div.itemPrice {
+	width: 100px;
+	padding-right: 15px !important;
+	font-size: 12px;
+	text-align: right;
+}
+
+/* 세트상품인 경우 */
+.cartTbl table tbody td.item.set {
+	padding: 10px 0 0 20px;
+	border-left: none; /* 선택상품 */
+}
+
+.cartTbl .selectedItem ul li.set div.itemName {
+	
+}
+
+.cartTbl .selectedItem ul li.set div.itemName ul {
+	padding: 5px 0;
+	height: 100px;
+	overflow-y: scroll;
+} /* 180723 수정 */
+.cartTbl .selectedItem ul li.set div.itemName ul li {
+	display: block;
+	padding: 5px 0;
+}
+
+.cartTbl .selectedItem ul li.set div.itemQuantity {
+	width: 100px;
+	padding-left: 5px;
+	border-left: 1px solid #dfdfdf;
+}
+
+.cartTbl .dcMsg {
+	font-size: 10px;
+	color: #fc000a;
+}
+
+/* 라인없는 테이블 */
+.innerTbl {
+	
+}
+
+.innerTbl {
+	padding: 10px 0;
+	border: none;
+	border-top: 1px solid #ebebeb;
+}
+
+.innerTbl th {
+	padding: 7px 0px 0 20px;
+	border-top: none;
+	background: none;
+	color: #333;
+	font-size: 13px;
+	line-height: 22px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.innerTbl td {
+	padding: 3px 0px 3px 20px;
+	border-top: none;
+	background: none;
+	font-size: 13px;
+}
+
+.innerTbl+.cartTotalSum {
+	margin-top: 0;
+}
+
+/* 장바구니 할인정보 */
+.innerTbl.cartDC {
+	background: #f9f9f9;
+}
+
+/* 금액합계 테이블 */
+.cartTotalSum {
+	display: table;
+	width: 100%;
+	border: 1px solid #666;
+	border-width: 2px 0 1px 0;
+}
+
+.cartTotalSum>dl {
+	display: table-cell;
+	position: relative;
+	width: 320px;
+	border-left: 1px solid #ddd;
+}
+
+.cartTotalSum>dl:first-child {
+	border-left: none;
+}
+
+.cartTotalSum>dl>dt {
+	display: block;
+	height: 65px;
+	padding-left: 30px;
+	border-bottom: 1px solid #ddd;
+	background: #f4f4f4;
+	color: #333;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.cartTotalSum>dl>dt>div.tit {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.cartTotalSum>dl>dt>div.tit>span {
+	display: table-cell;
+	width: 103px;
+	height: 64px;
+	vertical-align: middle;
+}
+
+.cartTotalSum>dl>dt>div.tit>span.price {
+	width: 180px;
+	padding-right: 30px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333;
+	text-align: right;
+}
+
+.cartTotalSum>dl>dt>div.tit>span.price strong {
+	font-size: 25px;
+}
+
+.cartTotalSum>dl>dt>div.tit.total>span {
+	color: #fc000a;
+}
+
+.cartTotalSum>dl>dd {
+	display: block;
+	min-height: 40px;
+	padding: 15px 30px;
+}
+
+.cartTotalSum>dl>dd ul.pList {
+	margin-bottom: 2px;
+}
+
+.cartTotalSum>dl>dd ul.pList>li {
+	margin-top: 3px;
+	padding-left: 8px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 50%;
+	text-align: right;
+}
+
+.cartTotalSum>dl>dd ul.pList>li:first-child {
+	margin-top: 1px;
+}
+
+.cartTotalSum>dl>dd ul.pList>li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.cartTotalSum>dl>dd ul.pList>li>span {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.cartTotalSum>dl>dd ul.pList>li>span.price {
+	text-align: right;
+}
+
+.cartTotalSum>dl>dd ul.pList>li.actualPay {
+	color: #fc000a;
+	font-weight: bold;
+}
+
+.iconCart {
+	display: block;
+	position: absolute;
+	left: -13px;
+	top: 20px;
+	width: 25px;
+	height: 23px;
+	border: 1px solid #dfdfdf;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_cart.png") #fff no-repeat 0 0;
+	line-height: 23px;
+}
+
+.iconCart span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.iconCart.plus {
+	background-position: 0 0;
+}
+
+.iconCart.minus {
+	background-position: 0 -25px;
+}
+
+.iconCart.equal {
+	background-position: 0 -50px;
+}
+
+.cartPriceSum {
+	padding: 15px 20px;
+	border-bottom: 1px solid #dfdfdf;
+	background: #f4f4f4;
+	text-align: right;
+}
+
+.cartPriceSum>dl {
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	padding-left: 50px;
+}
+
+.cartPriceSum>dl>dt {
+	display: inline;
+	margin-right: 7px;
+	color: #333;
+	font-size: 13px;
+}
+
+.cartPriceSum>dl>dd {
+	display: inline;
+	color: #333;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.cartPriceSum>dl>dd .price strong {
+	margin-right: 3px;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+.cartPriceSum>dl.total>dt, .cartPriceSum>dl.total>dd strong {
+	color: #fc000a;
+}
+
+.cartPriceSum .iconCart {
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: -1px;
+	width: 25px;
+	height: 23px;
+	border: none;
+	background-color: #f4f4f4;
+	line-height: 23px;
+}
+
+.cartPriceSum .iconCart.plus {
+	background-position: 0 0;
+}
+
+.cartPriceSum .iconCart.minus {
+	background-position: 0 -25px;
+}
+
+.cartPriceSum .iconCart.equal {
+	background-position: 0 -50px;
+}
+
+.payInfo {
+	
+}
+
+.payInfo:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.payInfo .payArea {
+	float: left;
+	width: 710px;
+	height: auto; /*180409수정*/
+	border: 1px solid #eaeaea;
+	border-width: 1px 0;
+} /*200302수정*/
+.payInfo .payArea .titW {
+	padding: 10px 20px 11px;
+	border-bottom: 1px solid #dfdfdf;
+	background: #f9f9f9;
+} /*200302수정*/
+.payInfo .payArea .payOption .radioW {
+	margin-right: 25px;
+} /*190321수정*/
+.payInfo .payArea .contW {
+	
+}
+
+.payInfo .payArea .contW ul {
+	padding: 20px 20px 13px 20px;
+}
+
+.payInfo .payArea .contW ul li {
+	margin-top: 3px;
+	padding-left: 12px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_hypen01.png") no-repeat 1px 50%;
+	line-height: 18px;
+}
+
+.payInfo .payArea .contW .innerTbl {
+	background: none;
+}
+
+.payInfo .articleWrap {
+	padding: 10px 20px;
+}
+
+.payInfo .articleWrap .chkW {
+	display: inline-block;
+	padding: 3px 0;
+}
+
+.payInfo .articleWrap .chkW label {
+	font-size: 13px;
+	color: #333;
+}
+
+/*180406추가*/
+.cp_pay {
+	float: left;
+	width: 710px;
+}
+
+.priceEnd {
+	padding-left: 10px;
+	float: right;
+}
+
+/*180406수정*/
+.priceArea { /*display:table-cell;float:right;*/
+	width: 270px;
+	height: 436px;
+	padding: 24px 22px;
+	border: 3px solid #666;
+	vertical-align: middle;
+} /*180406수정*/
+.priceArea dl {
+	display: table;
+	width: 100%;
+	padding: 0 15px;
+	width: 90%;
+} /*190227수정*/
+.priceArea dl.line {
+	border-top: 1px solid #e5e5e5;
+} /*190227수정*/
+.priceArea dl dt {
+	display: table;
+	width: 100px;
+	padding: 10px 0;
+	font-size: 13px;
+	/*background:url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 1px 50%;*/
+	font-weight: 400;
+	vertical-align: middle;
+} /*190227수정*/
+.priceArea dl dt .fb {
+	font-weight: 700;
+} /*180406추가*/
+.priceArea dl dd {
+	display: table-cell;
+	width: 184px;
+	color: #333;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.priceArea dl dd .price {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.priceArea dl dd .red {
+	color: #fc000a;
+} /*180406추가*/
+.priceArea dl dd .price strong {
+	font-size: 17px;
+}
+
+.priceArea dl.total {
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	border-top: 1px solid #e5e5e5;
+} /*190227수정*/
+.priceArea dl.total dt {
+	font-size: 14px;
+} /*190227수정*/
+.priceArea dl.total dd .price strong {
+	color: #fc000a;
+	font-size: 27px;
+}
+/*180406수정끝*/
+.priceArea dl.saleW {
+	background: #f9f9f9;
+} /*190227추가*/
+.cartTbl02 {
+	border-top: 2px solid #e0e0e0;
+	border-bottom: 2px solid #e0e0e0;
+}
+
+/* 정기배송 약관 */
+.cartArticleWrap {
+	padding-bottom: 5px;
+}
+
+.cartArticleWrap>.flL, .cartArticleWrap>.flR {
+	width: 510px;
+	margin-bottom: 15px;
+}
+
+.cartArticleWrap .chkW label {
+	color: #999;
+}
+
+.cartArticleWrap .chkWrap {
+	clear: both;
+	padding-top: 10px;
+	border-top: 2px solid #e5e5e5;
+}
+
+/* 총할인금액 */ /* 툴팁 안 총할인금액 리스트 */
+div.dcList {
+	
+}
+
+div.dcList dl {
+	display: table;
+	width: 100%;
+	margin-top: 3px;
+}
+
+div.dcList dl dt {
+	display: table-cell;
+	color: #333;
+}
+
+div.dcList dl dd {
+	display: table-cell;
+	color: #666;
+	text-align: right;
+}
+
+div.dcList dl dd .price strong {
+	font-weight: normal;
+}
+
+div.dcList dl.total {
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid #d7d7d7;
+}
+
+div.dcList dl.total dt {
+	font-weight: bold;
+}
+
+div.dcList dl.total dd .price strong {
+	color: #fc000a;
+	font-weight: bold;
+}
+
+/* ****************************************************************
+ * 로그인 *
+**************************************************************** */
+.loginCont {
+	margin: 20px 0;
+	padding: 35px 44px;
+	border: 1px solid #e7e7e7;
+}
+
+.loginCont:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.loginCont>.flL {
+	width: 430px;
+}
+
+.loginCont>.flR {
+	width: 430px;
+	padding-left: 44px;
+	border-left: 1px dashed #e7e7e7;
+}
+
+.loginCont .titWrap {
+	margin: 0 0 20px;
+	border-bottom: 1px solid #999;
+}
+
+.loginCont .titWrap .tit {
+	padding: 0 0 12px;
+	color: #333;
+	font-size: 22px;
+}
+
+.loginCont .inputWrap {
+	position: relative;
+}
+
+.loginCont .inputWrap .btnLgn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 110px;
+	height: 90px;
+	background: #f9732e;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.loginCont .inputWrap input.lgn {
+	height: 38px;
+	line-height: normal;
+	line-height: 35px\0/; /* for IE 8 */
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+
+.loginCont .inputWrap input.lgn:focus {
+	border-color: #f9732e;
+	outline: 0;
+}
+
+.loginCont .inputWrap input.lgn::-webkit-input-placeholder {
+	color: #999;
+	line-height: 16px;
+}
+
+.loginCont .inputWrap input.lgn:-webkit-input-placeholder {
+	color: #999;
+	line-height: 16px;
+}
+
+.loginCont .inputWrap input.lgn:-moz-placeholder {
+	color: #999;
+	line-height: 38px;
+}
+
+.loginCont .inputWrap input.lgn::-moz-placeholder {
+	color: #999;
+	line-height: 38px;
+}
+
+.loginCont .inputWrap input.lgn:-ms-input-placeholder {
+	color: #999;
+}
+
+.loginCont .inputWrap .btnB {
+	display: inline-block;
+	width: 96px;
+	height: 20px;
+	padding: 10px 0px;
+	background: #bdbdbd;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.loginCont .list01 {
+	margin: 5px 0 10px;
+}
+
+.loginCont .list01 li {
+	overflow: hidden;
+}
+
+.loginCont .btnF {
+	padding: 0 5px;
+}
+
+.btnWrap.otherAcc {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+}
+
+.btnWrap.otherAcc a {
+	margin: 0 3px;
+}
+
+/*201706 수정*/
+.memberBenefit {
+	display: table;
+	margin: 5px 0 30px;
+	width: 100%;
+	border: 1px solid #f1f1f1;
+	padding: 10px 0 20px;
+} /*181207수정*/
+.memberBenefit>div {
+	display: table-cell;
+	width: 190px;
+	padding: 0 12px;
+	text-align: center;
+	border-left: 1px dotted #ddd;
+}
+
+.memberBenefit .tit {
+	color: #666;
+	line-height: 1.2;
+	margin: 10px 0 3px;
+}
+
+.memberBenefit .cmnt {
+	color: #333;
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 10px;
+	letter-spacing: -1px;
+}
+
+.memberBenefit>div:first-child {
+	border-left: none;
+}
+/*201706 수정 끝*/
+.certTime {
+	color: #fc000a;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+/* 우편번호 검색 */
+.inpW {
+	position: relative;
+	margin: 10px 0;
+	padding: 0 200px 0 0;
+}
+
+.inpW input[type="text"] {
+	display: block;
+	width: 100%;
+}
+
+.inpW .btnB {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.inpW .btnB.sub {
+	position: absolute;
+	top: 0;
+	right: 99px;
+}
+
+.col2 {
+	overflow: hidden;
+}
+
+.col2 li {
+	float: left;
+	width: 40%;
+	padding: 2px 0;
+	line-height: 1.3;
+}
+
+.col2 li.w60p {
+	width: 60%;
+}
+
+.srchDtlWrap {
+	margin: 0 0 30px;
+}
+
+.srchDetail {
+	
+}
+
+.srchDetail dl {
+	display: table;
+	width: 100%;
+	margin: 0 0 5px;
+}
+
+.srchDetail dl dt {
+	display: table-cell;
+	width: 70px;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+
+.srchDetail dl dd {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.srchDetail dl:first-child {
+	margin-top: 5px;
+}
+
+/* ****************************************************************
+  * 회원가입 *
+**************************************************************** */
+.joinCopy {
+	margin: 20px 0 20px;
+	color: #333;
+	font-size: 20px;
+	line-height: 1.3;
+	text-align: center;
+} /*181207수정*/
+.joinCopy strong {
+	font-weight: 600;
+}
+
+/* 201706 수정 */
+.joinType {
+	display: table;
+	width: 100%;
+	margin: 10px 0;
+	padding: 40px 0;
+	border: 1px solid #e7e7e7;
+	border-width: 1px 0;
+}
+
+.joinType>div {
+	display: table-cell;
+	width: 33.3%;
+	padding: 20px 0;
+	border-left: 1px dotted #ddd;
+	text-align: center;
+}
+
+.joinType>div:first-child {
+	border-left: none;
+}
+
+.joinType .tit {
+	margin-top: 5px;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.joinType .cmnt {
+	margin: 5px 0 0 0;
+	color: #666;
+	font-size: 13px;
+}
+
+.joinType .btnB {
+	margin-top: 10px;
+	border: 1px solid #f9732e;
+	background: #fff;
+	color: #f9732e;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.joinType.business {
+	width: 1038px;
+	margin-top: -20px;
+	border: 1px solid #e7e7e7;
+}
+/* 201706 수정 끝 */
+.joinStep {
+	margin-bottom: 25px;
+}
+
+.joinStep:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.joinStep li {
+	float: left;
+	width: 345px;
+	padding: 0;
+	border: 1px solid #d7d7d7;
+	border-width: 1px 1px 1px 0;
+	background: #fff;
+}
+
+.joinStep li:first-child {
+	width: 346px;
+	border-left: 1px solid #d7d7d7;
+}
+
+.joinStep li div {
+	display: block;
+	height: 20px;
+	padding: 11px 0;
+	color: #333;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.joinStep li.on {
+	width: 343px;
+	border: 2px solid #f9732e;
+	margin-left: -1px;
+}
+
+.joinStep li:first-child.on {
+	width: 344px;
+	margin-left: 0;
+}
+
+.joinStep li.on div {
+	color: #f9732e;
+	height: 18px;
+	line-height: 18px;
+	font-weight: 600;
+}
+
+.joinCertWrap {
+	padding: 40px 0;
+	border: 1px solid #e7e7e7;
+	text-align: center;
+}
+
+.joinCertWrap .tit {
+	margin: 20px 0 5px;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.joinCertWrap .cont {
+	font-size: 13px;
+}
+
+.joinCertWrap .btnB {
+	margin-top: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.joinInfoWrap {
+	margin: 10px 0;
+	padding: 25px 0;
+	border: 1px solid #e7e7e7;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.joinInfoWrap dl {
+	display: table;
+	width: auto;
+	margin: 10px auto 0;
+	font-size: 13px;
+}
+
+.joinInfoWrap dl:first-child {
+	margin-top: 0;
+}
+
+.joinInfoWrap dl dt {
+	display: table-cell;
+	width: 70px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 50%;
+	color: #333;
+	font-weight: bold;
+}
+
+.joinInfoWrap dl dd {
+	display: table-cell;
+	width: 150px;
+}
+
+.joinInfoWrap dl dd.w300 {
+	width: 300px;
+}
+
+.stepWrap {
+	display: table;
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px 0;
+	border: 1px solid #eee;
+}
+
+.stepWrap>div {
+	display: table-cell;
+	width: 25%;
+	padding-top: 5px;
+	border-left: 1px dotted #eee;
+	text-align: center;
+}
+
+.stepWrap>div:first-child {
+	border-left: none;
+}
+
+.stepWrap>div img {
+	
+}
+
+.stepWrap .tit {
+	margin: 5px 0 0;
+	font-size: 17px;
+}
+
+.stepWrap .cont {
+	font-size: 13px;
+}
+
+.required+.tooltipWrap .tooltipBtn {
+	margin-left: 0;
+}
+
+/*.placeholder {color:blue !important;}
+input.placeholder::-webkit-input-placeholder {color:red !important;}
+input.placeholder:-webkit-input-placeholder {color:red !important;}
+input.placeholder:-moz-placeholder {color:red !important;}
+input.placeholder::-moz-placeholder {color:red !important;}
+input.placeholder:-ms-input-placeholder {color:red !important;}*/
+
+/* ****************************************************************
+  * 마이페이지 *
+**************************************************************** */
+/* 게시물검색 테이블 상단 */
+.srchWrapTop {
+	margin: 0 0 20px;
+	padding: 11px 20px;
+	border-top: 2px solid #666;
+	border-bottom: 1px solid #e7e7e7;
+	background: #edeff2;
+	text-align: left;
+}
+
+.srchWrapTop .btnW, .srchWrapTop .dateW, .srchWrapTop .selBox,
+	.srchWrapTop .btnSrch {
+	display: inline-block;
+	margin-left: 7px;
+	vertical-align: middle;
+}
+
+.srchWrapTop .btnW {
+	margin-left: 0;
+}
+
+.srchWrapTop .btnW .btnD {
+	
+}
+
+.srchWrapTop .btnW .btnD.on {
+	background: #c8c8c8;
+	color: #fff;
+}
+
+.srchWrapTop .selectDate {
+	display: inline-block;
+}
+
+.srchWrapTop .selectDate input.date {
+	background-position: 100% -30px;
+}
+
+.srchWrapTop .btnSrch {
+	display: inline-block;
+	width: 85px;
+	height: 28px;
+	padding: 5px 4px;
+	background: #f9732e;
+	color: #fff;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+}
+
+/* 메인 */
+.myShoppingInfo {
+	overflow: hidden;
+	border: 3px solid #666;
+}
+
+.myShoppingInfo>.flL {
+	width: 464px;
+}
+
+.myShoppingInfo>.flR {
+	width: 382px;
+}
+
+.myShoppingInfo>.flL>div, .myShoppingInfo>.flR>div {
+	height: 92px;
+}
+
+.myShoppingInfo .myInfo {
+	display: table;
+	height: 62px !important;
+	padding: 15px 0 15px 15px;
+} /*190208수정*/
+.myShoppingInfo .myInfo .img {
+	display: table-cell;
+	width: 56px;
+	height: 62px;
+	padding-right: 15px;
+}
+
+.myShoppingInfo .myInfo .img img {
+	width: 61px;
+	height: 62px;
+} /*201706수정*/
+.myShoppingInfo .myInfo .cont {
+	display: table-cell;
+	height: 62px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+.myShoppingInfo .myInfo .cont em {
+	color: #f9732e;
+	font-weight: bold;
+} /*170228수정*/
+.myShoppingInfo .myInfo .cont .btnD {
+	min-width: 85px;
+	margin-top: 5px;
+	border: 1px solid #f9732e;
+	color: #f9732e;
+	font-weight: 600;
+	font-size: 13px;
+	padding: 8px 8px;
+} /*201706수정*/
+.myShoppingInfo .status {
+	
+}
+
+.myShoppingInfo .status dl {
+	display: table;
+	width: 100%;
+}
+
+.myShoppingInfo .status dl dt {
+	display: table-cell;
+	width: 85px;
+	height: 45px;
+	padding-left: 10px;
+	border-top: 1px solid #f4f5f7;
+	background: #edeff2;
+	color: #333;
+	font-size: 12px;
+	vertical-align: middle;
+} /*190208수정*/
+.myShoppingInfo .status dl dt strong {
+	margin-right: 3px;
+	color: #333;
+}
+
+.myShoppingInfo .status dl dd {
+	display: table-cell;
+	width: 376px;
+	height: 45px;
+	padding-left: 10px;
+	border-top: 1px dotted #e7e7e7;
+	vertical-align: middle;
+} /*190208수정*/
+.myShoppingInfo .status dl:first-child dt {
+	border-top: 1px solid #edeff2;
+}
+
+.myShoppingInfo .status dl.h95 dt, .myShoppingInfo .status dl.h95 dd {
+	height: 77px;
+	padding-top: 15px;
+	vertical-align: top;
+}
+
+.myShoppingInfo .status dl dd ul.step li {
+	float: left;
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/my/step_arr.png") no-repeat 5px 50%;
+	/*font-weight:bold;*/
+}
+
+.myShoppingInfo .status dl dd ul li .num {
+	color: #f9732e;
+	font-weight: normal;
+	0
+}
+
+.myShoppingInfo .status dl dd ul.step li:first-child {
+	padding-left: 0;
+	background: none;
+}
+
+.myShoppingInfo .status dl dd ul.list01 li {
+	margin-top: 5px;
+	padding-right: 15px;
+}
+
+.myShoppingInfo .status dl dd ul.list01 li:first-child {
+	margin-top: 0;
+}
+
+.myShoppingInfo .mileage {
+	border-left: 1px solid #e7e7e7;
+}
+
+.myShoppingInfo .mileage ul {
+	display: table;
+	margin: 0 auto;
+	padding: 22px 0 0 0;
+}
+
+.myShoppingInfo .mileage li {
+	position: relative;
+	display: table-cell;
+	width: 120px;
+	height: 50px;
+}
+
+.myShoppingInfo .mileage li .myIcon {
+	position: absolute;
+	top: 0;
+	left: 10px;
+} /*190208수정*/
+.myShoppingInfo .mileage li span {
+	display: block;
+	margin-left: 52px;
+}
+
+.myShoppingInfo .mileage li span.tit {
+	margin-top: 5px;
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.myShoppingInfo .mileage li span.num {
+	color: #666;
+	font-size: 12px;
+}
+/*.myShoppingInfo .mileage li span.num strong {color:#f9732e;}*/
+.myShoppingInfo em {
+	color: #3b9c00;
+	font-weight: bold;
+}
+
+.myShoppingInfo strong {
+	color: #f9732e;
+}
+
+.myIcon {
+	display: block;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/my/img_my_main.png") no-repeat;
+	padding-left: 10px;
+} /*190208수정*/
+.myIcon span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+
+.myIcon.coupon {
+	width: 45px;
+	height: 50px;
+	background-position: 0 0;
+}
+
+.myIcon.reserve {
+	width: 45px;
+	height: 50px;
+	background-position: 0 -60px;
+}
+
+.myIcon.deposit {
+	width: 45px;
+	height: 50px;
+	background-position: 0 -120px;
+}
+
+.myIcon.money {
+	width: 47px;
+	height: 46px;
+	background-position: 0 -177px;
+} /*190208추가*/
+.myIcon.phone {
+	width: 29px;
+	height: 45px;
+	background-position: 100% 0px;
+}
+
+.myIcon.email {
+	width: 44px;
+	height: 45px;
+	background-position: 100% -60px;
+}
+
+.myIcon.addr {
+	width: 44px;
+	height: 45px;
+	background-position: 100% -120px;
+}
+
+.titWrap.type06 {
+	margin: 27px 0 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #666;
+}
+
+/*190208 마이페이지추가*/
+.myShoppingInfo .NEWmy .mileage {
+	border: none;
+}
+
+.myShoppingInfo .NEWmy .mileage li {
+	width: 110px;
+	border-left: 1px solid #e7e7e7;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.NEWmy .myInfo {
+	float: left;
+	width: 320px;
+}
+
+.NEWmy .mileage {
+	float: right;
+	width: 505px;
+}
+
+.myShoppingInfo .NEWmy .status {
+	display: table;
+} /*190227추가*/
+.myShoppingInfo .NEWmy .status02 {
+	display: table;
+} /*190227추가*/
+.myShoppingInfo .NEWmy .status02 dl {
+	display: table;
+	width: 100%;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dt {
+	display: table-cell;
+	width: 65px;
+	height: 45px;
+	padding-left: 10px;
+	border-top: 1px solid #f4f5f7;
+	background: #edeff2;
+	color: #333;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dt strong {
+	margin-right: 3px;
+	color: #333;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd {
+	display: table-cell;
+	width: 280px;
+	height: 45px;
+	padding-left: 10px;
+	border-top: 1px dotted #e7e7e7;
+	vertical-align: middle;
+}
+
+.myShoppingInfo .NEWmy .status02 dl:first-child dt {
+	border-top: 1px solid #edeff2;
+}
+
+.myShoppingInfo .NEWmy .status02 dl.h95 dt, .myShoppingInfo .status02 dl.h95 dd
+	{
+	height: 77px;
+	padding-top: 15px;
+	vertical-align: top;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd ul.step li {
+	float: left;
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/my/step_arr.png") no-repeat 5px 50%;
+	/*font-weight:bold;*/
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd ul li .num {
+	color: #f9732e;
+	font-weight: normal;
+	0
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd ul.step li:first-child {
+	padding-left: 0;
+	background: none;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd ul.list01 li {
+	margin-top: 5px;
+	padding-right: 15px;
+}
+
+.myShoppingInfo .NEWmy .status02 dl dd ul.list01 li:first-child {
+	margin-top: 0;
+}
+
+/* 최근주문내역 */
+.myOrderWrap {
+	margin: 16px 0 0;
+}
+
+.myOrderWrap:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.myOrderWrap>.flL {
+	width: 456px;
+}
+
+.myOrderWrap>.flR {
+	width: 386px;
+}
+
+.myOrderWrap .titWrap {
+	margin-bottom: 10px;
+}
+
+/* 날짜 타이틀 */
+.myOrderWrap .titDate {
+	position: relative;
+	width: 125px;
+	color: #333;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -31px;
+	float: right
+}
+
+.myOrderWrap .titDate input {
+	padding: 0;
+	border: none;
+	color: #333;
+	font-size: 17px;
+	font-weight: bold;
+	text-indent: 0;
+	line-height: 20px;
+}
+
+.myOrderWrap .titDate input.year {
+	width: 63px;
+	text-align: right;
+	background: #fff;
+}
+
+.myOrderWrap .titDate input.month {
+	width: 42px;
+	text-align: left;
+	background: #fff;
+}
+
+.myOrderWrap .titDate .btnImg {
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+}
+
+.myOrderWrap .titDate .prevMonth {
+	left: 0
+}
+
+.myOrderWrap .titDate .nextMonth {
+	right: 0
+}
+
+/* 달력 */
+.myOrderWrap .calendar {
+	
+}
+
+.myOrderWrap .calendar th {
+	padding: 4px 0;
+	border: 1px solid #e6e6e6;
+	border-width: 1px;
+	border-color: #e6e6e6 #edeff2;
+	background: #edeff2;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+}
+
+.myOrderWrap .calendar td {
+	padding: 0;
+	border: 1px solid #e6e6e6;
+}
+
+.myOrderWrap .calendar td a.day {
+	display: block;
+}
+
+.myOrderWrap .calendar td .day {
+	position: relative;
+	height: 40px;
+	padding: 5px;
+	font-size: 11px;
+}
+
+.myOrderWrap .calendar td .day .date {
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.myOrderWrap .calendar td .day .order .tit {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.myOrderWrap .calendar td .day:hover {
+	
+}
+
+.myOrderWrap .calendar td .day.active {
+	cursor: pointer;
+}
+
+.myOrderWrap .calendar td .day.active:hover {
+	background: #8bc71e;
+	color: #fff;
+}
+
+.myOrderWrap .calendar td .day.active:hover span, .myOrderWrap .calendar td .day.active:hover .order
+	{
+	color: #fff;
+}
+
+.myOrderWrap .calendar td.sun, .myOrderWrap .calendar td.mon {
+	background: #f9f9f9;
+}
+
+.myOrderWrap .calendar td.sun .day .date, .myOrderWrap .calendar td.hol .day .date
+	{
+	color: #fc000a;
+	font-size: 11px;
+}
+
+.myOrderWrap .calendar td.today .day {
+	padding: 5px;
+	border: none;
+}
+
+.myOrderWrap .calendar td.today .date {
+	text-decoration: underline;
+}
+
+.myOrderWrap .calendar td.other .day {
+	opacity: 0.5;
+}
+
+.myOrderWrap .calendar td .day .date {
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	color: #666;
+}
+
+.myOrderWrap .calendar td .day .order {
+	margin-top: 16px;
+	color: #666;
+	line-height: 1.2;
+}
+
+.myOrderWrap .calendar td .day .order .num {
+	color: #f9732e;
+}
+
+.myTbl {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.myTbl table {
+	
+}
+
+.myTbl table thead th {
+	padding: 11px 0;
+	background: #f4f4f4;
+	color: #333;
+	text-align: center;
+}
+
+.myTbl table tbody td {
+	padding: 10px 5px;
+	border-top: 1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+	color: #333;
+	text-align: center;
+}
+
+.myTbl table tbody tr td:first-child {
+	border-left: none;
+}
+
+.myOrderWrap .myTbl {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.myOrderWrap .myTbl table {
+	
+}
+
+.myOrderWrap .myTbl table thead th {
+	padding: 10px 0;
+	background: #edeff2;
+	color: #333;
+	text-align: center;
+}
+
+.myOrderWrap .myTbl table tbody td {
+	padding: 10px 3px;
+	border-top: 1px solid #e0e0e0;
+	border-left: none;
+	color: #999;
+	text-align: center;
+}
+
+.myOrderWrap .myTbl table tbody td .odNum {
+	color: #666;
+}
+
+.myOrderWrap .myTbl table tbody td .tit {
+	display: inline-block;
+	overflow: hidden;
+	max-width: 200px;
+	color: #333;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.myOrderWrap .myTbl table tbody td .tit:hover {
+	color: #3b9c00;
+	text-decoration: underline;
+}
+
+.myOrderWrap .paging {
+	margin: 15px 0 0;
+}
+
+.myInfo {
+	
+}
+
+.myInfo ul {
+	display: table;
+	width: 100%;
+}
+
+.myInfo ul li {
+	display: table-cell;
+	width: 33%;
+}
+
+.myInfo ul li>div.info {
+	position: relative;
+	padding: 25px 15px 25px 88px;;
+	border-left: 1px solid #e5e5e5;
+	text-align: left;
+}
+
+.myInfo ul li:first-child>div {
+	padding-left: 78px;
+	border-left: none;
+}
+
+.myInfo ul li>div.info i.myIcon {
+	position: absolute;
+	top: 28px;
+	left: 30px;
+}
+
+.myInfo ul li>div.info p {
+	color: #333;
+}
+
+.myInfo ul li>div.info p.tit {
+	font-weight: bold;
+}
+
+.myInfo ul li>div.edit {
+	overflow: hidden;
+	padding: 5px 15px;
+	border: 1px solid #e5e5e5;
+	border-width: 1px 0;
+	background: #f9f9f9;
+	text-align: center;
+}
+
+.myInfo ul li div.edit .date {
+	float: left;
+	color: #333;
+	padding-left: 8px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 8px;
+}
+
+.myInfo ul li div.edit .btnF {
+	float: right;
+}
+
+/*201706 수정*/
+.myShoppingInfo>ul {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.myShoppingInfo>ul>li {
+	display: table-cell;
+	width: 38%;
+	padding-left: 20px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar02.png") no-repeat 0 50%;
+	background-size: 1px 45px;
+	vertical-align: middle;
+}
+
+.myShoppingInfo>ul>li:first-child {
+	padding-left: 0;
+	background: none;
+	width: 28%;
+}
+
+.myShoppingInfo>ul>li:last-child {
+	width: 25%;
+}
+
+.myShoppingInfo .list01 .tit {
+	display: inline-block;
+	width: 120px;
+	color: #333;
+	font-weight: bold;
+}
+
+.myShoppingInfo .list01 strong {
+	color: #f9732e;
+}
+
+.myShoppingInfo .list01 li.noneBg {
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.gradeInfo {
+	
+}
+
+.gradeInfo table {
+	position: relative;
+	border-bottom: 1px solid #666;
+}
+
+.gradeInfo table tr td {
+	padding: 16px 0;
+	border-left: 1px solid #e5e5e5; /*border-bottom:1px solid #e5e5e5;*/
+	color: #333;
+	font-size: 13px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.gradeInfo table tr td:first-child {
+	border-left: none;
+}
+
+.gradeInfo table tr.gradeImg td {
+	height: 76px;
+	padding: 30px 0 10px;
+	/*background:url("https://www.goobnemall.com/static-root/resources/pc/img/my/icon_bg.png") no-repeat 50% 15px;*/
+	vertical-align: top;
+} /*201706 수정*/
+.gradeInfo table tr.gradeTit td {
+	padding: 0; /*background:#f9f9f9;*/
+	font-weight: bold;
+}
+
+.memberText {
+	background: url(https://www.goobnemall.com/static-root/resources/pc/img/2017/my_member_text.png) no-repeat;
+	text-indent: -9999px;
+	width: 70px;
+	display: inline-block;
+	border-left: 1px solid #fff !important;
+}
+
+.textvip {
+	background-position: 0 0%;
+	height: 15px;
+	position: absolute;
+	top: 117px;
+	left: 90px;
+}
+
+.textgold {
+	background-position: 0 33%;
+	height: 15px;
+	position: absolute;
+	top: 117px;
+	left: 291px;
+}
+
+.textsilver {
+	background-position: 0 65%;
+	height: 14px;
+	position: absolute;
+	top: 117px;
+	left: 500px;
+}
+
+.textfamily {
+	background-position: 0 100%;
+	height: 14px;
+	position: absolute;
+	top: 118px;
+	left: 710px;
+}
+
+.gradeInfo table tr.coupon {
+	border-top: 1px solid #e5e5e5;
+}
+
+.gradeInfo table tr.coupon td {
+	padding: 50px 0;
+	vertical-align: top;
+}
+
+.gradeInfo table tr.coupon td img {
+	margin-top: 10px;
+}
+
+.gradeInfo table tr.coupon td img:first-child {
+	margin-top: 0;
+}
+
+.cpText {
+	font-size: 20px;
+	font-weight: 600;
+	color: #90d316;
+	margin-top: 10px;
+}
+
+.memberEtc {
+	
+}
+
+.memberEtc p {
+	background: #f7f7f7;
+	color: #333;
+	padding: 30px 20px;
+	font-size: 13px;
+	border-bottom: 1px dotted #d9d9d9;
+	margin-top: 40px;
+}
+
+.memberEtc p:last-child {
+	border-bottom: none;
+	margin-top: 0;
+}
+
+.memberEtc span, .memberEtc strong {
+	display: block;
+	line-height: 1.8em;
+}
+
+.memberEtc span {
+	margin-left: 15px;
+}
+/*201706 수정 끝*/
+.srchWrapTop+.myOrder {
+	margin-top: -20px;
+}
+
+.myOrder ul {
+	display: table;
+	margin: 0 0 10px;
+	padding: 15px 20px 15px 7px;
+	border-bottom: 1px solid #e7e7e7;
+	background: #f9f9f9;
+}
+
+.myOrder ul li {
+	display: table-cell;
+	width: 125px;
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/my/step_arr.png") no-repeat 4px 20px;
+	text-align: center;
+}
+
+.myOrder ul li:first-child {
+	background: none;
+}
+/*.myOrder ul li.total + li {background:url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar02.png") no-repeat 0px 12px;background-size:1px 50px;}디자인없음 임의로 스타일링함*/
+.myOrder ul li>span {
+	display: block;
+	position: relative;
+	padding: 52px 0 0 0;
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.myOrder ul li>span>i {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 12px;
+	width: 100px;
+	height: 50px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/my/img_myOrder.png") no-repeat;
+}
+
+.myOrder ul li.step01>span>i {
+	background-position: 0 0;
+}
+
+.myOrder ul li.step02>span>i {
+	background-position: -100px 0;
+}
+
+.myOrder ul li.step03>span>i {
+	background-position: -200px 0;
+}
+
+.myOrder ul li.step04>span>i {
+	background-position: -300px 0;
+}
+
+.myOrder ul li.step05>span>i {
+	background-position: -400px 0;
+}
+
+.myOrder ul li>span strong {
+	font-size: 15px;
+	color: #f78330;
+}
+
+.myOrder ul li.total {
+	padding-left: 0;
+	background: none;
+	vertical-align: top;
+}
+
+.myOrder ul li.total>span.tit {
+	padding-top: 10px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.myOrder ul li.total>span {
+	padding-top: 0;
+	font-weight: normal;
+}
+
+.myOrder ul li.total>span strong {
+	
+}
+
+.myOrder.return ul li>span>i {
+	background-image: url("https://www.goobnemall.com/static-root/resources/pc/img/my/img_myOrder_return.png");
+} /*취소/교환/반품*/
+
+/* 마이페이지 메인화면 주문목록 좌우라인 */
+.prdtTbl.bdLR table tbody td {
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+
+.prdtTbl.bdLR table td.item {
+	border-left: none;
+}
+
+.prdtTbl.bdLR table tbody td:first-child {
+	border-left: 1px solid #e0e0e0;
+}
+
+.prdtTbl.bdLR table tbody tr td.noResult {
+	border-right: none !important;
+	border-left: none !important;
+}
+
+/* 주문 상품 테이블 */
+.prdtTbl {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.prdtTbl table {
+	
+}
+
+.prdtTbl table thead th {
+	padding: 11px 0;
+	background: #f4f4f4;
+	border-left: 1px solid #f4f4f4;
+	border-right: 1px solid #f4f4f4;
+	color: #333;
+	font-size: 12px;
+	text-align: center;
+}
+
+.prdtTbl table tbody td {
+	padding: 10px 5px;
+	border-top: 1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+	color: #333;
+	text-align: center;
+}
+
+.prdtTbl table tbody td:first-child {
+	border-right: 1px solid #e0e0e0;
+	border-left: none;
+}
+
+.prdtTbl table tbody td .btnE {
+	margin-top: 3px;
+	min-width: 71px;
+}
+
+.prdtTbl table tbody td .btnE:first-child {
+	margin-top: 0px;
+}
+
+.prdtTbl table tbody td.alR {
+	padding-right: 0;
+}
+
+.prdtTbl table tbody tr.bdMod td:first-child {
+	/*border-left:1px solid #e0e0e0;*/
+	
+} /* 브라우저에 따른 border 보완*/
+.prdtTbl td.orderInfo {
+	color: red;
+	border-right: 1px solid red;
+}
+
+.prdtTbl .odrDate {
+	color: #333;
+}
+
+.prdtTbl .odrNum strong {
+	color: #f78330;
+	font-weight: normal;
+}
+
+.prdtTbl .odrNum a {
+	margin: 0 2px;
+	color: #f78330;
+	text-decoration: underline;
+}
+
+.prdtTbl .btnW {
+	width: 85px;
+	margin: 3px auto 0;
+}
+
+.prdtTbl .odrStatus {
+	color: #3b9c00;
+}
+
+.prdtTbl .price {
+	color: #333;
+}
+
+.prdtTbl .price strong {
+	font-size: 14px;
+}
+
+.prdtTbl .dcMsg {
+	display: block;
+	font-size: 10px;
+	color: #fc000a;
+}
+
+.prdtTbl td.chk {
+	padding: 10px;
+	border-right: none !important;
+}
+
+.prdtTbl td+td.chk {
+	border-left: 1px solid #e0e0e0;
+}
+
+.prdtTbl td.chk+td.img {
+	padding-left: 0;
+	border-left: none;
+}
+
+.prdtTbl td.img {
+	padding: 15px 20px;
+	border-right: none !important;
+}
+
+.prdtTbl table tbody td.img img {
+	width: 80px;
+	height: 80px;
+}
+
+.prdtTbl td.item {
+	padding: 10px 0 10px 0;
+	border-left: none;
+	text-align: left;
+}
+
+.prdtTbl .itemTit {
+	display: table;
+	width: 100%;
+	padding: 0;
+}
+
+.prdtTbl .itemTit .name {
+	display: table-cell;
+	padding-bottom: 10px;
+	color: #333;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 600;
+}
+
+.prdtTbl .itemTit .name a {
+	color: #333;
+}
+
+.prdtTbl .itemTit .btn {
+	display: table-cell;
+	max-width: 85px;
+	padding: 0 5px;
+	text-align: right;
+}
+
+.prdtTbl .selectedItem {
+	width: 100%;
+	border-top: 1px solid #dfdfdf;
+}
+
+.prdtTbl .selectedItem  ul li {
+	border-top: 1px dotted #dfdfdf;
+}
+
+.prdtTbl .selectedItem  ul li>div {
+	display: inline-block;
+	padding: 6px 0;
+	color: #999;
+	vertical-align: middle;
+}
+
+.prdtTbl .selectedItem  li:first-child {
+	border-top: none;
+}
+
+.prdtTbl .selectedItem  li .itemQuantity {
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 8px 50%;
+}
+
+.prdtTbl .selectedItem  li .itemPrice strong {
+	font-size: 12px;
+	color: #333;
+}
+
+.prdtTbl .selectedItem  li .itemState {
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 8px 50%;
+	font-size: 12px;
+	color: #fc000a;
+}
+
+.prdtTbl .selectedItem.edit {
+	width: 100%;
+	border-top: 1px solid #dfdfdf;
+}
+
+.prdtTbl .selectedItem.edit ul li {
+	display: table;
+	width: 100%;
+}
+
+.prdtTbl .selectedItem.edit ul li>div {
+	display: table-cell;
+	padding: 6px 0;
+	color: #999;
+	vertical-align: middle;
+}
+
+.prdtTbl .selectedItem.edit ul li div.itemPrice {
+	width: 70px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.prdtTbl .selectedItem.edit ul li div.itemQuantity {
+	width: 57px;
+}
+
+.prdtTbl .selectedItem.edit ul li div.itemDelete {
+	width: 16px;
+}
+
+.prdtTbl .selectedItem.edit ul li div.itemName {
+	padding-right: 5px;
+}
+
+.prdtTbl .itemPrice {
+	color: #333;
+}
+
+.prdtTbl .itemPrice strong {
+	font-size: 14px;
+	color: #fc000a;
+}
+
+/* 취소/반품 테이블 */
+.prdtTbl.return td {
+	padding: 5px;
+}
+
+.prdtTbl.return td.img {
+	padding: 15px 20px;
+}
+
+.prdtTbl.return td.item {
+	padding: 0;
+	border-left: none !important;
+}
+
+.prdtTbl.return .itemTit .name {
+	padding-top: 10px;
+}
+
+.prdtTbl.return .itemTit+.selectedItem {
+	border-top: 1px solid #e0e0e0;
+}
+
+.prdtTbl.return .selectedItem {
+	padding: 8px 0 9px 0;
+	border-top: none;
+}
+
+.prdtTbl.return .selectedItem>p {
+	display: inline-block;
+	padding: 0;
+	color: #999;
+	vertical-align: middle;
+}
+
+.prdtTbl.return .selectedItem .itemQuantity {
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 8px 50%;
+}
+
+.prdtTbl.return tr.bdMod .item {
+	border-top: 1px dotted #bdbdbd;
+}
+
+/* 위시리스트 */
+.prdtTbl.wish td {
+	padding: 10px 5px;
+}
+
+.prdtTbl.wish td.img {
+	padding: 10px 20px 10px 0;
+}
+
+.prdtTbl.wish td.item {
+	padding: 0;
+}
+
+.prdtTbl.wish .itemTit .name {
+	padding-bottom: 6px;
+}
+
+.prdtTbl.wish .status {
+	display: block;
+	font-size: 12px;
+	color: #fc000a;
+}
+
+.noticeWrap {
+	margin-top: 60px;
+}
+
+.noticeWrap .tit {
+	margin-bottom: 5px;
+	padding-left: 20px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon02.png") no-repeat 0 50%;
+	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.noticeWrap .cont {
+	padding: 10px 15px;
+	border: 1px solid #f0f0f0;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.noticeWrap .cont ul li {
+	margin: 5px 0 0;
+	text-indent: -8px;
+	margin-left: 10px;
+}
+
+.noticeWrap .cont ul li:first-child {
+	margin-top: 0;
+}
+
+/* 금액합계 테이블 */
+.haveSNB .cartTotalSum {
+	
+}
+
+.haveSNB .cartTotalSum>dl>dt {
+	padding-left: 20px;
+}
+
+.haveSNB .cartTotalSum>dl>dt>div.tit>span.price {
+	width: 140px;
+	padding-right: 20px;
+}
+
+.haveSNB .cartTotalSum>dl>dt>div.tit>span.price em {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.haveSNB .cartTotalSum>dl>dt>div.tit>span.price strong {
+	letter-spacing: -1px;
+}
+
+.haveSNB .cartTotalSum>dl>dd {
+	padding: 15px 20px;
+}
+
+.addReserve {
+	padding: 10px 20px;
+	border-bottom: 1px solid #858585;
+}
+
+.addReserve dt {
+	display: inline-block;
+	margin-right: 20px;
+	color: #333;
+	font-weight: bold;
+}
+
+.addReserve dd {
+	display: inline-block;
+}
+
+.addReserve dd .price strong {
+	color: #fc000a;
+}
+
+.attachedFileList {
+	overflow: hidden;
+}
+
+.attachedFileList:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.attachedFileList>div {
+	float: left;
+	position: relative;
+	padding: 8px 8px 0 0;
+	color: #999;
+}
+
+.attachedFileList>div img {
+	width: 60px;
+	height: 60px;
+}
+
+.attachedFileList>div .delItem {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
+.attachedFileList>ul li {
+	float: left;
+	color: #999;
+}
+
+.attachedFileList>ul li:before {
+	content: ' , ';
+	margin-left: 10px;
+}
+
+.attachedFileList>ul li:first-child:before {
+	content: '';
+	margin-left: 0;
+}
+
+.lyPop .radioW {
+	margin-right: 10px;
+}
+
+.lyPop .infoTbl.alL th {
+	padding-left: 15px;
+}
+
+.lyPop .infoTbl.alL th .icon.required {
+	margin-left: 3px;
+	margin-right: 0;
+}
+
+.lyPop .lyContainer .tracking+.btnWrap, .lyPop .lyContainer .receipt+.btnWrap
+	{
+	margin-top: 10px;
+}
+
+.checkTxt {
+	margin: 50px 0;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* 정기배송일정 */
+.prdtListDelivery {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.DeliveryItem {
+	position: relative;
+	overflow: hidden;
+	width: 495px;
+	height: 120px; /*height:108px;*/
+	margin-left: 35px;
+	padding: 0;
+}
+
+.DeliveryItem ul {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 495px;
+	padding: 0;
+}
+
+.DeliveryItem li {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: auto;
+	margin: 0 20px 0 0;
+}
+
+.DeliveryItem li img {
+	width: 80px;
+	height: 80px;
+}
+
+.DeliveryItem li a {
+	display: block;
+	color: #999;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.DeliveryItem li a.itemName {
+	overflow: hidden;
+	height: 36px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.DeliveryItem li span.state {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+}
+
+.DeliveryItem li span.state:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/bg_op45.png");
+	/*opacity: 0.35;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";*/
+}
+
+.DeliveryItem li span.state .txt {
+	display: block;
+	position: relative;
+	margin-top: 30px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.prdtListDelivery .btnPrev {
+	position: absolute;
+	top: 30px;
+	left: -1px;
+}
+
+.prdtListDelivery .btnNext {
+	position: absolute;
+	top: 30px;
+	right: -1px;
+}
+
+/* 정기배송 달력 */
+.titDate {
+	position: relative;
+	width: 165px;
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 24px;
+}
+
+.titDate input {
+	height: 26px;
+	padding: 0;
+	border: none;
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	text-indent: 0;
+	line-height: 28px;
+}
+
+.titDate input.year {
+	width: 83px;
+	text-align: right;
+	background: #fff;
+}
+
+.titDate input.month {
+	width: 52px;
+	text-align: left;
+	background: #fff;
+}
+
+.titDate .btnImg {
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+}
+
+.titDate .prevMonth {
+	left: 0
+}
+
+.titDate .nextMonth {
+	right: 0
+}
+
+.calendar {
+	margin: 10px 0 0;
+}
+
+.calendar th {
+	padding: 8px 0;
+	border: 1px solid #e6e6e6;
+	border-width: 1px;
+	border-color: #e6e6e6 #edeff2;
+	background: #edeff2;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+}
+
+.calendar td {
+	padding: 0;
+	border: 1px solid #e6e6e6;
+}
+
+.calendar td .day {
+	position: relative;
+	height: 100px;
+	padding: 10px;
+	color: #666;
+}
+
+.calendar td .day:hover {
+	
+}
+
+.calendar td .day .date {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.calendar td .day.active {
+	cursor: pointer;
+}
+/*.calendar td .day.active:hover {background:#8bc71e;color:#fff;}
+.calendar td .day.active:hover span, .myOrderWrap .calendar td .day.active:hover .order {color:#fff;}*/
+.calendar td.sun, .calendar td.mon {
+	background: #f9f9f9;
+}
+
+.calendar td.sun .day .date, .calendar td.hol .day .date {
+	color: #fc000a;
+	font-size: 13px;
+}
+
+.calendar td.today .day {
+	border: 1px solid #999;
+	padding: 9px;
+}
+
+.calendar td.other .day { /*opacity:0.5;cursor:default;*/
+	
+}
+
+.calendar td.other .day .date, .calendar td.other .day .order ul li p {
+	color: #999
+}
+
+.calendar td.other.sun .day .date, .calendar td.other.hol .day .date {
+	color: #ff9296;
+}
+
+.calendar td .day .date {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	color: #666;
+	font-weight: bold;
+	text-align: left;
+}
+
+.calendar td .day .order {
+	position: relative;
+	margin-top: 19px;
+	color: #666;
+}
+
+.calendar td .day .order+.order {
+	margin-top: 3px;
+}
+
+.calendar td .day .order .tit {
+	margin-bottom: 2px;
+	color: #3b9c00;
+	font-size: 12px; /*font-weight:bold;*/
+	text-align: left;
+}
+
+.calendar td .day .order .tit2 {
+	margin-bottom: 2px;
+	color: #f78330;
+	font-size: 12px; /*font-weight:bold;*/
+	text-align: left;
+}
+
+.calendar td.other .day .order .tit, .calendar td.other .day .order .tit
+	{
+	color: #999
+}
+
+.calendar td .day .order ul {
+	
+}
+
+.calendar td .day .order ul li {
+	margin-top: 1px;
+	padding-left: 6px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png') no-repeat 0 5px;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.calendar td .day .order ul li p { /*overflow:hidden;height:14px;*/
+	color: #666;
+	text-overflow: clip; /*white-space:nowrap;*/
+}
+
+.calendar td .day .order ul li.etc {
+	background-image: none;
+	color: #a1a1a1;
+}
+
+.calendar td .day .order ul li .state {
+	color: #fc000a;
+}
+
+.calendar td .day .payInfo {
+	padding: 25px 0 0 0;
+	text-align: right;
+}
+
+.calendar td .day .payInfo span {
+	display: block;
+	color: #666;
+}
+
+.calendar td .day .payInfo span.price strong {
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.calendar td .day .order+.order .payInfo {
+	padding: 4px 0 0 0;
+} /*결제예정일에 다른 내용 포함한 경우*/
+
+/* 주문상세내역 레이어팝업 */
+.orderDetail {
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	z-index: 200;
+}
+
+.orderDetail .tooltipLyr {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	width: 260px;
+	border: 2px solid #cdcdcd;
+	background: #fff;
+	text-align: left;
+}
+
+.orderDetail .tooltipLyr .tooltipTit {
+	height: 30px;
+	padding: 0 10px;
+	border-bottom: 1px solid #eaeaea;
+	background: #f9f9f9;
+	color: #666;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 30px;
+}
+
+.orderDetail .tooltipLyr .tooltipCont {
+	clear: both;
+	padding: 10px;
+	color: #333;
+	font-size: 11px;
+	line-height: 1.5;
+	font-weight: normal;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li {
+	margin-top: 5px;
+	padding-left: 6px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png') no-repeat 0 5px;
+	font-size: 11px;
+	color: #666;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li:first-child
+	{
+	margin-top: 0;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li span.num {
+	margin-left: 5px;
+	padding-left: 8px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar02.png') no-repeat 0 50%;
+	background-size: 1px 10px;
+	color: #f78330;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li span.price {
+	margin-left: 5px;
+	padding-left: 8px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar02.png') no-repeat 0 50%;
+	background-size: 1px 10px;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li span.price strong
+	{
+	color: #f78330;
+}
+
+.orderDetail .tooltipLyr .tooltipCont ul.orderDetailList li span.state {
+	color: #fc000a;
+}
+
+.orderDetail.on {
+	z-index: 201;
+}
+
+.orderDetail.on .tooltipLyr {
+	display: block;
+}
+
+.orderDetail .btnD {
+	float: right;
+	height: 14px;
+	margin-top: 3px;
+	margin-right: -5px;
+	padding: 4px 10px;
+}
+
+/* 금, 토 레이어 왼쪽에서 열림 */
+.day.active.posL .orderDetail .tooltipLyr {
+	left: -170px;
+}
+
+.myDeliveryDay {
+	padding: 6px 0;
+	border-top: 1px solid #d7d7d7;
+}
+
+.myDeliveryDay .selectWeekday {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.myDeliveryDay a.btnD {
+	vertical-align: middle;
+}
+
+.myDeliveryDay .selectWeekday li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+
+.myDeliveryDay .weekday input:checked+label {
+	border: 1px solid #f9732e;
+	background: #f9732e;
+	color: #fff;
+}
+
+.myDeliveryDay .weekday input+label.on {
+	border: 1px solid #f9732e;
+	background: #f9732e;
+	color: #fff;
+}
+
+.myDeliveryDay .weekday label {
+	font-weight: normal;
+}
+/*.ie8 .myDeliveryDay .weekday input {height:23px;width:23px;}*/
+.myWeekday {
+	float: right;
+	width: 125px;
+	height: 16px;
+	padding: 5px 0;
+	border-radius: 26px;
+	background: #494949;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+}
+
+.myWeekday strong {
+	color: #fdff54;
+}
+
+.myDeliveryDay .myWeekday {
+	margin-top: 1px;
+}
+
+/* 이번회차 건너뛰기 */
+.lyPop .prdtTbl.hideThead {
+	border-top: 0;
+}
+
+.lyPop .prdtTbl.hideThead thead {
+	display: none;
+}
+
+.lyPop .prdtTbl.hideThead td.img {
+	padding-left: 0;
+}
+
+.lyPop .prdtTbl.hideThead .itemTit .name {
+	padding-bottom: 6px;
+}
+
+.lyPop .prdtTbl.hideThead .selectedItem ul li>div {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.infoTbl02 .arr {
+	border-left: none;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar02.png") repeat-y 50%;
+}
+
+.infoTbl02 .arr+td {
+	border-left: none;
+}
+
+.lyPop .checkTxt {
+	margin: 25px 0 35px;
+}
+
+.tblTopNote {
+	padding: 10px 0;
+	border-top: 1px solid #d7d7d7;
+	color: #333;
+	text-align: center;
+}
+
+/* 시식후기작성 */
+.prdtInfo.reviewWrite {
+	display: table;
+	height: 60px;
+	padding: 0 0 0 80px;
+}
+
+.prdtInfo.reviewWrite .img {
+	display: table-cell;
+	width: 80px;
+}
+
+.prdtInfo.reviewWrite .img img {
+	width: 60px;
+	height: 60px;
+}
+
+.prdtInfo.reviewWrite .info {
+	display: table-cell;
+	height: 60px;
+	vertical-align: middle;
+}
+
+.prdtInfo.reviewWrite .info span {
+	display: block;
+}
+
+.prdtInfo.reviewWrite .info .name {
+	color: #333;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.prdtInfo.reviewWrite .info .date {
+	color: #999;
+	font-size: 12px;
+}
+
+/* 나의통장현황 */
+.myMileage {
+	display: table;
+	width: 842px;
+	height: 65px;
+	padding: 26px 0;
+	border: 5px solid #e8e8e8;
+	text-align: center;
+}
+
+.myMileage>div {
+	position: relative;
+	display: table-cell;
+	width: 75px;
+	padding-left: 60px;
+	padding-right: 20px; /*border-right:1px solid red;*/
+	vertical-align: middle;
+} /*190208수정*/
+.myMileage>div i.myIcon {
+	position: absolute;
+	top: 0;
+	left: 20px;
+} /*190208수정*/
+.myMileage div dl {
+	width: 75px;
+}
+
+.myMileage div dl dt {
+	width: 75px;
+	color: #333;
+	font-weight: bold;
+	text-align: right;
+}
+
+.myMileage div dl dd {
+	width: 75px;
+	text-align: right;
+}
+
+.myMileage div dl dd strong {
+	color: #f9732e;
+}
+/*.myMileage div.first + div {padding-right:0;}190208숨김*/
+.myMileage div.first {
+	display: table-cell;
+	width: 230px;
+	padding-left: 115px;
+	padding-right: 20px;
+	border-right: 2px solid #e8e8e8;
+	text-align: left;
+} /*190208수정*/
+.myMileage div.first i.myIcon {
+	left: 30px;
+} /*190208수정*/
+.myMileage div.first dl {
+	overflow: hidden;
+	width: 230px !important;
+	background-color: #fff
+}
+
+.myMileage div.first dl dt {
+	float: left;
+	width: 95px;
+	font-size: 17px;
+	font-weight: 600;
+	text-align: left;
+	line-height: 34px;
+}
+
+.myMileage div.first dl dd {
+	float: left;
+	width: 135px;
+	font-size: 12px;
+}
+
+.myMileage div.first dl dd strong {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+.myMileage div.first p {
+	width: 230px;
+	padding-top: 7px;
+	text-align: left;
+}
+
+.myMileage div.coupon dl dt {
+	letter-spacing: -1px;
+}
+
+.myMileage div.first.coupon dl dt {
+	letter-spacing: -2px;
+}
+
+.myMileage div.coupon i.myIcon {
+	left: 15px;
+} /*190208수정*/
+.myMileage div.first.coupon i.myIcon {
+	left: 34px;
+} /*190208수정*/
+.myMileage div.money i.myIcon {
+	left: 17px;
+} /*190208추가*/
+.myMileage div.first.money i.myIcon {
+	left: 38px;
+} /*190208추가*/
+.myMileage .myIcon {
+	background-image: url("https://www.goobnemall.com/static-root/resources/pc/img/my/img_myMileage.png");
+}
+
+.myMileage .first.coupon .myIcon {
+	width: 75px;
+	height: 65px;
+	background-position: 0 0;
+}
+
+.myMileage .first.reserve .myIcon {
+	width: 75px;
+	height: 65px;
+	background-position: 0 -65px;
+}
+
+.myMileage .first.deposit .myIcon {
+	width: 75px;
+	height: 65px;
+	background-position: 0 -130px;
+}
+
+.myMileage .first.money .myIcon {
+	width: 65px;
+	height: 65px;
+	background-position: -93px 0;
+} /*190208추가*/
+.myMileage .coupon .myIcon {
+	width: 50px;
+	height: 65px;
+	background-position: 0 -195px;
+}
+
+.myMileage .reserve .myIcon {
+	width: 50px;
+	height: 65px;
+	background-position: 0 -260px;
+}
+
+.myMileage .deposit .myIcon {
+	width: 50px;
+	height: 65px;
+	background-position: 0 -325px;
+}
+
+.myMileage .money .myIcon {
+	width: 50px;
+	height: 65px;
+	background-position: 0 -390px
+} /*190208추가*/
+
+/* 쿠폰적용대상 툴팁 */
+.dcInfo .tooltipWrap .tooltipBtn {
+	margin-left: 0;
+}
+
+.dcInfo .tooltipWrap .tooltipLyr .tooltipCont p.tit {
+	margin-bottom: 5px;
+	padding: 0 0 3px 7px;
+	border-bottom: 1px solid #d7d7d7;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 5px;
+	color: #333;
+	font-weight: bold;
+}
+
+.dcInfo .tooltipWrap .tooltipLyr .tooltipCont ul {
+	margin-left: 5px;
+}
+
+.dcInfo .tooltipWrap .tooltipLyr .tooltipCont ul li {
+	margin-top: 2px;
+	padding-left: 10px;
+	text-indent: -8px;
+	color: #666;
+}
+
+.dcInfo .tooltipWrap .tooltipLyr .tooltipCont ul li:first-child {
+	margin-top: 0;
+}
+
+.dcInfo .tooltipWrap .tooltipLyr .tooltipCont ul+p.tit {
+	margin-top: 10px;
+}
+
+.mPrice {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.mPrice strong {
+	font-weight: normal;
+}
+
+.mPrice.plus strong {
+	color: #fc000a;
+}
+
+.mPrice.minus strong {
+	color: #fc000a;
+}
+
+.infoTbl03 .alL .ellipsis.w350 {
+	
+}
+
+.lyPop .noticeWrap {
+	margin-top: 20px;
+}
+
+.lyPop .noticeWrap .tit {
+	margin-bottom: 5px;
+	padding-left: 0px;
+	background: none;
+	color: #666;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.lyPop .noticeWrap .cont {
+	padding: 6px 7px;
+	border: 1px solid #f0f0f0;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.lyPop .noticeWrap .cont ul li {
+	margin: 3px 0 0;
+	text-indent: -5px;
+	margin-left: 7px;
+	color: #999;
+	font-size: 11px;
+}
+
+.lyPop .noticeWrap .cont ul li:first-child {
+	margin-top: 0;
+}
+
+/* 탈퇴 */
+.myShoppingInfo.quit {
+	display: table;
+	width: 842px;
+	padding: 20px 0 15px;
+	border: 5px solid #e8e8e8;
+}
+
+.myShoppingInfo.quit .flL {
+	background-color:;
+}
+
+.myShoppingInfo.quit .flR {
+	
+}
+
+.myShoppingInfo.quit>.flL {
+	width: 405px;
+}
+
+.myShoppingInfo.quit>.flR {
+	width: 410px;
+}
+
+.myShoppingInfo  dl.myOrder02 {
+	margin-left: 25px;
+}
+
+.myShoppingInfo  dl.myOrder02 dt {
+	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.myShoppingInfo  dl.myOrder02 dt strong {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.myShoppingInfo  dl.myOrder02 dt .btnE {
+	float: right;
+	width: auto;
+}
+
+.myShoppingInfo  dl.myOrder02 dd {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.myShoppingInfo  dl.myOrder02 dd>ul {
+	clear: both;
+}
+
+.myShoppingInfo  dl.myOrder02 dd>ul li {
+	margin-top: 3px;
+	padding-left: 8px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 50%;
+}
+
+.myShoppingInfo  dl.myOrder02 dd>ul li a {
+	display: block;
+	overflow: hidden;
+	width: 375px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.myShoppingInfo  dl.myOrder02 dd>ul li.noResult {
+	padding-left: 0;
+	background: none;
+}
+
+.myShoppingInfo.quit>.flR>div.mileage {
+	height: 50px;
+	margin-top: 12px;
+	margin-bottom: 22px;
+}
+
+.myShoppingInfo.quit .mileage ul {
+	margin: 0 0 0 30px;
+	padding-top: 0;
+}
+
+.myShoppingInfo.quit .note {
+	clear: both;
+	padding: 18px 25px 23px;
+	border: 1px solid #efefef;
+	border-width: 1px 0;
+	background-color: #f9f9f9;
+}
+
+.myShoppingInfo.quit .note ul li {
+	margin-top: 5px;
+}
+
+.myShoppingInfo.quit .note ul li strong {
+	color: #666;
+}
+
+.myShoppingInfo.quit .chkBox {
+	margin: 10px 0 0 25px;
+}
+
+/* ****************************************************************
+  * 후기&레시피 *
+**************************************************************** */
+/* 시식후기 */
+.bannerWrap.review+.titWrap {
+	margin-top: 25px;
+}
+
+.reviewList {
+	margin: 10px 0 30px 0;
+	padding: 20px;
+	background: #eee;
+}
+
+.reviewList:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.reviewList li {
+	float: left;
+	width: 215px;
+	padding: 14px 14px 12px;
+	margin-left: 9px;
+	background: #fff;
+}
+
+.reviewList li:first-child {
+	margin-left: 0;
+}
+
+.reviewList li p.img {
+	position: relative;
+}
+
+.reviewList li p.img img {
+	width: 215px;
+	height: 215px;
+}
+
+.reviewList li p.img .bestIcon {
+	position: absolute;
+	top: -14px;
+	left: 5px;
+}
+
+.reviewList li p.scoreW {
+	margin: 10px 0 0;
+}
+
+.reviewList li p.prdt {
+	margin: 5px 0 0;
+	color: #999;
+	font-size: 11px;
+	line-height: 1.25;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 14px;
+} /*190726수정*/
+.reviewList li p.tit {
+	margin: 4px 0 0;
+}
+
+.reviewList li p.tit a {
+	display: block;
+	overflow: hidden;
+	color: #333;
+	font-size: 13px;
+	line-height: 1.25;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.reviewList li p.tit a:hover {
+	text-decoration: underline;
+}
+
+.reviewList li p.info {
+	margin: 7px 0 0;
+	color: #999;
+	font-size: 12px;
+	line-height: 1.25;
+}
+
+.reviewList li p.info .name {
+	
+}
+
+.reviewList li p.info .date {
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+}
+
+/* 포토후기 */
+.photoListWrap {
+	position: relative;
+	height: 84px;
+	margin: 0 0 20px;
+	padding: 10px 19px;
+	border: 1px solid #e5e5e5;
+}
+
+.photoList {
+	position: relative;
+	overflow: hidden;
+	width: 990px;
+	height: 84px;
+	margin-left: 13px;
+	padding: 0;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/bg_reviewPhotoList.png") repeat-x 0 0;
+}
+
+.photoList ul {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width:;
+	padding: 0;
+}
+
+.photoList li {
+	float: left;
+	width: 84px;
+	height: 84px;
+	margin: 0 15px 10px 0;
+}
+
+.photoList li img {
+	width: 84px;
+	height: 84px;
+}
+
+.photoListWrap .btnPrev {
+	position: absolute;
+	top: 50%;
+	left: -1px;
+	margin-top: -10px;
+}
+
+.photoListWrap .btnNext {
+	position: absolute;
+	top: 50%;
+	right: -1px;
+	margin-top: -10px;
+}
+/* 다이어트 포토후기 */
+.diet .photoList li a {
+	display: block;
+	overflow: hidden;
+	width: 84px;
+	height: 84px;
+}
+
+.diet .photoList li span.dietImg {
+	float: left;
+}
+
+.diet .photoList li img {
+	width: 42px;
+	height: 84px;
+}
+
+.titWrap+.titWrap.tblTit {
+	margin-top: 25px;
+}
+
+.bannerWrap+.titWrap.tblTit {
+	margin-top: 28px;
+}
+
+.btnWrap.boardBtn {
+	margin-top: -28px;
+	text-align: right;
+}
+
+.paging.noPaging+.btnWrap.boardBtn {
+	margin-top: 10px;
+}
+
+.reviewView {
+	
+}
+
+.reviewView .prdtInfo {
+	position: relative;
+	height: 70px;
+	padding: 15px 0 10px 80px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.reviewView .prdtInfo .img {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 68px;
+	height: 68px;
+	border: 1px solid #e5e5e5;
+}
+
+.reviewView .prdtInfo .img img {
+	width: 68px;
+	height: 68px;
+}
+
+.reviewView .prdtInfo .prdt {
+	margin-top: 10px;
+	color: #999;
+}
+
+.reviewView .prdtInfo .info {
+	
+}
+
+.reviewView .prdtInfo .info .name {
+	
+}
+
+.reviewView .prdtInfo .info .date {
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+}
+
+.reviewView .prdtInfo p.scoreW {
+	margin-top: 5px;
+}
+
+.reviewView .rvwTit {
+	padding: 8px 0;
+	border-bottom: 1px solid #eaeaea;
+	color: #333;
+}
+
+.reviewView .rvwCont {
+	overflow-y: auto;
+	max-height: 355px;
+	margin: 0 0 50px;
+}
+
+.reviewView .rvwCont .memberView {
+	padding: 20px 0px 10px;
+}
+
+.reviewView .rvwCont .adminView {
+	padding: 15px 15px;
+	background: #f9f9f9;
+}
+
+.reviewView .rvwCont .adminView .name {
+	float: left;
+	color: #333;
+}
+
+.reviewView .rvwCont .adminView .date {
+	float: right;
+}
+
+.reviewView .rvwCont .adminView .txt {
+	clear: both;
+	margin-top: 25px;
+}
+
+/* 레시피 */
+.bannerWrap.recipe+.titWrap {
+	margin-top: 25px;
+}
+
+.best+.titWrap.tblTit {
+	margin-top: 25px;
+}
+
+/* 레시피 리스트 */
+.recipeList {
+	padding: 0;
+}
+
+.recipeList ul {
+	overflow: hidden;
+	width: 1050px;
+}
+
+.recipeList li {
+	float: left;
+	padding: 14px;
+	margin-right: 7px;
+	margin-bottom: 10px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.recipeList li .img {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.recipeList li .img img {
+	width: 225px;
+	height: 133px;
+}
+
+.recipeList li .info {
+	position: relative;
+	height: 55px;
+}
+
+.recipeList li .info p {
+	margin-top: 5px;
+	color: #999;
+	font-size: 12px;
+	line-height: 1.25;
+}
+
+.recipeList li .info .tit a {
+	display: inline-block;
+	overflow: hidden;
+	width: 225px;
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+} /*180907 수정*/
+.recipeList li .info .tit a:hover {
+	text-decoration: underline;
+}
+
+.recipeList li .info .sTit {
+	overflow: hidden;
+	width: 225px;
+	height: 16px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.recipeList li .info span.date {
+	display: inline-block;
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+}
+
+.recipeList li .info .recom {
+	position: absolute;
+	top: 18px;
+	right: 0;
+}
+
+.recipeList.chef {
+	
+}
+
+.recipeList.chef li .info {
+	height: 72px;
+}
+
+.recipeList.chef li .info .sTit {
+	
+}
+
+.recipeList.chef li .info .tit {
+	margin-top: 2px;
+}
+
+.recipeList.chef li .info .tit+p {
+	margin-top: 15px;
+}
+
+.recipeList.chef li .info .recom {
+	top: 37px
+}
+
+.recipeList li.noResult {
+	width: 1040px;
+	padding: 60px 0;
+	border-width: 1px 0;
+	text-align: center;
+}
+
+.recipeList li.noResult p {
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.recipeList li.noResult p.cmnt {
+	margin-top: 20px;
+	color: #666;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.recipeList li.noResult p.cmnt .btnA {
+	margin-top: 10px;
+}
+
+button.recommend {
+	display: block;
+	overflow: hidden;
+	width: 75px;
+	height: 30px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_recipe.png") no-repeat 0 0;
+}
+
+button.recommend {
+	text-align: right;
+	line-height: 30px;
+}
+
+button.recommend strong {
+	margin-right: 7px;
+}
+
+button.recommend.on {
+	background-position: -75px 0;
+}
+
+.recipeList+.paging {
+	margin-top: 30px;
+}
+
+.rcpIcon {
+	display: inline-block;
+	overflow: hidden;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_recipe.png") no-repeat 0 0;
+	vertical-align: middle;
+}
+
+.rcpIcon span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.rcpIcon.hit {
+	width: 19px;
+	height: 13px;
+	margin-right: 5px;
+	background-position: -160px 0;
+}
+
+.rcpIcon.ingre {
+	width: 20px;
+	height: 18px;
+	background-position: -210px -50px;
+}
+
+.rcpIcon.cook {
+	width: 24px;
+	height: 18px;
+	background-position: -240px -50px;
+}
+
+.rcpIcon.gnm {
+	width: 80px;
+	height: 41px;
+	background-position: 0 -100px;
+}
+
+.viewed {
+	font-weight: 600;
+	font-size: 14px;
+} /* 170207추가 */
+
+/* 이달의 베스트 */
+.recipeList.best {
+	padding-left: 20px;
+	padding-top: 10px;
+	background: #eee;
+}
+
+.recipeList.best ul {
+	width: 1016px;
+}
+
+.recipeList.best li {
+	border: 1px solid #eee;
+}
+
+.recipeList.best li .img {
+	
+}
+
+.recipeList.best li .img img {
+	width: 215px;
+	height: 127px;
+}
+
+.recipeList.best li .img .bestIcon {
+	position: absolute;
+	top: -14px;
+	left: -14px;
+	background-image: url("https://www.goobnemall.com/static-root/resources/pc/img/2017/icon_best2.png");
+	width: 50px;
+	height: 41px;
+	background-size: 100% auto;
+} /* 170207수정 */
+.recipeList.best li .info {
+	width: 215px;
+}
+
+/* 레시피 상세 */
+.viewTitWrap {
+	display: table;
+	width: 100%;
+	height: 28px;
+	padding: 9px 0 8px;
+	border-top: 1px solid #adadad;
+	border-bottom: 1px solid #dedede;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.viewTitWrap>div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.viewTitWrap .tit {
+	padding-left: 24px;
+	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.viewTitWrap .tit span {
+	color: #999;
+}
+
+.viewTitWrap .info {
+	width: 320px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.viewTitWrap .info:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.viewTitWrap .info dl {
+	float: right;
+	overflow: hidden;
+}
+
+.viewTitWrap .info dl dt {
+	float: left;
+	margin-left: 7px;
+	padding-left: 8px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar.png") no-repeat 0px 50%;
+	color: #999;
+}
+
+.viewTitWrap .info dl dt:first-child {
+	margin-left: 0;
+	padding-left: 0;
+	background: none;
+}
+
+.viewTitWrap .info dl dd {
+	float: left;
+	margin-left: 5px;
+	color: #999;
+}
+
+.viewTitWrap .shareArea {
+	width: 120px;
+	padding-right: 24px;
+}
+
+.viewContWrap {
+	position: relative;
+	border-bottom: 1px solid #dedede;
+	padding: 25px 22px;
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+.recipeDetail .viewContWrap {
+	position: relative;
+	border: 3px solid #ddd;
+	margin-top: 10px;
+	padding: 25px 0 0;
+	line-height: 1.5;
+}
+
+.recipeDetail .viewContWrap .rcpIcon.topLeft, .viewContWrap .rcpIcon.topRight
+	{
+	position: absolute;
+	top: -3px;
+	width: 17px;
+	height: 17px;
+}
+
+.recipeDetail .viewContWrap .rcpIcon.topLeft {
+	left: -3px;
+	background-position: 0 -150px;
+}
+
+.recipeDetail .viewContWrap .rcpIcon.topRight {
+	right: -3px;
+	background-position: -20px -150px;
+}
+
+.viewContWrap .subTit {
+	margin-bottom: 7px;
+	color: #f78330;
+	font-size: 17px;
+	font-weight: 600;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+.viewContWrap .subTit i.rcpIcon {
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+.viewContWrap .recipeInfo1 { /*min-height:280px;*/
+	padding: 0 25px 25px 25px;
+	border-bottom: 3px solid #ddd;
+	color: #999
+}
+
+.viewContWrap .recipeInfo1:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.viewContWrap .recipeInfo1 .imgArea {
+	float: left;
+	width: 474px;
+}
+
+.viewContWrap .recipeInfo1 .imgArea img {
+	width: 474px !important;
+	height: auto; /*height:280px;*/
+}
+
+.viewContWrap .recipeInfo1 .infoArea {
+	float: right;
+	width: 489px;
+}
+
+.viewContWrap .recipeInfo1 .sTit {
+	font-size: 14px;
+}
+
+.viewContWrap .recipeInfo1 .tit {
+	color: #333;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+
+.viewContWrap .recipeInfo1 .cmnt {
+	margin-top: 5px;
+	padding-top: 8px;
+	border-top: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.viewContWrap .recipeInfo1 .info2 {
+	margin-top: 30px;
+}
+
+.viewContWrap .recipeInfo1 .info2 dl {
+	padding: 5px 10px 10px;
+	background: #ededed;
+}
+
+.viewContWrap .recipeInfo1 .info2 dl dt {
+	margin-top: 2px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon05.png") no-repeat 0 8px;
+	color: #666;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.viewContWrap .recipeInfo1 .info2 dl dd {
+	margin-top: 2px;
+	padding-left: 10px;
+	color: #999;
+	font-size: 11px;
+	line-height: 1.25;
+}
+
+.viewContWrap .recipeInfo1 .info2 dl dd+dt {
+	margin-top: 6px;
+}
+
+.viewContWrap .recipeInfo2 {
+	
+}
+
+.viewContWrap .recipeInfo2 .subTit {
+	margin: 20px 0 10px 22px;
+}
+
+.viewContWrap .cooking {
+	
+}
+
+.viewContWrap .cooking ul.stepType {
+	
+} /* 조리방법 */ /*레시피형식*/
+.viewContWrap .cooking ul.stepType>li {
+	padding: 20px 22px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.viewContWrap .cooking ul.stepType>li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.viewContWrap .cooking ul.stepType>li:first-child {
+	padding-top: 0;
+	border-top: none;
+}
+
+.viewContWrap .cooking ul.stepType>li .img {
+	float: left;
+	width: 340px; /*height:200px;*/
+	padding: 14px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.viewContWrap .cooking ul.stepType>li .img img {
+	width: 340px;
+}
+
+.viewContWrap .cooking ul.stepType>li .cont {
+	float: right;
+	width: 590px;
+	padding: 5px 0 0 0;
+}
+
+.viewContWrap .cooking ul.stepType>li .cont p.step {
+	margin-top: 5px;
+	color: #333;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.viewContWrap .cooking ul.stepType>li .cont p.txt {
+	margin-top: 15px;
+}
+
+.viewContWrap .cooking .editorArea { /* width: 990px;*/
+	margin: 0 22px 20px 22px;
+} /* 조리방법 */ /*자유형식*/
+.viewContWrap .cooking .editorArea img {
+	max-width: 990px !important;
+}
+
+.viewContWrap .viewContNote {
+	padding: 30px 0;
+	border-top: 1px solid #e5e5e5;
+	background: #f9f9f9;
+	color: #816b59;
+	font-size: 13px;
+	text-align: center;
+}
+
+.viewContWrap .viewContNote p+p {
+	margin-top: 10px;
+}
+
+.viewContWrap .viewContNote p a.link01 {
+	display: block;
+	font-size: 11px;
+}
+
+.viewContWrap .viewContNote .recom {
+	color: #666;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.viewContWrap .viewContNote button.recommend {
+	display: inline-block;
+	overflow: hidden;
+	width: 97px;
+	height: 38px;
+	margin: 16px 0 0 5px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_recipe.png") no-repeat 0 0;
+	font-size: 20px;
+}
+
+.viewContWrap .viewContNote button.recommend {
+	text-align: right;
+	line-height: 30px;
+	background-position: 0 -50px;
+}
+
+.viewContWrap .viewContNote button.recommend strong {
+	margin-right: 10px;
+}
+
+.viewContWrap .viewContNote button.recommend.on {
+	background-position: -100px -50px;
+}
+
+.btnWrap.viewBtn {
+	margin: 10px 0 20px;
+}
+
+.btnWrap.viewBtn:first-child {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.btnWrap.viewBtn .btnB {
+	width: 87px;
+	margin-right: 3px;
+}
+
+.hashtagWrap {
+	padding: 11px 22px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.hashtagWrap span, .hashtagWrap a {
+	display: inline-block;
+	margin-right: 5px;
+	color: #f9732e;
+}
+
+.inputHashtag {
+	padding: 15px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.inputHashtag .tit {
+	color: #333;
+	font-weight: bold;
+}
+
+.inputHashtag .tit span {
+	padding-left: 28px;
+	color: #f9732e;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_recipe.png") no-repeat 0 -199px;
+}
+
+.inputHashtag .chkWrap {
+	margin-top: 10px;
+}
+
+.inputHashtag .chkWrap span {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+/* 댓글 */
+.commentWrap {
+	
+}
+
+.commentWrite {
+	overflow: hidden;
+	padding: 20px;
+	border: 1px solid #dedede;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.commentWrite textarea {
+	float: left;
+	width: 860px;
+	height: 66px;
+	padding: 11px 15px;
+	border: 1px solid #e5e5e5;
+	color: #999;
+	line-height: 1.5;
+}
+
+.commentWrite button {
+	width: 107px;
+	height: 90px;
+	border: 1px solid #e5e5e5;
+	border-left: none;
+	background: #fff;
+	color: #666;
+	font-size: 15px;
+	font-weight: 600;
+} /* 170224수정 */
+.commentWrite .chkW, .cmntEdit .chkW {
+	display: block;
+	margin-top: 5px;
+	line-height: 1.2;
+} /* 비밀글 */
+.commentTit {
+	margin: 18px 0 5px;
+	color: #999;
+} /*디자인변경*/
+.commentTit strong {
+	color: #333;
+}
+
+.commentWrite+.titWrap.tblTit {
+	margin: 15px 0 5px;
+} /*기존스타일*/
+.commentList {
+	
+}
+
+.commentList>ul {
+	border: 1px solid #999;
+	border-width: 1px 0;
+}
+
+.commentList>ul>li {
+	padding: 17px 0;
+	border-top: 1px dotted #d0d0d0;
+	font-size: 13px;
+}
+
+.commentList>ul>li:first-child {
+	border-top: none;
+}
+
+.commentList .cmntInfo { /*overflow:hidden;*/
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+
+.commentList .cmntInfo:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.commentList .cmntInfo>span {
+	float: left;
+	margin-right: 15px;
+}
+
+.commentList .cmntInfo>span.name {
+	color: #333;
+	font-weight: bold;
+}
+
+.commentList .cmntInfo>span.date {
+	color: #666;
+}
+
+.commentList .cmntInfo>span.btnW {
+	float: right;
+	margin-right: 0;
+	color: #e0e0e0;
+}
+
+.commentList .cmntInfo>span.btnW span.barLeft {
+	padding-left: 13px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar.png") no-repeat 4px 50%;
+}
+
+.commentList .cmntInfo>span.btnW a {
+	display: inline-block;
+	padding-left: 13px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar.png") no-repeat 4px 50%;
+	color: #999;
+	font-size: 11px;
+}
+
+.commentList .cmntInfo>span.btnW a:first-child {
+	background: none;
+}
+
+.commentList .cmntView {
+	
+}
+
+.commentList .cmntEdit {
+	margin-bottom: 3px;
+}
+
+.commentList .cmntEdit {
+	overflow: hidden;
+}
+
+.commentList .cmntEdit textarea {
+	float: left;
+	width: 900px;
+	height: 66px;
+	padding: 11px 15px;
+	border: 1px solid #e5e5e5;
+	color: #999;
+	line-height: 1.5;
+}
+
+.commentList .cmntEdit button {
+	width: 108px;
+	height: 90px;
+	border: 1px solid #e5e5e5;
+	border-left: none;
+	background: #fff;
+	color: #666;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.commentList ul li.reply {
+	padding-left: 20px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_reply.png") no-repeat 0 15px;
+} /*답글*/
+.commentList .reply .cmntEdit textarea {
+	width: 880px
+}
+
+.commentList ul li.secret {
+	
+} /*비밀글*/
+.commentList ul li.secret .secretTxt {
+	color: #999;
+}
+
+/* 나만의 레시피 */
+.cookingWrite {
+	padding: 30px 30px 30px;
+	background: #eee;
+}
+
+.cookingWrite:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.cookingWrite .imgArea {
+	float: left;
+	width: 369px;
+}
+
+.cookingWrite .imgArea .img {
+	width: 367px;
+	height: 228px;
+	border: 1px solid #e5e5e5;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/bg_cookingImg.png") #fff no-repeat 50%
+}
+
+.cookingWrite .imgArea .img img {
+	width: 339px;
+	height: 200px;
+	border: 14px solid #fff;
+}
+
+.cookingWrite .imgArea .inpFileWrap {
+	margin-top: 10px;
+}
+
+.cookingWrite .infoArea {
+	float: right;
+	width: 610px;
+}
+
+.cookingWrite .innerTbl {
+	padding: 0px 0 0;
+	border-top: none;
+}
+
+.cookingWrite .innerTbl th {
+	padding: 15px 0 0 25px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon05.png") no-repeat 15px 25px;
+}
+
+.cookingWrite .innerTbl td {
+	padding: 12px 0 0;
+}
+
+.cookingWrite .innerTbl textarea.line3 {
+	width: 476px;
+	height: 54px;
+}
+
+.cookingWrite .innerTbl textarea.line2 {
+	width: 476px;
+	height: 36px;
+}
+
+.cookingWrite .innerTbl textarea.line2+.line2 {
+	margin-top: 5px;
+}
+
+.cookingWrite2 {
+	margin: 20px 0 0;
+	border: 1px solid #e5e5e5;
+	border-width: 1px 0;
+}
+
+.cookingWrite2 th {
+	border-top: 1px solid #f1f1f1;
+	background: #f6f6f4;
+	text-align: center;
+}
+
+.cookingWrite2 th .step {
+	color: #333;
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+.cookingWrite2 th .btnD {
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.cookingWrite2 th {
+	border-top: 1px solid #f1f1f1;
+	background: #f6f6f4;
+	text-align: center;
+}
+
+.cookingWrite2 td {
+	padding: 10px 20px;
+	border-top: 1px solid #f1f1f1;
+}
+
+.cookingWrite2 td textarea {
+	width: 835px;
+}
+
+.cookingWrite2 td .inpFileWrap {
+	width: 370px;
+	margin-top: 5px;
+}
+
+.cookingWrite3 {
+	margin: 15px 0 0;
+}
+
+.cookingWrite3 .tit {
+	margin-bottom: 5px;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.cookingWrite3 .editorWrap {
+	
+}
+
+/* ****************************************************************
+  * 힐링다이어트 *
+**************************************************************** */
+/* 홈트레이닝 201702 수정 */
+.trainingList {
+	
+}
+
+.trainingList ul {
+	overflow: hidden;
+	width: 1042px;
+}
+
+.trainingList ul li {
+	float: left;
+	width: 484px;
+	margin: 0 7px 10px 0;
+	padding: 14px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.trainingList ul li .img img {
+	width: 484px;
+}
+
+.trainingList ul li .tit {
+	overflow: hidden;
+	height: 34px;
+	margin-top: 10px;
+	color: #333;
+	font-size: 15px;
+	line-height: 1.4;
+}
+/*.trainingList ul li .tit a {color:#333;font-size:13px;line-height:1.4;}*/
+.trainingList ul li.noResult {
+	width: 1040px;
+	padding: 60px 0;
+	border-width: 1px 0;
+	text-align: center;
+}
+
+.trainingList ul li.noResult p {
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.trainingList+.paging {
+	margin-top: 30px;
+}
+/* 201702 수정 끝 */
+.listViewTbl .tit a .trainer {
+	color: #999;
+}
+
+.listViewTbl .tit .cmntNum {
+	margin-left: 5px;
+	color: #f78330;
+	vertical-align: middle;
+}
+
+.listViewTbl tr.notice td .type, .listViewTbl tr.notice td.tit a,
+	.listViewTbl tr.notice td a .trainer {
+	color: #f78330;
+}
+
+.listViewTbl tr td .recomNum {
+	color: #fc000a;
+}
+
+.listViewTbl tr td .type {
+	color: #999;
+}
+
+/* 다이어트 후기 */
+.bannerWrap.diet+.titWrap {
+	margin-top: 25px;
+}
+
+.dietList {
+	padding-left: 20px;
+	padding-top: 20px;
+	background: #eee;
+}
+
+.dietList ul {
+	overflow: hidden;
+	width: 1016px;
+}
+
+.dietList li {
+	float: left;
+	width: 215px;
+	padding: 14px;
+	margin-left: 9px;
+	margin-bottom: 20px;
+	background: #fff;
+}
+
+.dietList li:first-child {
+	margin-left: 0;
+}
+
+.dietList li .img {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.dietList li .img:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.dietList li .img span.dietImg {
+	float: left;
+	position: relative;
+}
+
+.dietList li .img span.dietImg.after {
+	margin-left: 1px
+}
+
+.dietList li .img span.dietImg span.label {
+	position: absolute;
+	bottom: 0;
+	width: 87px;
+	height: 20px;
+	padding: 0 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/bg_op45.png");
+	color: #fff;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+.dietList li .img span.dietImg.after span.label {
+	text-align: right;
+}
+
+.dietList li .img img {
+	width: 107px;
+	height: 215px;
+}
+
+.dietList li .info {
+	position: relative;
+	height: 75px;
+}
+
+.dietList li .info p {
+	margin-top: 5px;
+	color: #999;
+	font-size: 12px;
+	line-height: 1.25;
+}
+
+.dietList li .info .type {
+	color: #f78330;
+}
+
+.dietList li .info .tit {
+	margin: 2px 0 9px;
+}
+
+.dietList li .info .tit a {
+	display: block;
+	overflow: hidden;
+	width: 225px;
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dietList li .info .tit a:hover {
+	text-decoration: underline;
+}
+
+.dietList li .info span.date {
+	display: inline-block;
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+}
+
+.dietList li .info .recom {
+	position: absolute;
+	top: 37px;
+	right: 0;
+}
+
+.dietList li .img .bestIcon {
+	position: absolute;
+	top: -14px;
+	left: 5px;
+}
+
+.dietDetail .viewContWrap {
+	padding: 0;
+	margin-top: 10px;
+}
+
+.viewContWrap .dietInfo1 {
+	
+}
+
+.viewContWrap .dietInfo1 .dietInfo ul {
+	display: table;
+	width: 1040px;
+	background: #fff;
+}
+
+.viewContWrap .dietInfo1 .dietInfo li {
+	display: table-cell;
+	width: 190px;
+	padding: 10px 0 10px 17px;
+	border: 1px solid #e5e5e5;
+	border-left: none;
+}
+
+.viewContWrap .dietInfo1 .dietInfo li:first-child {
+	width: 189px;
+	border-left: 1px solid #e5e5e5;
+}
+
+.viewContWrap .dietInfo1 .dietInfo li span.tit {
+	margin-right: 10px;
+	color: #333;
+	font-weight: bold;
+}
+
+.viewContWrap .dietInfo1 .dietInfo li strong {
+	color: #f78330;
+}
+
+.viewContWrap .dietInfo1 .dietPhotoArea {
+	margin-top: 0;
+}
+
+.dietPhotoArea {
+	position: relative;
+	margin: 10px 0 0;
+	padding: 25px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f9f9f9;
+}
+
+.dietPhotoArea .dietPhoto { /*overflow:hidden;*/
+	display: table;
+	width: 345px;
+	height: 345px;
+	table-layout: fixed;
+	margin: 0 auto;
+	padding: 14px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.dietPhotoArea .dietPhoto>span { /*float:left;*/
+	overflow: hidden;
+	width: 172px;
+	height: 345px;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.dietPhotoArea .dietPhoto>span.before {
+	border-right: 1px solid #fff;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/diet/img_diet_before.png") no-repeat;
+}
+
+.dietPhotoArea .dietPhoto>span.after {
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/diet/img_diet_after.png") no-repeat;
+}
+
+.dietPhotoArea .dietPhoto img {
+	width: 172px;
+	height: 345px;
+}
+
+.dietPhotoArea .dietWeight>div {
+	position: absolute;
+	top: 130px;
+	width: 122px;
+	text-align: center;
+}
+
+.dietPhotoArea .dietWeight>div.before {
+	left: 160px;
+}
+
+.dietPhotoArea .dietWeight>div.after {
+	right: 160px;
+}
+
+.dietPhotoArea .dietWeight div .label {
+	display: block;
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.dietPhotoArea .dietWeight div .weight {
+	display: block;
+	width: 122px;
+	height: 97px;
+	margin-top: 10px;
+	padding-top: 35px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/diet/bg_dietWeight.png") no-repeat;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.dietPhotoArea .dietWeight div.after .before {
+	background-position: 0 0;
+}
+
+.dietPhotoArea .dietWeight div.after .weight {
+	background-position: 100% 0;
+}
+
+.dietPhotoArea .dietWeight div .weight strong {
+	margin-right: 3px;
+	font-size: 40px;
+	line-height: 1.253;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+
+.dietPhotoArea.upload .dietWeight>div {
+	top: 153px;
+	width: 300px;
+	text-align: left;
+}
+
+.dietPhotoArea.upload .dietWeight>div.before {
+	left: 20px;
+}
+
+.dietPhotoArea.upload .dietWeight>div.after {
+	right: 20px;
+}
+
+.dietPhotoArea.upload .dietWeight div .weight {
+	width: auto;
+	height: 35px;
+	margin-top: 10px;
+	padding-top: 0;
+	background: none;
+	color: #666;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.dietPhotoArea.upload .dietWeight div .cmnt {
+	margin-top: 8px;
+	color: #999;
+	font-size: 11px;
+}
+
+.viewContWrap .dietInfo2 {
+	padding: 22px 22px;
+}
+
+.viewContWrap .dietInfo2 .editorArea {
+	
+}
+
+.viewContWrap .dietInfo3 {
+	
+}
+
+.dietWrite {
+	padding: 0 0 10px;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.dietWrite .infoTbl {
+	border-bottom-width: 1px;
+}
+
+/* ****************************************************************
+	고객센터
+**************************************************************** */
+
+/* 트레이너 답변 */
+.answerWrap {
+	margin: 0 0 20px;
+}
+
+.answerWrap .answerView {
+	padding: 18px 20px;
+	border: 1px solid #999;
+	font-size: 13px;
+} /* 170217수정 */
+.answerWrap .tit {
+	margin-bottom: 15px;
+	padding-bottom: 8px;
+	border-bottom: 1px dotted #cfcfcf;
+	line-height: 1.25;
+}
+
+.answerWrap .tit:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.answerWrap .tit span.name, .answerWrap .tit span.date {
+	margin-right: 15px;
+}
+
+.answerWrap .tit .name {
+	color: #fff;
+	font-weight: bold;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/2017/icon_trainer.png") #ff8421 no-repeat 3px
+		top;
+	padding: 3px 8px 4px 24px;
+	border-radius: 3px;
+} /* 170217수정 */
+.answerWrap .tit .btnW {
+	float: right;
+}
+
+.bannerWrap.cs+.listViewTbl {
+	margin-top: 25px;
+}
+
+.bannerWrap.cs+.cartTab {
+	margin-top: 25px;
+}
+
+.cartTab.cs {
+	position: relative;
+	margin: 0 0 20px;
+	border-bottom: 2px solid #666;
+}
+
+.cartTab.cs ul {
+	height: 38px;
+}
+
+.cartTab.cs ul li {
+	float: left;
+}
+
+.cartTab.cs ul li a {
+	display: block;
+	width: 93px;
+	height: 37px;
+	margin: 0;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	background: #ebebeb;
+	font-size: 13px;
+	line-height: 37px;
+	text-align: center;
+}
+
+.cartTab.cs ul li a span {
+	display: table-cell;
+	width: 93px;
+	height: 38px;
+	vertical-align: middle;
+	line-height: 16px;
+}
+
+.cartTab.cs ul li:first-child a {
+	border-left: 1px solid #bbb;
+}
+
+.cartTab.cs ul li.on a {
+	width: 96px;
+	height: 38px;
+	margin-left: -1px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	border-left: 2px solid #666;
+	background: #fff;
+	color: #333;
+	font-size: 13px;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+.cartTab.cs ul li:first-child.on a {
+	margin-left: 0;
+}
+
+.listViewTbl.faq td.tit a {
+	max-width: 625px;
+	padding-left: 25px;
+	text-overflow: clip;
+	overflow: visible;
+	white-space: normal;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_q2.png") no-repeat;
+} /*ellipsis 처리 제거*/
+.listViewTbl.faq .adminView {
+	padding: 20px 35px 25px 60px;
+	border: none;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_a.png") no-repeat 20px 20px #fafafa;
+}
+
+/* 주문상품내역 팝업 */
+.selPrdtTbl {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
+}
+
+.selPrdtTbl th {
+	padding: 8px 0 9px;
+	background: #fafafa;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+}
+
+.selPrdtTbl td {
+	padding: 8px 0 9px;
+	border-top: 1px solid #f1f1f1;
+	color: #666;
+	text-align: center;
+}
+
+.selPrdtTbl td.tit {
+	text-align: left;
+}
+
+.selPrdtTbl tr:first-child td {
+	border-top: 1px solid #d7d7d7;
+}
+
+.selPrdtTbl tr td.tit a {
+	display: block;
+	width: 390px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/bg_updown.png") no-repeat 100% 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.selPrdtTbl tr.on td.tit a {
+	background-position: 100% 0;
+	color: #333;
+	font-weight: bold;
+}
+
+/* 펼쳐진 게시물 표시를 위한 라인 스타일 */
+.selPrdtTbl tr.tblList.on td {
+	border-color: #a3a3a3;
+	background: #fdfdfd;
+}
+
+.selPrdtTbl tr.tblView.on+tr td {
+	border-color: #a3a3a3;
+}
+
+.selPrdtTbl tr.on:last-child td {
+	border-bottom: 1px solid #a3a3a3;
+}
+
+.selPrdtTbl .itemList {
+	overflow-y: auto;
+	max-height: 212px;
+}
+
+.selPrdtTbl .itemList ul {
+	
+}
+
+.selPrdtTbl .itemList ul li {
+	display: table;
+	width: 100%;
+	border-top: 1px solid #efefef;
+}
+
+.selPrdtTbl .itemList ul li:first-child {
+	border-top: none;
+}
+
+.selPrdtTbl .itemList ul li div {
+	display: table-cell;
+	padding: 5px 0;
+	text-align: left;
+}
+
+.selPrdtTbl .itemList ul li  div.chk {
+	width: 50px;
+	text-align: center;
+}
+
+.selPrdtTbl .itemList ul li  div.img {
+	width: 80px;
+}
+
+.selPrdtTbl .itemList ul li  div.info .itemQuantity {
+	padding-left: 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 8px 50%;
+}
+
+.selPrdtTbl .itemList ul li img {
+	width: 60px;
+	height: 60px;
+}
+
+/* ****************************************************************
+	이벤트
+**************************************************************** */
+/* tab */
+.tabType03 {
+	margin-bottom: 40px;
+}
+
+.tabType03:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.tabType03 li {
+	float: left;
+	width: 345px;
+	padding: 0;
+	border: 1px solid #d7d7d7;
+	border-width: 1px 1px 1px 0;
+	background: #fff;
+}
+
+.tabType03 li:first-child {
+	width: 346px;
+	border-left: 1px solid #d7d7d7;
+}
+
+.tabType03 li a {
+	display: block;
+	height: 20px;
+	padding: 11px 0;
+	color: #333;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.tabType03 li.on {
+	width: 343px;
+	border: 2px solid #f9732e;
+	margin-left: -1px;
+}
+
+.tabType03 li:first-child.on {
+	width: 344px;
+	margin-left: 0;
+}
+
+.tabType03 li.on a {
+	color: #f9732e;
+	height: 18px;
+	line-height: 18px;
+	font-weight: 600;
+}
+
+/* 이벤트 리스트 */
+.eventList {
+	background:;
+}
+
+.eventList>ul {
+	
+}
+
+.eventList>ul>li {
+	margin-bottom: 20px;
+}
+
+.eventList>ul>li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.eventList>ul>li a {
+	
+}
+
+.eventList>ul>li a span {
+	display: block;
+}
+
+.eventList>ul>li .imgArae {
+	float: left;
+	overflow: hidden;
+	width: 520px;
+	height: 200px;
+}
+
+.eventList>ul>li .imgArae img {
+	width: 520px;
+	height: 200px;
+}
+
+.eventList>ul>li .infoArae {
+	float: right;
+	width: 440px;
+	height: 200px;
+	padding: 0 40px;
+	background: #f5f5f5;
+}
+
+.eventList .infoArae .eventTit {
+	overflow: hidden;
+	max-height: 45px;
+	margin: 0 0 15px;
+	padding: 27px 0 17px;
+	border-bottom: 1px solid #e7e7e7;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.eventList a:hover .infoArae .eventTit {
+	text-decoration: underline;
+}
+
+.eventList .infoArae .titEnd {
+	color: #555;
+} /* 170206추가 */
+.eventList a:hover .infoArae .titEnd {
+	text-decoration: none;
+} /* 170206추가 */
+.eventList .infoArae .eventInfo span {
+	margin-bottom: 7px;
+	line-height: 1.3;
+}
+
+.eventList .infoArae .eventInfo .info01 {
+	overflow: hidden;
+	max-height: 33px;
+	color: #333;
+	font-size: 13px;
+}
+
+.eventList .infoArae .eventInfo .info02 {
+	padding-left: 7px;
+	color: #999;
+	font-size: 11px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon05.png") no-repeat 0 6px;
+}
+
+.eventList .infoArae .eventInfo .info02 .end {
+	display: inline;
+	color: #fc000a;
+}
+
+.eventList li.noResult {
+	width: 1040px;
+	padding: 60px 0;
+	border-width: 1px 0;
+	text-align: center;
+}
+
+.eventList li.noResult p {
+	color: #333;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.eventList li.noResult p.cmnt {
+	margin-top: 20px;
+	color: #666;
+	font-size: 15px;
+	line-height: 1.4;
+	font-weight: normal;
+}
+
+.eventList li.noResult p.cmnt .btnA {
+	margin-top: 10px;
+}
+
+.eventEnd {
+	position: absolute;
+	width: 520px;
+	height: 116px;
+	background: #000;
+	opacity: 0.7;
+	color: #fff;
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 84px;
+} /* 20170206 수정 */
+
+/* 상세 */
+.eventDetail .viewTitWrap .info {
+	width: 190px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.eventDetail+.commentWrap {
+	margin-top: 30px;
+}
+
+.eventDetail+.titWrap.tblTit {
+	margin-top: 30px;
+}
+
+.eventDetail .viewContWrap {
+	padding: 30px 0;
+}
+
+.eventDetail .viewContWrap .editorArea {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.eventDetail .viewContWrap .typeInfo {
+	margin: 10px 20px;
+	color: #999;
+}
+
+.eventDetail .viewContWrap .eventBanner {
+	
+}
+
+.btnWrap.viewEvent {
+	margin: 30px 0 50px;
+	text-align: center;
+}
+
+.btnWrap.viewEvent .btnM {
+	margin: 0 1px;
+}
+
+/* 설문형 */
+.viewContWrap.pollType {
+	
+}
+
+.eventBanner+.pollInfo1, .eventBanner+.pollInfo2, .eventBanner+.pollInfo3
+	{
+	margin-top: 30px;
+}
+
+.pollInfo1 {
+	margin-bottom: 30px;
+	padding: 0 25px;
+}
+
+.pollInfo1 .pollTit {
+	color: #333;
+	font-size: 42px;
+	font-weight: 600;
+	line-height: 1.05;
+}
+
+.pollInfo1 .pollCont {
+	margin-top: 17px;
+}
+
+.pollInfo1 .pollTime {
+	margin-top: 17px;
+	display: inline-block;
+	padding: 0 5px;
+	background: #f9732e;
+	color: #ffffd5;
+	font-weight: bold;
+}
+
+.pollInfo2 {
+	
+}
+
+.pollInfo2 .innerTbl {
+	padding: 3px 0;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+	background: #f9f9f9;
+}
+
+.pollInfo2 .innerTbl th {
+	padding: 7px 0 7px 25px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 15px 50%;
+	vertical-align: middle;
+}
+
+.pollInfo2 .innerTbl td {
+	padding: 7px 0 7px;
+}
+
+.pollInfo2 .addrW .postW {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.pollInfo3 {
+	padding: 0 20px;
+}
+
+.pollInfo3 .pollQuestion {
+	margin-top: 30px;
+	color: #333;
+	font-weight: bold;
+}
+
+.pollInfo3 .pollAnswer {
+	margin-top: 5px;
+}
+
+.pollInfo3 .pollAnswer li {
+	margin-top: 3px;
+	color: #333;
+}
+
+.pollInfo3 .pollAnswer li .radioW+input {
+	display: block;
+}
+
+.pollInfo3 .pollAnswer li .img {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.pollAnswer textarea {
+	width: 100%;
+	height: 128px;
+}
+
+.pollAnswer .img {
+	display: block;
+	margin: 10px 0 15px;
+}
+
+.pollInfo3 .pollAnswer .imgType {
+	margin-top: 3px;
+	margin-bottom: -10px;
+} /*이미지형*/
+.pollInfo3 .pollAnswer .imgType:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.pollInfo3 .pollAnswer .imgType li {
+	float: left;
+	width: 240px;
+	margin: 0 10px 10px 0;
+}
+
+.listViewTbl.event td.tit a {
+	max-width: 820px;
+}
+
+/* 갤러리형 */
+.eventGalleryList {
+	
+}
+
+.eventGalleryList ul {
+	overflow: hidden;
+	width: 1050px;
+}
+
+.eventGalleryList li {
+	float: left;
+	padding: 14px;
+	margin-right: 7px;
+	margin-bottom: 10px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.eventGalleryList li .img {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.eventGalleryList li .img img {
+	width: 225px;
+	height: 225px;
+}
+
+.eventGalleryList li .info {
+	position: relative;
+	height: 67px;
+}
+
+.eventGalleryList li .info p {
+	margin-top: 5px;
+	color: #999;
+	font-size: 12px;
+	line-height: 1.25;
+}
+/*.eventGalleryList li .info .tit a {display:block;overflow:hidden;width:225px;color:#333;font-size:13px;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;}*/
+.eventGalleryList li .info .tit a:hover {
+	text-decoration: underline;
+}
+
+.eventGalleryList li .info span.date {
+	display: inline-block;
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%;
+}
+
+.eventGalleryList li.noResult {
+	width: 1040px;
+	padding: 60px 0;
+	border-width: 1px 0;
+	text-align: center;
+}
+
+.eventGalleryList li.noResult p {
+	color: #333;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.eventGalleryList li.noResult p.cmnt {
+	margin-top: 20px;
+	color: #666;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.eventGalleryList li.noResult p.cmnt .btnA {
+	margin-top: 10px;
+}
+
+.eventGalleryList li .info .tit a {
+	overflow: hidden;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	width: 225px;
+	max-height: 32px;
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
+	display: box;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: -webkit-box;
+	-moz-line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+}
+
+.eventDetail .viewContWrap.galleryType {
+	padding: 20px 25px;
+}
+
+.eventDetail .viewContWrap.galleryType>div {
+	margin: 10px 0;
+}
+
+.eventDetail .viewContWrap.galleryType>div+div {
+	margin-top: 20px;
+}
+
+.eventDetail .viewContWrap.galleryType>div img {
+	max-width: 990px !important;
+}
+
+.tabType04 {
+	height: 38px;
+	margin: 10px 0 30px;
+	border-bottom: 2px solid #666;
+	position: relative;
+} /* 180709수정 */
+.tabType04 li {
+	float: left;
+} /* 201702 수정 */
+.tabType04 li a {
+	display: block;
+	width: 169px;
+	height: 37px;
+	margin: 0;
+	border-top: 1px solid #d7d7d7;
+	border-right: 1px solid #d7d7d7;
+	background: #fff;
+	font-size: 13px;
+	line-height: 37px;
+	text-align: center;
+} /* 201702 수정 끝 */
+.tabType04 li a strong {
+	color: #f9732e;
+	font-weight: normal;
+}
+
+.tabType04 li:first-child a {
+	border-left: 1px solid #bbb;
+}
+
+.tabType04 li.on {
+	
+}
+
+.tabType04 li.on a {
+	width: 168px;
+	height: 38px;
+	margin-left: -1px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	border-left: 2px solid #666;
+	background: #fff;
+	color: #333;
+	font-size: 13px;
+	line-height: 36px;
+	font-weight: bold;
+}
+
+.tabType04 li.on a strong {
+	font-weight: 600;
+}
+
+.tabType04 li:first-child.on a {
+	margin-left: 0;
+}
+
+.guideTit {
+	margin: 20px 21px 15px;
+	color: #333;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.guideTit span {
+	display: inline-block;
+	overflow: hidden;
+	width: 21px;
+	margin-right: 3px;
+	height: 21px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/customer/icon_num.png") no-repeat 0 0;
+	vertical-align: middle;
+	font-size: 0;
+	text-indent: -999em;
+}
+
+.guideTit .num01 {
+	background-position: 0px 0px;
+}
+
+.guideTit .num02 {
+	background-position: 0px -25px;
+}
+
+.guideTit .num03 {
+	background-position: 0px -50px;
+}
+
+.guideTit .num04 {
+	background-position: 0px -75px;
+}
+
+.guideTit .num05 {
+	background-position: 0px -100px;
+}
+
+.guideTit .num06 {
+	background-position: 0px -125px;
+}
+
+.guideTit .num07 {
+	background-position: 0px -150px;
+}
+
+.guideTit .num08 {
+	background-position: 0px -175px;
+}
+
+.guideTit .num09 {
+	background-position: 0px -200px;
+}
+
+.guideTit .num10 {
+	background-position: 0px -225px;
+}
+
+.guideCont {
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.searchWrap {
+	padding: 20px 202px 17px;
+	border: 1px solid #e7e7e7;
+	border-width: 1px 0;
+	background: #fafafa;
+	text-align: center;
+}
+
+.searchWrap:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.searchWrap .chkWrap {
+	float: left;
+	height: 18px;
+	padding: 9px 0 8px 0;
+	vertical-align: middle;
+}
+
+.searchWrap .chkWrap .chkBox input+label {
+	color: #666;
+}
+
+.searchWrap .srchWrap {
+	float: right;
+	position: relative;
+	width: 450px;
+	height: 35px;
+	margin: 0;
+	padding-right: 88px;
+}
+
+.searchWrap .srchWrap input.keyword {
+	width: 446px;
+	padding: 7px 0 6px;
+	border: 2px solid #d7d7d7;
+}
+
+.searchWrap .srchWrap .btnSrch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 85px;
+	height: 35px;
+	background: #333;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.searchWrap .srchReport {
+	float: right;
+	width: 538px;
+	margin: 5px 0 0;
+	color: #999;
+	text-align: left;
+}
+
+.searchWrap .srchReport em {
+	color: #f78330;
+}
+
+.articleEmail {
+	padding: 50px 0 50px 180px;
+	border: 2px solid #ddd;
+	border-width: 2px 0;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_email.png") no-repeat 70px 50%;
+	color: #333;
+	font-size: 13px;
+}
+
+/* 릴레이톡 */
+.talkDetail {
+	
+}
+/*.talkDetail .viewTitWrap {display:table;width:100%;height:28px;padding:9px 0 8px;border-width:0 !important;background:#fff;}*/
+.talkDetail .viewTitWrap {
+	display: table;
+	width: 100%;
+	height: 28px;
+	padding: 0 0 8px;
+	border-width: 0 !important;
+	background: #fff;
+}
+
+.talkDetail .viewTitWrap .tit {
+	padding-left: 0;
+}
+
+.talkDetail .viewTitWrap .tit .pTit {
+	float: left;
+	color: #333;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 35px;
+}
+
+.talkDetail .viewTitWrap .shareArea {
+	padding-right: 0;
+}
+
+.talkDetail .talkBanner {
+	margin-bottom: 10px;
+}
+
+.talkDetail .bestTalk {
+	overflow: hidden;
+	border: 2px solid #eaeaea;
+}
+
+.talkDetail .bestTalk .thisTalk {
+	float: left;
+	width: 517px;
+	border-right: 1px solid #eaeaea;
+}
+
+.talkDetail .bestTalk .lastTalk {
+	float: left;
+	width: 518px;
+}
+
+.talkDetail .bestTalk dl dt {
+	padding: 9px 10px;
+	border-bottom: 1px solid #eaeaea;
+	background: #fafafa;
+	color: #333;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.talkDetail .bestTalk dl dt strong {
+	color: #3b9c00;
+	font-weight: 600;
+}
+
+.talkDetail .bestTalk dl dt span {
+	color: #999;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.talkDetail .bestTalk dl dd {
+	height: 140px;
+	padding: 0;
+	overflow-y: auto;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo {
+	margin: 12px 20px 11px;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo li {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo li:first-child {
+	margin-top: 0;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo li strong {
+	display: inline-block;
+	width: 70px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/blt_icon03.png") no-repeat 0 50%;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo li span.result {
+	color: #f9732e;
+}
+
+.talkDetail .bestTalk dl dd ul.talkInfo li span.result:before {
+	content: '- ';
+	color: #666;
+}
+
+.talkDetail .viewContWrap {
+	padding: 0;
+	border-bottom: none;
+}
+
+.talkDetail .commentList.best {
+	background: #f9f9f9;
+}
+
+.talkDetail .commentList>ul {
+	border-color: #d6d6d6;
+}
+
+.talkDetail .commentList.best>ul {
+	border-top: 1px solid #999;
+}
+
+.talkDetail .commentList ul li {
+	padding: 18px 20px;
+}
+
+.talkDetail .commentList .cmntInfo {
+	position: relative;
+}
+
+.talkDetail .commentList .cmntInfo>span.talkIcon.best {
+	margin-right: 10px;
+}
+
+.talkDetail .commentList .cmntInfo .talkIcon.recom {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.talkDetail .commentList .cmntInfo>span .talkIcon.report, .talkDetail .commentList .cmntInfo>span .talkIcon.delete
+	{
+	margin-top: 2px;
+}
+
+.talkDetail .commentList .replyWrap {
+	margin-top: 15px;
+}
+
+.talkDetail .commentList .replyWrap .replyTit {
+	
+}
+
+.talkDetail .commentList .replyWrap .replyTit .btnReply {
+	display: inline-block;
+	height: 20px;
+	padding: 0 15px 0 0;
+	color: #999;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.talkDetail .commentList .replyWrap .replyTit .btnReply em {
+	color: #f9732e;
+}
+
+.talkDetail .commentList .replyWrap .replyCont {
+	display: none;
+}
+
+.talkDetail .commentList .replyWrap .commentWrite {
+	padding: 18px 0;
+	border: none;
+	background: none;
+} /*답글*/
+.talkDetail .commentList .replyWrap .replyList {
+	
+}
+
+.talkDetail .commentList .replyWrap .replyList ul li {
+	margin-bottom: 20px;
+	padding: 0 0 0 20px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_reply.png") no-repeat 0 0;
+}
+
+.talkDetail .commentList .replyWrap .replyList ul li .cmntView {
+	position: relative;
+	width: 850px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.talkDetail .commentList .replyWrap .replyList ul li .cmntView:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: -6px;
+	width: 6px;
+	height: 6px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/talk/img_talk.png") no-repeat -20px 0;
+}
+
+.talkDetail .commentList .replyWrap .replyList .paging2 {
+	/*height:23px;*/
+	margin: 40px 0 12px;
+}
+
+.talkDetail .commentList .replyWrap.open .replyCont {
+	display: block;
+}
+
+.talkIcon {
+	display: block;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/talk/img_talk.png") no-repeat;
+}
+
+.talkIcon span {
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+
+.talkIcon.btnReply {
+	background-position: 100% 9px;
+}
+
+.open .talkIcon.btnReply {
+	background-position: 100% -12px;
+}
+
+.talkIcon.best {
+	width: 32px;
+	height: 18px;
+	background-position: 0 -40px;
+}
+
+.talkIcon.report {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-position: 0 -20px;
+}
+
+.talkIcon.report.myReport {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-position: -20px -20px;
+}
+
+.talkIcon.delete {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-position: 1px 1px;
+}
+
+.talkIcon.recom {
+	display: block;
+	height: 21px;
+	padding: 0 0 0 26px;
+	background-position: 0 -60px;
+	line-height: 21px;
+}
+
+.talkIcon.recom em {
+	display: block;
+	min-width: 32px;
+	height: 21px;
+	padding: 0 6px 0 0;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/talk/img_talk.png") no-repeat 100% -60px;
+	color: #f9732e;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 21px;
+}
+
+.best .paging2 a {
+	border: 1px solid #f9f9f9;
+}
+
+.paging2 { /*height:23px;*/
+	margin: 40px 0 0;
+	text-align: center;
+}
+
+.paging2 a {
+	display: inline-block;
+	min-width: 15px;
+	height: 21px;
+	margin: 0;
+	padding: 0 3px;
+	border: 1px solid #fff;
+	color: #666;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.paging2 a:hover {
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	color: #f9732e;
+	text-decoration: none;
+}
+
+.paging2 a.on {
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	color: #f9732e;
+	font-weight: bold;
+}
+
+.paging2 a.btnFirst, .paging2 a.btnPrev, .paging2 a.btnNext, .paging2 a.btnLast
+	{
+	overflow: hidden;
+	border: 1px solid #d7d7d7;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_common.png") #ebebeb no-repeat;
+	text-indent: -999em;
+}
+
+.paging2 a.btnFirst.off, .paging2 a.btnPrev.off, .paging2 a.btnNext.off,
+	.paging2 a.btnLast.off {
+	/*border:1px solid #eee;background-color:#f5f5f5;cursor:default;*/
+	display: none;
+}
+
+.paging2 a.btnFirst {
+	background-position: 0px -30px;
+}
+
+.paging2 a.btnPrev {
+	background-position: -25px -30px;
+}
+
+.paging2 a.btnNext {
+	background-position: -50px -30px;
+}
+
+.paging2 a.btnLast {
+	background-position: -75px -30px;
+}
+
+.paging2 a:hover.btnFirst {
+	background-color: #727272;
+	background-position: -100px -30px;
+}
+
+.paging2 a:hover.btnPrev {
+	background-color: #727272;
+	background-position: -125px -30px;
+}
+
+.paging2 a:hover.btnNext {
+	background-color: #727272;
+	background-position: -150px -30px;
+}
+
+.paging2 a:hover.btnLast {
+	background-color: #727272;
+	background-position: -175px -30px;
+}
+
+.listViewTbl.talk td.tit a {
+	max-width: 670px;
+}
+
+.listViewTbl.talk tr.on td .type {
+	color: #f78330;
+}
+
+.listViewTbl.talk tr.on td.tit a, .listViewTbl.talk tr.on td.tit .cmntNum
+	{
+	color: #f78330;
+	font-weight: bold;
+}
+
+.titWrap.talkTit {
+	margin: 5px 0;
+}
+
+.titWrap.talkTit .sort {
+	margin: 10px 0;
+}
+
+.reportList {
+	border-top: 1px solid #efefef;
+	border-bottom: 2px solid #efefef;
+}
+
+.reportList li {
+	padding: 10px;
+	border-top: 1px solid #efefef;
+}
+
+.reportList .radioW {
+	margin-right: 0;
+}
+
+.reportList .radioW input[type="radio"] {
+	width: 13px;
+	height: 13px;
+	margin-right: 5px;
+	border: none;
+}
+
+.reportList .radioW label {
+	display: inline-block;
+	width: 360px;
+	color: #333;
+	font-size: 13px;
+}
+
+.recipeTabWrap {
+	overflow: hidden;
+	height: 146px;
+	margin: 20px 0;
+	text-align: right;
+}
+
+.recipeTabWrap.on {
+	overflow: visible;
+	height: auto;
+}
+
+.btnRcpTab {
+	display: inline-block;
+	height: 18px;
+	margin-bottom: 5px;
+	padding: 3px 15px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/bg_btnRcpTab.png") no-repeat 100% 0;
+	color: #666;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.recipeTab { /**/
+	margin: 0 0 0;
+}
+
+.btnRcpTab.on {
+	background-position: 100% -25px;
+}
+
+.recipeTab ul {
+	
+}
+
+.recipeTab ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.recipeTab li {
+	float: left;
+	width: 207px;
+	margin-top: 0;
+	padding: 0;
+	border: 1px solid #d7d7d7;
+	border-width: 0 1px 1px 0;
+	background: #fff;
+}
+
+.recipeTab li a {
+	display: block;
+	height: 18px;
+	padding: 10px 0;
+	background-color: #fbfbfb;
+	color: #666;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.recipeTab li.on {
+	width: 208px;
+	margin-top: -1px;
+	margin-left: -1px;
+	border-color: #f9732e;
+}
+
+.recipeTab li.on a {
+	height: 19px;
+	line-height: 19px;
+}
+
+.recipeTab li.on a {
+	background-color: #f9732e;
+	color: #fff;
+	font-weight: bold;
+}
+
+.recipeTab li.fstCol {
+	width: 206px;
+	border-left: 1px solid #d7d7d7;
+}
+
+.recipeTab li.fstCol.on {
+	width: 207px;
+}
+
+.recipeTab li.fstRow {
+	margin-top: 0;
+}
+
+.recipeTab li.fstRow a {
+	background-image: url("https://www.goobnemall.com/static-root/resources/pc/img/common/bg_line01.png");
+	background-repeat: repeat-x;
+}
+
+.recipeTab li.fstRow.on a {
+	height: 18px;
+	background: #f9732e;
+}
+
+/* 201702 뷰티라이프 추가 */
+.bl_news {
+	
+}
+
+.bl_news li {
+	float: left;
+	width: 245px;
+	height: 230px;
+	margin-right: 17px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+}
+
+.bl_news li>img {
+	width: 245px;
+	height: 140px;
+}
+
+.bl_news a:hover {
+	text-decoration: underline;
+}
+
+.bl_news li strong {
+	font-size: 16px;
+	color: #333;
+	line-height: 21px;
+	font-weight: 600;
+	display: block;
+	padding: 14px 13px 5px;
+	height: 40px;
+	overflow: hidden;
+} /* 171019수정 */
+.bl_news li span {
+	display: inline-block;
+	font-size: 12px;
+	color: #555;
+	line-height: 1;
+	padding: 0 13px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 220px;
+	overflow: hidden;
+}
+
+/* quick menu 201701 수정 */
+.quick {
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	width: 200px;
+	z-index: 300;
+}
+
+.qLeft {
+	margin-left: -640px;
+}
+
+.qRight {
+	margin-left: 540px;
+	width: 100px;
+}
+
+.quick.fixed .qInner {
+	position: fixed;
+	top: 85px;
+	width: 100px;
+}
+
+.qRight.quick .qInner {
+	width: 90px; /*background:#fff;*/
+} /*190328수정*/
+
+/* 왼쪽 201701 수정 */
+.qLeft .qInner {
+	
+}
+
+.qLeft .qInner>div {
+	margin-bottom: 10px; /*background:#fff;*/
+	text-align: center;
+}
+
+.quick .btnImg {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.quick .btnImg.btnPrev {
+	width: 15px;
+	height: 15px;
+	background-position: -285px -35px;
+}
+
+.quick .btnImg.btnPrev:hover {
+	background-position: -315px -35px;
+}
+
+.quick .btnImg.btnNext {
+	width: 15px;
+	height: 15px;
+	background-position: -300px -35px;
+}
+
+.quick .btnImg.btnNext:hover {
+	background-position: -330px -35px;
+}
+
+.quick .historyWrap .btnImg.btnPrev {
+	background-position: -170px -180px;
+}
+
+.quick .historyWrap .btnImg.btnPrev:hover {
+	background-position: -200px -180px;
+}
+
+.quick .historyWrap .btnImg.btnNext {
+	background-position: -185px -180px;
+}
+
+.quick .historyWrap .btnImg.btnNext:hover {
+	background-position: -215px -180px;
+}
+
+.quick .historyWrap .btnImg.btnPrev.off {
+	background-position: -170px -180px;
+	opacity: 0.3;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	cursor: default;
+}
+
+.quick .historyWrap .btnImg.btnNext.off {
+	background-position: -185px -180px;
+	opacity: 0.3;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	cursor: default;
+}
+
+/* 로그인 연동 170714추가 */
+.simple_coupon {
+	width: 494px;
+	height: 219px;
+	background: #f3f3f3 url(https://www.goobnemall.com/static-root/resources/pc/img/2017/img_spLogin.png) no-repeat 33px 27px;
+	padding: 127px 33px 27px;
+	box-sizing: border-box;
+	border: 1px dotted #bbb;
+}
+
+.simple_coupon>strong {
+	font-size: 15px;
+	color: #333;
+	font-weight: 600;
+	display: block;
+}
+
+.simple_coupon1 {
+	width: 340px;
+	height: 110px;
+	background: #f3f3f3 url(https://www.goobnemall.com/static-root/resources/pc/img/2017/img_spLogin10000.png) no-repeat 20px
+		15px;
+	padding: 20px 15px 15px 170px;
+	box-sizing: border-box;
+	border: 1px dotted #bbb;
+	margin: 10px 0;
+	font-weight: bold;
+	color: #f9732e;
+	font-size: 14px;
+	letter-spacing: -1px;
+}
+
+.simple_login {
+	float: right;
+	width: 420px;
+	margin: 10px -10px 0 0;
+}
+
+.spLogin {
+	position: relative;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e4e3e4;
+}
+
+.spLogin .btnLgn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 115px;
+	height: 100px;
+	background: #f9732e;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.spInput {
+	padding-top: 8px;
+}
+
+.spInput>a {
+	position: absolute;
+	left: 240px;
+	font-size: 11px;
+	color: #888;
+	vertical-align: middle;
+}
+
+.spInput>strong {
+	color: #333;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.spPop dl {
+	width: 100%;
+	display: table;
+	border-bottom: 1px solid #eaeaea;
+	padding: 10px 0;
+}
+
+.spPop dl>dt {
+	display: inline-block;
+	width: 25%;
+	font-weight: 600;
+	color: #333;
+	vertical-align: top;
+}
+
+.spPop dl>dd {
+	display: inline-block;
+	width: 75%;
+}
+
+.spPop dl>dd>span {
+	font-size: 11px;
+	display: block;
+	margin-top: 5px;
+	color: #777;
+}
+
+.spPop_txt {
+	border-bottom: 1px solid #eaeaea;
+	padding: 15px 0;
+}
+
+.spPop_txt:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.spPop_result {
+	background: url(https://www.goobnemall.com/static-root/resources/pc/img/2017/img_unused.jpg) no-repeat left 20px;
+	padding: 27px 0 35px 90px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.spPop_result>span {
+	font-size: 18px;
+	color: #f9732e;
+	display: block;
+	font-weight: 600;
+}
+
+.spPop_terms {
+	overflow: hidden;
+	padding: 10px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+/*오늘의 특가 171122추가*/
+.saleDaily {
+	float: left;
+	width: 500px;
+	height: 407px;
+	border: 1px solid #e5e5e5;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 40px;
+} /* 180918수정 */
+.saleDaily:nth-child(even) {
+	margin-left: 40px;
+}
+
+.saleDaily .saleImg {
+	display: block;
+	width: 498px;
+	height: 274px;
+	position: relative;
+}
+
+.saleDaily .saleImg img {
+	width: 498px;
+	height: 274px;
+}
+
+.saleDaily .saleDailyDC {
+	display: block;
+	overflow: hidden;
+	width: 95px;
+	height: 103px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/prdt/img_prdtList.png") no-repeat 0 0;
+	color: #fff;
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	background-size: 520% auto;
+} /*180528 수정*/
+.saleDaily .saleDailyDC>span.discount {
+	display: block;
+	margin: 20px 0 0 -23px;
+	font-size: 22px;
+	line-height: 42px;
+	text-align: center;
+} /*180528 수정*/
+.saleDaily .saleDailyDC>span.discount strong {
+	font-size: 36px;
+}
+
+.saleDaily .saleTit {
+	margin: 15px 22px 0;
+} /* 180918 수정 */
+.saleDaily .saleTit>span {
+	color: #999;
+	font-size: 14px;
+	display: block;
+}
+
+.saleDaily .saleTit>span:first-child {
+	display: none;
+} /* 180321수정 */
+.saleDaily .saleTit span.saleTitKey {
+	color: #333;
+	font-size: 23px;
+	font-weight: 600;
+	display: block;
+	height: 28px;
+	line-height: 1;
+	letter-spacing: -0.9px;
+	overflow: hidden;
+} /*180918수정*/
+.saleDaily .saleLink {
+	border-top: 1px solid #e5e5e5;
+	position: relative;
+}
+
+.saleDaily .saleLink a {
+	display: inline-block;
+	width: 247px;
+	height: 36px;
+	font-size: 15px;
+	background-image: url(https://www.goobnemall.com/static-root/resources/pc/img/2017/icon_saleDaily.png);
+	background-repeat: no-repeat;
+	line-height: 2.2;
+	box-sizing: border-box;
+	padding-left: 22%;
+}
+
+.saleDaily .saleLink a.saleShare {
+	background-position: 38% 7px;
+}
+
+.saleDaily .saleLink a.saleCart {
+	background-position: 38% -34px;
+	border-left: 1px solid #e5e5e5;
+	color: #ff6e27;
+}
+
+.saleDaily .salePrice {
+	height: 48px;
+	position: relative;
+	right: 15px;
+	text-align: right;
+	line-height: 1;
+	margin-top: -15px;
+} /* 180321 수정 */
+.saleDaily .salePrice .saleNomal {
+	text-decoration: line-through;
+	color: #999;
+}
+
+.saleDaily .salePrice .salePr {
+	color: #fe3501;
+}
+
+.saleDaily .salePrice .salePr>strong {
+	font-size: 27px;
+}
+
+.saleDaily .salePrice .saleUnit {
+	display: block;
+	color: #fe3501;
+	line-height: 1;
+	margin-top: 3px !important;
+} /*180918 수정*/
+
+/* 20180104 비회원 개인정보 수집 동의 */
+.titWrap .privacyNm {
+	border-top: 2px solid #e0e0e0;
+	border-bottom: 2px solid #e0e0e0;
+	padding: 20px 0;
+}
+
+/* 20180104 로그인 팝업 */
+.titWrap .Ytit {
+	margin: 0 auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.orderLogin input.lgn {
+	height: 38px;
+	line-height: normal;
+	line-height: 35px\0/; /* for IE 8 */
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+
+.orderLoginWrap {
+	padding: 10px 0;
+}
+
+.orderLoginWrap .otherAcc {
+	text-align: center;
+	float: left;
+}
+
+.lyContainer .btnLgn {
+	width: 99%;
+	height: auto;
+	padding: 15px 5px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+.orderLoginList {
+	
+}
+
+.orderLoginList ul {
+	text-align: center;
+}
+
+.orderLoginList ul li {
+	margin: 0 auto;
+	display: inline-block;
+	font-size: 13px;
+	margin-right: 20px;
+}
+
+.orderLoginList ul li a {
+	display: inline-block;
+}
+
+.orderLoginList ul li::after {
+	content: '|';
+	color: #666;
+	margin-left: 20px;
+}
+
+.orderLoginList ul li:last-child::after {
+	content: '';
+	margin-left: 0;
+}
+
+.shareWrap {
+	margin-top: 10px;
+}
+
+.shareWrap button {
+	width: 49%;
+	height: 45px;
+	box-sizing: border-box;
+	background: #f9732e;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: bold;
+	letter-spacing: -0.01em;
+} /*200805*/
+.shareWrap button.naver {
+	background: #41c825;
+}
+
+.shareWrap button.facebook {
+	background: #5274ba;
+}
+
+.shareWrap button.kakao {
+	background: #fce507;
+	color: #3c1d1d;
+}
+
+.shareWrap button .ico {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 4%;
+	vertical-align: middle;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/img_login.png") no-repeat 0 0;
+	background-size: 320px auto;
+}
+
+.shareWrap button.naver .ico {
+	width: 15px;
+	height: 15px;
+	background-position: 0 0;
+}
+
+.shareWrap button.facebook .ico {
+	width: 10px;
+	height: 19px;
+	background-position: -20px 0;
+}
+
+.shareWrap button.kakao .ico {
+	width: 16px;
+	height: 15px;
+	background-position: -40px 0;
+}
+
+.loginMemberBn {
+	margin-top: 30px;
+	width: 100%;
+}
+
+/*180413 검색결과페이지 */
+.prdtList .tit02 {
+	font-size: 15px;
+	padding-left: 10px;
+	color: #272222;
+	font-weight: 600;
+	padding-top: 10px;
+} /*180530추가*/
+.prdtList .tit02 strong {
+	color: #ff4949;
+} /*180530추가*/
+.recipeList.seach_view .tit02 {
+	font-size: 15px;
+	padding-left: 10px;
+	color: #272222;
+	font-weight: 600;
+} /*180502 수정*/
+.recipeList.seach_view .tit02 strong {
+	color: #ff4949;
+}
+
+.recipeList.seach_view ul {
+	width: 1040px;
+} /*180502 추가*/
+.recipeList.seach_view li {
+	border: none;
+	padding: 20px 20px;
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+	margin-bottom: 0;
+} /*180502 수정*/
+.recipeList.seach_view li:first-child {
+	border-top: 2px solid #666
+}
+
+.recipeList.seach_view li .img img {
+	width: 150px;
+	height: 89px;
+	margin-right: 20px;
+}
+
+.recipeList.seach_view li .info {
+	height: 60px;
+	position: relative;
+} /*180502 수정*/
+.recipeList.seach_view li .info .tit a {
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.recipeList.seach_view li .info span.name {
+	margin-left: 10px;
+} /*180502 추가*/
+.recipeList.seach_view li .info img {
+	vertical-align: top;
+	margin-left: 10px;
+	margin-top: 2px;
+} /*180502 추가*/
+.recipeList.seach_view li .info .btnNext {
+	background-position: -101px -201px;
+	position: absolute;
+	top: 0;
+	right: 50px;
+} /*180502 추가*/
+.recipeList.seach_view li .info span.name, .recipeList.seach_view li .info span.date
+	{
+	display: inline-block;
+	font-size: 13px;
+	vertical-align: top;
+	margin-top: 2px;
+} /*180502 수정*/
+.recipeList.seach_view li .info .cmnt {
+	font-size: 14px;
+	color: #888;
+	font-weight: 500;
+	width: 860px;
+	height: 57px;
+	overflow: hidden;
+	line-height: 1.3em;
+} /*180502 추가*/
+.recipeList.seach_view li .info .cmnt.long {
+	width: 100%;
+	height: 40px;
+}
+
+.recipeList.seach_view li .review_view .cmnt {
+	font-size: 14px;
+	color: #888;
+	font-weight: 500;
+	width: 880px;
+	height: auto;
+	overflow: hidden;
+	line-height: 1.4em;
+} /*180502 추가*/
+.recipeList.seach_view li .review_view .cmnt.long {
+	width: 100%;
+	height: 40px;
+} /*180502 추가*/
+.recipeList.seach_view li .review_view {
+	padding: 20px 0 0 20px;
+	min-height: 100px;
+}
+
+.seach_view li .review_view {
+	display: none;
+} /*180502 추가*/
+.seach_view li div.review_view.on {
+	display: table
+} /*180502 추가*/
+.seach_view li div.review_view.on {
+	border-top: 1px solid #e5e5e5;
+	margin-top: 10px;
+	min-width: 1040px;
+	margin-left: -20px;
+}
+
+.recipeList.seach_view li .info.review_tit {
+	height: 25px;
+} /*180502 수정*/
+
+/* 라디오 상품교환페이지 180926추가 */
+.radio_top {
+	height: 254px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/customer/radio_topimg.jpg") no-repeat 380px top;
+	margin-top: 40px;
+}
+
+.radio_top>span>img {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.radio_top>span {
+	display: inline-block;
+	margin: 30px 0 0 40px;
+	width: 350px;
+	color: #2a2a2a;
+	font-size: 28px;
+	line-height: 1.3;
+}
+
+.radio_top>span>strong {
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.radio_subtit {
+	color: #333;
+	font-size: 17px;
+	font-weight: 500;
+	margin: 50px 0 10px;
+}
+
+.radio_step {
+	height: 147px;
+	overflow: hidden;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/customer/radio_bg_step.png") no-repeat left top;
+}
+
+.radio_step li {
+	height: 147px;
+	width: 148px;
+	margin-right: 85px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	padding-top: 65px;
+	box-sizing: border-box;
+	line-height: 1.4;
+	padding-left: 10px;
+	letter-spacing: -1px;
+}
+
+.radio_step li span>strong {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.radio_step li:last-child {
+	margin-right: 0;
+	padding-left: 10px;
+}
+
+.radio_channel li {
+	border: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+}
+
+.radio_channel li .channel_tit {
+	display: inline-block;
+	width: 210px;
+	margin: 40px 0 0 30px;
+	vertical-align: top;
+	font-size: 16px;
+}
+
+.radio_channel li .channel_tit>span {
+	background-color: #484848;
+	font-weight: 700;
+	color: #fff;
+	padding: 0 10px;
+	border-radius: 30px;
+	font-size: 12px;
+}
+
+.radio_channel li .channel_tit>strong {
+	color: #333;
+	font-size: 23px;
+	display: block;
+	margin-top: 10px;
+}
+
+.radio_channel li .channel_btn {
+	display: inline-block;
+	padding: 22px 20px 0;
+	width: 190px;
+	vertical-align: top;
+}
+
+.radio_channel li .btn_coupon {
+	display: block;
+	background-color: #ff4949;
+	color: #fff;
+	font-weight: 600;
+	font-size: 17px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.radio_channel li .btn_product {
+	display: block;
+	border: 1px solid #e5e5e5;
+	background-color: #f4f4f4;
+	color: #333;
+	font-size: 16px;
+	text-align: center;
+	padding: 15px 0;
+	margin-top: 6px;
+}
+
+.radio_quick {
+	display: inline-block;
+	width: 100px;
+	height: 62px;
+	border: 1px solid #e5e5e5;
+	border-width: 0 1px;
+	box-sizing: border-box;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/customer/radio_quick.png") no-repeat center 10px;
+	color: #272222;
+	text-align: center;
+	padding-top: 35px;
+	font-weight: 600;
+}
+
+/* 굽머니 상품 레이어팝업 190130추가 */
+.gm_tab {
+	margin-bottom: 25px;
+}
+
+.gm_tab:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.gm_tab li {
+	float: left;
+	width: 166px;
+	padding: 0;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	margin: -1px -1px 0 0;
+}
+
+.gm_tab li:nth-child(5), .gm_tab li:nth-child(10) {
+	margin-right: 0px;
+}
+
+.gm_tab li a {
+	display: block;
+	padding: 10px 15px;
+	color: #666;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.gm_tab li.on {
+	background-color: #f9732e;
+	z-index: 99999;
+	border: 1px solid #f9732e;
+}
+
+.gm_tab li.on a {
+	color: #fff;
+	font-weight: bold;
+}
+
+.gmprdt .prdtList {
+	width: 836px;
+	height: 570px;
+	overflow-y: auto;
+	overflow-x: hidden;
+} /*190207수정*/
+.gmprdt .prdtList ul {
+	
+} /*190207수정*/
+.gmprdt .prdtList .tit02 {
+	padding-left: 32px;
+	font-size: 18px;
+} /*190207수정*/
+.gmprdt .prdtList ul li .itemWrap {
+	height: 218px;
+	padding: 20px 0;
+}
+
+.gmprdt .prdtList ul li .itemWrap:hover {
+	padding: none;
+	border: none;
+	margin: 0;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemImg img {
+	width: 162px;
+	height: 162px;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemTit {
+	width: 163px;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemTit p.name a {
+	letter-spacing: -1px;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemPrice div.priceWrap {
+	width: 162px;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemPrice {
+	width: 162px;
+}
+
+.gmprdt .prdtList>ul>li {
+	width: 162px;
+	border: none;
+	margin: 0;
+	padding-left: 32px
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemImg .pack_bg02 {
+	width: 45px;
+	height: 39px;
+	top: 132px;
+	right: 4px;
+}
+
+.gmprdt .prdtList ul li .itemWrap .itemImg .pack_bg02 .pack_font {
+	font-size: 22px;
+}
+
+input.gmbox {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+	position: absolute;
+	top: 20px;
+	left: 32px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+/*상세 내 상품평 UI수정 190329수정*/
+.review2019 {
+	margin-top: 20px;
+}
+
+.review2019:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.review2019 li.totalList {
+	float: right;
+	width: 605px;
+	overflow: hidden;
+}
+
+.review2019 li.totalList.sel {
+	width: 1040px;
+} /*190409추가*/
+.review2019 li.RVphoto {
+	float: left;
+	width: 375px;
+}
+
+.RVList {
+	border-top: 1px solid #666;
+}
+
+.RVList li {
+	border-bottom: 1px solid #f1f1f1;
+	padding: 15px 0;
+	min-height: 70px;
+	max-height: 110px;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+} /*200402수정*/
+.RVList li:nth-child(5n) {
+	border-bottom: 0;
+}
+
+.RVList li a.RVimg {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	overflow: hidden;
+}
+
+.RVList li a.RVimg>img {
+	width: 140%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: -20%;
+}
+
+.RVList li .txtList {
+	width: 82.64%;
+} /*190409수정*/
+.RVList li .txtList.w100 {
+	width: 100% !important;
+} /*190415수정*/
+.RVList li .txtList span {
+	display: inline-block;
+	font-size: 13px;
+} /*200402수정*/
+.RVList li .txtList span.RVname {
+	color: #333;
+	font-weight: 700;
+	padding: 0 15px 0 5px;
+} /*200402수정*/
+.RVList li .txtList a.RVcts {
+	display: block;
+	line-height: 1.5;
+	margin-top: 10px;
+	height: 56px;
+	overflow: hidden;
+}
+
+.RVList li .txtList a.RVcts.noImg {
+	width: 100%;
+	max-height: 56px;
+	height: auto;
+	pointer-events: none;
+} /*200402수정*/
+.RVwrite {
+	padding: 30px 0 5px;
+	margin-top: 30px;
+	background-color: #f3f3f3;
+}
+
+.RVwriteBtn {
+	background-color: #fff;
+}
+
+.RVphotoList {
+	overflow-y: auto;
+	height: 520px;
+} /* 190416수정 */
+.RVphotoList a {
+	display: inline-block;
+	float: left;
+	width: 115px;
+	height: 115px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 5px 5px 0;
+}
+
+.RVphotoList a:nth-child(3n) {
+	margin: 0 0 5px 0;
+} /* 190415수정 */
+.RVphotoList a:first-child {
+	margin: 0 5px 5px 0;
+}
+
+.RVphotoList a>img {
+	width: 115px;
+	height: 115px;
+} /* 190415수정 */
+.RVnone {
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/icon_info.png') no-repeat center top;
+	background-size: 45px auto;
+	height: 60px;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 55px;
+}
+
+/* 끝판왕 추가 190415 */
+.lastKing {
+	margin-bottom: 30px;
+}
+
+.lastKing:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.lastKing li {
+	display: inline-block;
+	width: 505px;
+	box-sizing: border-box;
+	padding: 15px 0;
+	float: left;
+	position: relative;
+	border-top: 2px solid #666;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.lastKing li:nth-child(2) {
+	margin-left: 30px;
+}
+
+.lastKing li .lkcts {
+	width: 290px;
+	position: absolute;
+	top: 15px;
+	left: 205px;
+}
+
+.lastKing .lkimg {
+	width: 180px;
+	height: 180px;
+}
+
+.lastKing .lkicon {
+	position: absolute;
+	left: 5px;
+	top: -3px;
+}
+
+.lastKing .lkcts .tit {
+	font-size: 15px;
+	margin: 5px 0;
+	font-weight: 600;
+	color: #333;
+	display: block;
+	height: 45px;
+	width: 295px;
+	overflow: hidden;
+}
+
+.lastKing .lkcts .txt {
+	max-height: 80px;
+	overflow: hidden;
+	display: block;
+	line-height: 1.7;
+}
+
+.lastKing .lkcts .info {
+	margin-top: 10px;
+	color: #999;
+	font-size: 12px;
+}
+
+.lastKing .lkcts .info .bar {
+	margin-left: 8px;
+	padding-left: 10px;
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/common/icon_vBar03.png") no-repeat 0px 50%
+}
+
+.lastKing .lkPrdt {
+	line-height: 1;
+	padding-left: 5px;
+	vertical-align: top;
+	color: #333;
+}
+
+.lktit {
+	background: url(https://www.goobnemall.com/static-root/resources/pc/img/common/icon_review_tit.png) no-repeat left 4px;
+	padding-left: 28px;
+}
+
+/*191002 회원가입 이용약관 추가*/
+.box01 {
+	padding: 15px 30px;
+	margin-top: 10px;
+	border: 1px solid #eee;
+	position: relative;
+	height: auto;
+	font-size: 13px;
+	color: #666;
+}
+
+a.mktbtn {
+	background: url("https://www.goobnemall.com/static-root/resources/pc/img/2018_main/img_common.png") no-repeat;
+	background-position: -185px -180px;
+	text-indent: -999px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin-top: 1px;
+}
+
+.mktCT {
+	display: none;
+}
+
+.mktCT.on {
+	display: block;
+}
+
+/*200302 결제페이지 굽페이 추가*/
+.pay_goob {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 10px;
+}
+
+.pay_goob p {
+	padding: 10px 20px;
+	border: 1px solid #96cb01;
+	display: inline-block;
+	border-radius: 10px;
+	margin-left: 5px;
+	text-align: center;
+	background: #fff;
+}
+
+.pay_goob p span {
+	display: block;
+}
+
+.pay_goob input {
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+/*200402 상품평 UI 수정*/
+.RVwrite.RVBox {
+	background: #fff;
+	border: 1px solid #b7b7b7;
+	padding: 35px 38px;
+}
+
+.RVwrite.RVBox div {
+	float: left;
+	text-align: left;
+	margin-right: 40px;
+}
+
+.RVwrite.RVBox div:last-child {
+	margin-right: 0;
+}
+
+.RVwrite.RVBox:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.prdtDtlExp .detailReview .RVBox .cmntBox02 {
+	margin: 0;
+}
+
+.RVBox .cmntBox02 div.line {
+	border-left: 1px solid #ebebeb;
+	padding-left: 40px;
+}
+
+.prdtDtlExp .detailReview .RVBox .cmntBox02 p.pdTit {
+	font-size: 13px;
+}
+
+.RVBox .cmntBox02 p strong.fc01 {
+	font-size: 14px;
+}
+
+.RVBox .cmntBox02 p strong.fc33 {
+	font-size: 40px;
+	line-height: 0.8em;
+}
+
+.RVBox .cmntBox02 p span.starScore {
+	vertical-align: text-top;
+	margin-top: -5px;
+}
+
+/*200402 포토후기 레이어팝업*/
+.lyPop.photoRv_pop {
+	border: none;
+	padding: 40px 50px
+}
+
+.lyPop.photoRv_pop .lyHeader .closeLyBtn {
+	top: 10px;
+}
+
+.photoRv_pop .reviewView_photo {
+	float: left;
+	width: 428px;
+	padding-right: 20px;
+	padding-top: 20px;
+	height: 520px;
+	overflow-y: auto;
+}
+
+.photoRv_pop .reviewView {
+	float: left;
+	width: 410px;
+	border-left: 1px solid #eae9e9;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.reviewView_photo img {
+	width: auto;
+	display: block;
+	overflow: hidden;
+	height: auto;
+	max-width: 100%;
+}
+
+.photoRv_pop .reviewView .prdtInfo {
+	height: 83px;
+	padding: 20px 0 10px 92px;
+}
+
+.photoRv_pop .reviewView .prdtInfo p.scoreW {
+	margin-top: 0px;
+}
+
+.photoRv_pop .reviewView .prdtInfo .prdt {
+	margin-top: 5px;
+	font-size: 13px;
+}
+
+.photoRv_pop .reviewView .prdtInfo .img {
+	width: 80px;
+	height: 80px;
+	top: 20px;
+}
+
+.photoRv_pop .reviewView .prdtInfo .img img {
+	width: 80px;
+	height: 80px;
+}
+
+.photoRv_pop .reviewView .prdtInfo .title {
+	font-size: 15px;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 95%;
+} /*200423수정*/
+.photoRv_pop .reviewView .prdtInfo .info {
+	font-size: 12px;
+}
+
+.photoRv_pop .reviewView .rvwCont {
+	min-height: 426px;
+	margin: 0;
+	position: relative;
+}
+
+.photoRv_pop .reviewView .rvwCont .memberView {
+	padding: 20px 0 20px;
+}
+
+.memberView .reviewText {
+	color: #666;
+	font-size: 13px;
+}
+
+.photoRv_pop .reviewView .rvwCont .adminView {
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+	min-width: 370px;
+} /*200612수정*/
+.lyPop.photoRv_pop .btnPrev {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/review_btn.png') no-repeat 0 0;
+	display: inline-block;
+	text-indent: -999px;
+	width: 12px;
+	height: 25px;
+}
+
+.lyPop.photoRv_pop .btnNext {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	background: url('https://www.goobnemall.com/static-root/resources/pc/img/common/review_btn.png') no-repeat -14px 0;
+	display: inline-block;
+	text-indent: -999px;
+	width: 12px;
+	height: 25px;
+}
+
+/*201029 첫구매추천세트*/
+.tabType03.tabFirst li a {
+	color: #666;
+	background: #fafafa;
+	border: 1px solid #e8e8e8;
+	box-sizing: border-box;
+	height: 52px;
+	padding: 17px 0;
+}
+
+.tabType03.tabFirst li, .tabType03.tabFirst li.on {
+	border: none;
+	width: 520px;
+}
+
+.tabType03.tabFirst li.on a {
+	color: #fff;
+	background: #4b3737;
+	border: 1px solid #4b3737;
+}
+
+.prdtListTimeSale.dlvrListNew.firstList .itemWrap .itemInfoArea {
+	padding: 20px 0;
+	width: 498px;
+}
+
+.prdtListTimeSale.firstList .itemWrap .itemInfoArea .itemTit .name {
+	font-size: 20px;
+	line-height: 20px;
+	height: 20px;
+}
+
+.prdtListTimeSale.dlvrListNew.firstList .itemWrap .itemInfoArea .itemTit .cmnt
+	{
+	font-size: 15px;
+}
+
+.prdtListTimeSale.dlvrListNew.firstList .itemPrice.dlvrPrice .primecost
+	{
+	font-size: 14px;
+}
+
+.prdtListTimeSale.dlvrListNew.firstList .itemWrap .itemInfoArea .itemPrice
+	{
+	width: 497px;
+}
+
+.prdtListTimeSale.dlvrListNew.firstList .itemWrap .itemInfoArea .itemPrice .priceWrap .price strong
+	{
+	color: #272222;
+}
+
+.fsBtn {
+	min-width: 140px;
+	height: 44px;
+	color: #222;
+	border: 1px solid #222;
+	background: #fff;
+	font-size: 15px;
+	font-weight: 500;
+} /*201105*/
+.prdtListTimeSale.dlvrListNew.firstList .itemWrap .itemInfoArea .itemPrice .priceWrap dt
+	{
+	width: 68px;
+}

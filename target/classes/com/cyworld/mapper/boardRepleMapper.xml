@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.boardReple">	
+	<select id="getData" parameterType="Integer" resultType="com.cyworld.dto.CyBoardRepleDTO">
+		select num, guestNum, userId, userName, content, created from cyboardReple where guestNum = #{num} order by created asc
+	</select>
+	
+	<select id="getNum" resultType="Integer">
+		select nvl(max(num),0) from cyboardReple
+	</select>
+	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyBoardRepleDTO">
+		insert into cyboardReple (num, guestNum, userId, userName, content, created) values (#{num}, #{guestNum}, #{userId}, #{userName}, #{content}, sysdate)	
+	</insert>
+	
+	<delete id="deleteData" parameterType="Integer">
+		delete cyboardReple where num = #{num}
+	</delete>
+</mapper>

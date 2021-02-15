@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.using">	
+	<select id="getBackGround" parameterType="String" resultType="String">
+		select originalFileName from cyusingbg where userId = #{userId}
+	</select>
+	
+	<select id="getMinimi" parameterType="String" resultType="com.cyworld.dto.CyUsingItemDTO">
+		select originalFileName, imgX, imgY from cyusingMinimi where userId = #{userId}
+	</select>
+	
+	<select id="getStoryRoom" parameterType="String" resultType="String">
+		select originalFileName from cyusingStoryRoom where userId = #{userId}
+	</select>
+	
+	<insert id="insertBG" parameterType="com.cyworld.dto.CyUsingItemDTO">
+		insert into cyusingbg (userId, saveFileName, originalFileName) values (#{userId}, #{saveFileName}, #{originalFileName} )
+	</insert>
+	
+	<insert id="insertMinimi" parameterType="com.cyworld.dto.CyUsingItemDTO">
+		insert into CYUSINGMINIMI (userId, saveFileName, originalFileName, imgX, imgY) values (#{userId}, #{saveFileName}, #{originalFileName}, '379px', '186px' )
+	</insert>
+	
+	<insert id="insertStoryRoom" parameterType="com.cyworld.dto.CyUsingItemDTO">
+		insert into cyusingStoryRoom (userId, saveFileName, originalFileName) values (#{userId}, #{saveFileName}, #{originalFileName} )
+	</insert>
+	
+	<select id="getUsingSongs"  parameterType="String" resultType="com.cyworld.dto.CyUsingSongsDTO">
+		select userId,songOrder,saveFileName,originalFileName from cyUsingSongs where userId=#{userId}
+		order by songOrder asc
+	</select>
+	
+	<update id="updateBackGround" parameterType="map" >
+		update cyUsingBg set saveFileName = #{backGround}, originalFileName = #{backGround} where userId = #{userId}	
+	</update>
+	
+	<update id="updateStoryRoom" parameterType="map" >
+		update cyUsingStoryRoom set saveFileName = #{storyRoom}, originalFileName = #{storyRoom} where userId = #{userId}	
+	</update>
+	
+	<update id="updateMinimi" parameterType="map" >
+		update cyUsingMinimi set saveFileName = #{minimi}, originalFileName = #{minimi}, imgX = #{imgX}, imgY = #{imgY} where userId = #{userId}	
+	</update>
+	
+	<select id="getMaxSongOrder" parameterType="String" resultType="int">
+	select nvl(max(songOrder),0) from cyUsingSongs where userId=#{userId}
+	</select>
+	
+	<insert id="insertUsingSongs" parameterType="com.cyworld.dto.CyUsingSongsDTO">
+		insert into cyUsingSongs(userId,songOrder,saveFileName,originalFileName) values(#{userId},#{songOrder},#{saveFileName},#{originalFileName})
+	</insert>
+		
+	<delete id="deleteUsingSongs" parameterType="String">
+		delete from cyUsingSongs where userId=#{userId}
+	</delete>
+	
+	
+	<!-- 1-11 예리 추가 -->
+	<insert id="insertUsingFont" parameterType="com.cyworld.dto.CyUsingItemDTO">
+		insert into cyusingfont (userId, saveFileName, originalFileName) values (#{userId}, #{saveFileName}, #{originalFileName} )
+	</insert>
+
+	<select id="getUsingFont" parameterType="String" resultType="String">
+		select saveFileName from cyusingfont where userId = #{userId}
+	</select>
+	
+	<select id="getUsingFontCss" parameterType="String" resultType="String">
+		select originalFileName from cyusingfont where userId = #{userId}
+	</select>
+	
+	<update id="updateUsingFont" parameterType="map">
+		update cyusingfont set saveFileName = #{saveFileName}, originalFileName = #{originalFileName} where userId = #{userId}	
+	</update>
+</mapper>

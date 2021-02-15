@@ -1,0 +1,404 @@
+
+delete cyitemshop;
+
+insert into cyitemshop values (
+1,'MCSniper-BK Love','배경음악','/admin/music/MCSniper-BK Love.jpg',
+'/admin/music/MCSniper-BK Love.mp3',10);
+
+insert into cyitemshop values (
+2,'프리스타일-Y','배경음악','/admin/music/프리스타일-Y.jpg',
+'/admin/music/프리스타일-Y.mp3',10);
+
+insert into cyitemshop values (
+3, 'FT아일랜드 - 사랑앓이', '배경음악', '/admin/music/FT아일랜드 - 사랑앓이.jpg', 
+'/admin/music/FT아일랜드 - 사랑앓이.mp3',10);
+
+insert into cyitemshop values (
+4, 'M TO M - 세 글자', '배경음악', '/admin/music/M TO M - 세 글자.jpg',
+  '/admin/music/M TO M - 세 글자.mp3',10);
+
+insert into cyitemshop values (
+5, 'PK헤만 - Evergreen', '배경음악', '/admin/music/PK헤만 - Evergreen.jpg',
+  '/admin/music/PK헤만 - Evergreen.mp3',10);
+
+insert into cyitemshop values (
+6, 'Take - 나비무덤', '배경음악', '/admin/music/Take - 나비무덤.jpg',
+  '/admin/music/Take - 나비무덤.mp3',10);
+
+insert into cyitemshop values (
+7, 'Tei-사랑은 향기를 남기고', '배경음악', '/admin/music/Tei-사랑은 향기를 남기고.jpg',
+  '/admin/music/Tei-사랑은 향기를 남기고.mp3',10);
+
+insert into cyitemshop values (
+8, 'The Nuts (더 넛츠) - 사랑의 바보', '배경음악', '/admin/music/The Nuts (더 넛츠) - 사랑의 바보.jpg',
+  '/admin/music/The Nuts (더 넛츠) - 사랑의 바보.mp3',10);
+
+insert into cyitemshop values (
+9, 'V.One-면도', '배경음악', '/admin/music/V.One-면도.jpg',
+  '/admin/music/V.One-면도.mp3',10);
+
+insert into cyitemshop values (
+10, '가비엔제이 - 해바라기', '배경음악', '/admin/music/가비엔제이 - 해바라기.jpg',
+  '/admin/music/가비엔제이 - 해바라기.mp3',10);
+
+insert into cyitemshop values (
+11, '김동희-Someday', '배경음악', '/admin/music/김동희-Someday.jpg',
+  '/admin/music/김동희-Someday.mp3',10);
+
+insert into cyitemshop values (
+12, '나얼 - 귀로', '배경음악', '/admin/music/나얼 - 귀로.jpg',
+  '/admin/music/나얼 - 귀로.mp3',10);
+
+insert into cyitemshop values (
+13, '러브홀릭-butterfly', '배경음악', '/admin/music/러브홀릭-butterfly.jpg',
+  '/admin/music/러브홀릭-butterfly.mp3',10);
+
+insert into cyitemshop values (
+14, '루그-죄', '배경음악', '/admin/music/루그-죄.jpg',
+  '/admin/music/루그-죄.mp3',10);
+
+insert into cyitemshop values (
+15, '마골피 - 비행소녀', '배경음악', '/admin/music/마골피 - 비행소녀.jpg',
+  '/admin/music/마골피 - 비행소녀.mp3',10);
+
+insert into cyitemshop values (
+16, '바이브 - 사진을 보다가', '배경음악', '/admin/music/바이브 - 사진을 보다가.jpg',
+  '/admin/music/바이브 - 사진을 보다가.mp3',10);
+
+insert into cyitemshop values (
+17, '박지헌 - 보고싶은날엔', '배경음악', '/admin/music/박지헌 - 보고싶은날엔.jpg',
+  '/admin/music/박지헌 - 보고싶은날엔.mp3',10);
+
+insert into cyitemshop values (
+18, '박효신 - 추억은 사랑을 닮아', '배경음악', '/admin/music/박효신 - 추억은 사랑을 닮아.jpg',
+  '/admin/music/박효신 - 추억은 사랑을 닮아.mp3',10);
+
+insert into cyitemshop values (
+19, '백지영-사랑안해', '배경음악', '/admin/music/백지영-사랑안해.jpg',
+  '/admin/music/백지영-사랑안해.mp3',10);
+
+insert into cyitemshop values (
+20, '버즈 - 남자를 몰라 가사', '배경음악', '/admin/music/버즈 - 남자를 몰라.jpg',
+  '/admin/music/버즈 - 남자를 몰라.mp3',10);
+
+insert into cyitemshop values (
+21, '버즈-가시', '배경음악', '/admin/music/버즈-가시.jpg',
+  '/admin/music/버즈-가시.mp3',10);
+
+insert into cyitemshop values (
+22, '브라운 아이드걸스 - LOVE', '배경음악', '/admin/music/브라운 아이드걸스 - LOVE.jpg',
+  '/admin/music/브라운 아이드걸스 - LOVE.mp3',10);
+
+insert into cyitemshop values (
+23, '브라운아이즈 - 벌써 일년', '배경음악', '/admin/music/브라운아이즈 - 벌써 일년.jpg',
+  '/admin/music/브라운아이즈 - 벌써 일년.mp3',10);
+
+insert into cyitemshop values (
+24, '신혜성 린 - 사랑후에', '배경음악', '/admin/music/신혜성 린 - 사랑후에.jpg',
+  '/admin/music/신혜성 린 - 사랑후에.mp3',10);
+
+insert into cyitemshop values (
+25, '싸이 - 낙원', '배경음악', '/admin/music/싸이 - 낙원.jpg',
+  '/admin/music/싸이 - 낙원.mp3',10);
+
+insert into cyitemshop values (
+26, '씨야 - 미친사랑의노래', '배경음악', '/admin/music/씨야 - 미친사랑의노래.jpg',
+  '/admin/music/씨야 - 미친사랑의노래.mp3',10);
+
+insert into cyitemshop values (
+27, '씨야 -사랑의 인사', '배경음악', '/admin/music/씨야 -사랑의 인사.jpg',
+  '/admin/music/씨야 -사랑의 인사.mp3',10);
+
+insert into cyitemshop values (
+28, '양정승 - 밤하늘의 별을', '배경음악', '/admin/music/양정승 - 밤하늘의 별을.jpg',
+  '/admin/music/양정승 - 밤하늘의 별을.mp3',10);
+
+insert into cyitemshop values (
+29, '양파 - 사랑... 그게 뭔데', '배경음악', '/admin/music/양파 - 사랑... 그게 뭔데.jpg',
+  '/admin/music/양파 - 사랑... 그게 뭔데.mp3',10);
+
+insert into cyitemshop values (
+30, '에이트-심장이없어', '배경음악', '/admin/music/에이트-심장이없어.jpg',
+  '/admin/music/에이트-심장이없어.mp3',10);
+
+insert into cyitemshop values (
+31, '에픽하이-Fly', '배경음악', '/admin/music/에픽하이-Fly.jpg',
+  '/admin/music/에픽하이-Fly.mp3',10);
+
+insert into cyitemshop values (
+32, '원투 - 못된여자2', '배경음악', '/admin/music/원투 - 못된여자2.jpg',
+  '/admin/music/원투 - 못된여자2.mp3',10);
+
+insert into cyitemshop values (
+33, '윤도현 - 사랑했나봐', '배경음악', '/admin/music/윤도현 - 사랑했나봐.jpg',
+  '/admin/music/윤도현 - 사랑했나봐.mp3',10);
+
+insert into cyitemshop values (
+34, '이기찬 - 또 한번 사랑은 가고', '배경음악', '/admin/music/이기찬 - 또 한번 사랑은 가고.jpg',
+  '/admin/music/이기찬 - 또 한번 사랑은 가고.mp3',10);
+
+insert into cyitemshop values (
+35, '이승기 - 삭제', '배경음악', '/admin/music/이승기 - 삭제.jpg',
+  '/admin/music/이승기 - 삭제.mp3',10);
+
+insert into cyitemshop values (
+36, '이지 - 응급실', '배경음악', '/admin/music/이지 - 응급실.jpg',
+  '/admin/music/이지 - 응급실.mp3',10);
+
+insert into cyitemshop values (
+37, '장나라 - 나도 여자랍니다', '배경음악', '/admin/music/장나라 - 나도 여자랍니다.jpg',
+  '/admin/music/장나라 - 나도 여자랍니다.mp3',10);
+
+insert into cyitemshop values (
+38, '전람회 - 취중진담', '배경음악', '/admin/music/전람회 - 취중진담.jpg',
+  '/admin/music/전람회 - 취중진담.mp3',10);
+
+insert into cyitemshop values (
+39, '정재욱 - 들리나요', '배경음악', '/admin/music/정재욱 - 들리나요.jpg',
+  '/admin/music/정재욱 - 들리나요.mp3',10);
+
+insert into cyitemshop values (
+40, '지아-술한잔해요', '배경음악', '/admin/music/지아-술한잔해요.jpg',
+  '/admin/music/지아-술한잔해요.mp3',10);
+
+insert into cyitemshop values (
+41, '진원 - 고칠게', '배경음악', '/admin/music/진원 - 고칠게.jpg',
+  '/admin/music/진원 - 고칠게.mp3',10);
+
+insert into cyitemshop values (
+42, '쿨 - 아로하', '배경음악', '/admin/music/쿨 - 아로하.jpg',
+  '/admin/music/쿨 - 아로하.mp3',10);
+
+insert into cyitemshop values (
+43, '팀 - 사랑합니다', '배경음악', '/admin/music/팀 - 사랑합니다.jpg',
+  '/admin/music/팀 - 사랑합니다.mp3',10);
+
+insert into cyitemshop values (
+44, '휘성 - 가슴 시린 이야기', '배경음악', '/admin/music/휘성 - 가슴 시린 이야기.jpg',
+  '/admin/music/휘성 - 가슴 시린 이야기.mp3',10);
+
+insert into cyitemshop values (
+45, '네가 너무 좋아~ 여성', '미니미', '/admin/minimi/test30.gif',
+'/admin/minimi/test30.gif',10);
+
+insert into cyitemshop values (
+46, '오늘 결혼해요~ 여성', '미니미', '/admin/minimi/test31.gif',
+'/admin/minimi/test31.gif',10);
+
+insert into cyitemshop values (
+47, '블랙&핑크', '스킨', '/admin/background/blackPink.jpg',
+ '/admin/background/blackPink.jpg',10);
+
+insert into cyitemshop values (
+48, '푸른 구름', '스킨', '/admin/background/cloude1.jpg',
+ '/admin/background/cloude1.jpg',10);
+
+insert into cyitemshop values (
+49, '안개 낀 숲 속', '스킨', '/admin/background/forest2.jpg',
+ '/admin/background/forest2.jpg',10);
+
+insert into cyitemshop values (
+50, '소원을 비는 소녀', '스킨', '/admin/background/girl1.jpg',
+ '/admin/background/girl1.jpg',10);
+
+insert into cyitemshop values (
+51, '노을과 소녀', '스킨', '/admin/background/girl2.jpg',
+ '/admin/background/girl2.jpg',10);
+
+insert into cyitemshop values (
+52, '사막과 도로', '스킨', '/admin/background/road1.jpg',
+ '/admin/background/road1.jpg',10);
+
+insert into cyitemshop values (
+53, '하얀배경 라이언', '스킨', '/admin/background/ryon2.jpg',
+ '/admin/background/ryon2.jpg',10);
+
+insert into cyitemshop values (
+54, '센치한 하늘', '스킨', '/admin/background/sky1.jpg',
+ '/admin/background/sky1.jpg',10);
+
+insert into cyitemshop values (
+55, '너와 나의 노을', '스킨', '/admin/background/sky2.jpg',
+ '/admin/background/sky2.jpg',10);
+
+insert into cyitemshop values (
+56, '떠려니', '스킨', '/admin/background/soulhyun.jpg',
+ '/admin/background/soulhyun.jpg',10);
+
+insert into cyitemshop values (
+57, '푸른 숲 속', '스킨', '/admin/background/forest1.jpg',
+ '/admin/background/forest1.jpg',10);
+
+insert into cyitemshop values (
+58, '파란배경 라이언', '스킨', '/admin/background/ryon1.jpg',
+ '/admin/background/ryon1.jpg',10);
+
+insert into cyitemshop values (
+59, '보랏빛 우주', '스킨', '/admin/background/space1.jpg',
+ '/admin/background/space1.jpg',10);
+
+insert into cyitemshop values (
+60, '훈정글북체', '글꼴', '/admin/font/hoonjunglebook.gif',
+'/admin/font/hoonjunglebook.css',10);
+
+insert into cyitemshop values (
+61, '모닝커피체', '글꼴', '/admin/font/coffee1.gif',
+'/admin/font/coffee.css',10);
+
+insert into cyitemshop values (
+62, '유니고딕체', '글꼴', '/admin/font/unigothic.gif',
+'/admin/font/unigothic.css',10);
+
+insert into cyitemshop values (
+63, '메이플스토리체', '글꼴', '/admin/font/maplestory.gif',
+'/admin/font/maplestory.css',10);
+
+insert into cyitemshop values (
+101, '타이포크레용체', '글꼴', '/admin/font/typocrayon.gif',
+'/admin/font/typocrayon.css',10);
+
+insert into cyitemshop values (
+102, '둘기마요체', '글꼴', '/admin/font/dovemayo.gif',
+'/admin/font/dovemayo.css',10);
+
+insert into cyitemshop values (
+64, '휘핑크림이 좋아', '미니미', '/admin/minimi/test1.gif',
+'/admin/minimi/test1.gif',10);
+
+insert into cyitemshop values (
+65, '귀여운 악마', '미니미', '/admin/minimi/test2.gif',
+'/admin/minimi/test2.gif',10);
+
+insert into cyitemshop values (
+66, '지금은 열공중!', '미니미', '/admin/minimi/test3.gif',
+'/admin/minimi/test3.gif',10);
+
+insert into cyitemshop values (
+67, '동네사람들 나와보세요!!!', '미니미', '/admin/minimi/test4.gif',
+'/admin/minimi/test4.gif',10);
+
+insert into cyitemshop values (
+68, '라떼는 텔미가 유행이었어~', '미니미', '/admin/minimi/test5.gif',
+'/admin/minimi/test5.gif',10);
+
+insert into cyitemshop values (
+69, '바람을 가르는 윈드밀', '미니미', '/admin/minimi/test6.gif',
+'/admin/minimi/test6.gif',10);
+
+insert into cyitemshop values (
+70, '아아 마이크테스트', '미니미', '/admin/minimi/test7.gif',
+'/admin/minimi/test7.gif',10);
+
+insert into cyitemshop values (
+71, '하루가 바쁜 의사', '미니미', '/admin/minimi/test8.gif',
+'/admin/minimi/test8.gif',10);
+
+insert into cyitemshop values (
+72, '오늘도 화이팅! 의사', '미니미', '/admin/minimi/test9.gif',
+'/admin/minimi/test9.gif',10);
+
+insert into cyitemshop values (
+73, '냥냥이 코스프레', '미니미', '/admin/minimi/test10.gif',
+'/admin/minimi/test10.gif',10);
+
+insert into cyitemshop values (
+74, '비눗방울 불어볼까요?', '미니미', '/admin/minimi/test11.gif',
+'/admin/minimi/test11.gif',10);
+
+insert into cyitemshop values (
+75, '자유로운 신 남성상', '미니미', '/admin/minimi/test12.gif',
+'/admin/minimi/test12.gif',10);
+
+insert into cyitemshop values (
+76, '테크토닉 댄서', '미니미', '/admin/minimi/test13.gif',
+'/admin/minimi/test13.gif',10);
+
+insert into cyitemshop values (
+77, '트렌디한 여성 댄서', '미니미', '/admin/minimi/test14.gif',
+'/admin/minimi/test14.gif',10);
+
+insert into cyitemshop values (
+78, '하트춤 남성 댄서', '미니미', '/admin/minimi/test15.gif',
+'/admin/minimi/test15.gif',10);
+
+insert into cyitemshop values (
+79, '오두방정 여성 댄서', '미니미', '/admin/minimi/test16.gif',
+'/admin/minimi/test16.gif',10);
+
+insert into cyitemshop values (
+80, '오두방정 남성 댄서', '미니미', '/admin/minimi/test17.gif',
+'/admin/minimi/test17.gif',10);
+
+insert into cyitemshop values (
+81, '독도는 우리땅', '미니미', '/admin/minimi/test18.gif',
+'/admin/minimi/test18.gif',10);
+
+insert into cyitemshop values (
+82, '활기찬 남학생', '미니미', '/admin/minimi/test19.gif',
+'/admin/minimi/test19.gif',10);
+
+insert into cyitemshop values (
+83, '수영이 좋아! 남성', '미니미', '/admin/minimi/test20.gif',
+'/admin/minimi/test20.gif',10);
+
+insert into cyitemshop values (
+84, '펭펭이', '미니미', '/admin/minimi/test21.gif',
+'/admin/minimi/test21.gif',10);
+
+insert into cyitemshop values (
+85, '테니스가 좋아! 남성', '미니미', '/admin/minimi/test22.gif',
+'/admin/minimi/test22.gif',10);
+
+insert into cyitemshop values (
+86, '토끼 인형이 좋아! 여성', '미니미', '/admin/minimi/test23.gif',
+'/admin/minimi/test23.gif',10);
+
+insert into cyitemshop values (
+87, '잠이 덜 깼어...', '미니미', '/admin/minimi/test24.gif',
+'/admin/minimi/test24.gif',10);
+
+insert into cyitemshop values (
+88, '오두방정 신난다! 여성', '미니미', '/admin/minimi/test25.gif',
+'/admin/minimi/test25.gif',10);
+
+insert into cyitemshop values (
+89, '사랑이 넘치는 소방관', '미니미', '/admin/minimi/test26.gif',
+'/admin/minimi/test26.gif',10);
+
+insert into cyitemshop values (
+90, '청첩장 받았어요! 여성', '미니미', '/admin/minimi/test27.gif',
+'/admin/minimi/test27.gif',10);
+
+insert into cyitemshop values (
+91, '나 엄청 화났어!!!', '미니미', '/admin/minimi/test28.gif',
+'/admin/minimi/test28.gif',10);
+
+insert into cyitemshop values (
+92, '에베베~약오르지!', '미니미', '/admin/minimi/test29.gif',
+'/admin/minimi/test29.gif',10);
+
+insert into cyitemshop values (
+93, '눈내린날밖에서','스토리룸','/admin/room/winter_room.png','/admin/room/winter_room.png',10);
+
+insert into cyitemshop values (
+94, '농장에서','스토리룸','/admin/room/con_room.gif','/admin/room/con_room.gif',10);
+
+insert into cyitemshop values (
+95, '숲속에서','스토리룸','/admin/room/forest_room.gif','/admin/room/forest_room.gif',10);
+
+insert into cyitemshop values (
+96, '박물관에서','스토리룸','/admin/room/musium_room.gif','/admin/room/musium_room.gif',10);
+
+insert into cyitemshop values (
+97, '내방에서','스토리룸','/admin/room/my_room.gif','/admin/room/my_room.gif',10);
+
+insert into cyitemshop values (
+98, '공원에서','스토리룸','/admin/room/park_room.jpg','/admin/room/park_room.jpg',10);
+
+insert into cyitemshop values (
+99, '공원에서2','스토리룸','/admin/room/park2_room.gif','/admin/room/park2_room.gif',10);
+
+insert into cyitemshop values (
+100, '핑크룸에서','스토리룸','/admin/room/pink_room.png','/admin/room/pink_room.png',10);
+
+commit;

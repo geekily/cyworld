@@ -1,0 +1,373 @@
+@charset "utf-8";
+/* ****************************************************************
+	main
+**************************************************************** */
+#container {width:100%;}
+
+.mainContBox {width:1040px;margin:0 auto;clear:both;position:relative;}/*180413수정*/
+.mainContBox:after {content:'';display:block;clear:both;}
+
+.titWrap {margin:60px 0 15px; overflow:hidden;text-align:center}/*180413수정*/
+.titWrap .tit {color:#272222;font-size:26px;line-height:1.25;}
+.titWrap .tit + .cmnt {color:#888;margin-top:12px;font-size:13px;border:1px solid #e5e5e5;padding:1px 18px 1px 10px;background:url("../img/2018_main/icon_more.png")no-repeat 86% 52%;position:absolute;top:0;right:23px;}/*180413수정*/
+.titWrap .tit + .cmnt.addcl{right:0;}/*180413추가*/
+
+/* 메인배너 슬라이더 */
+.mainBanner {height:450px;position:relative;}/*180413수정*/
+.imgSliderWrap {position:relative;width:100%;min-width:1040px;height:450px;margin:0 auto;}/*180413수정*/
+
+.listW .sliderImg {position:relative;width:100%;height:450px;overflow:hidden;}/*180413수정*/
+.listW .sliderImg li {position: absolute;left:0;top:0;width:100%;height:450px;/*margin-left:-50%;*/opacity:0;}/*180413수정*/
+.listW .sliderImg li a {display:block;width:875px;height:450px;margin:0 auto; padding-left:166px;}/*180413수정*/
+
+.pagingW ul.sliderNav {display:table;position:absolute;left:50%;bottom:20px;width:835px;height:45px;margin-left:-315px;z-index:10;}/* 170601수정 */
+.pagingW ul.sliderNav li {display:table-cell;width:20%;} /* 170907수정 */
+.pagingW ul.sliderNav li a {display:block;height:15px;padding:15px;background:url("../images/main/mainBanner_vLine.png") no-repeat 0 50% #fff;color:#333;font-size:13px;line-height:15px;text-align:center;}
+.pagingW ul.sliderNav li.select a {background:#ff8421 !important;color:#fff; font-weight:600;}/* 170710수정 */
+.pagingW ul.sliderNav li:first-child a {background:#fff;}
+
+/*180413 메인배너 컨트롤러 추가*/
+.mainBanner .ctrl{position:absolute;bottom:30px;left:50%;margin-left:-285px;z-index:99;font-size:16px;background:rgba(0,0,0,.2);border-radius:23px;padding:0 18px;line-height:44px;color:#fff;}/* 2020-07-21 */
+div.ctrl .prev a{display:inline-block;text-indent:-999px;background:url(https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_ctr_p.png)no-repeat;width:8px;height:12px;vertical-align:middle;}
+div.ctrl .next a{display:inline-block;text-indent:-999px;background:url(https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_ctr_n.png)no-repeat;width:8px;height:12px;vertical-align:middle;padding-right:5px;}
+div.ctrl .pause{display:inline-block;text-indent:-999px;background:url(https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_ctr_s.png)no-repeat 16px 15px;width:25px;vertical-align:middle;border-left:1px solid rgba(39, 34, 34, .15);cursor:pointer;}/*180530수정*/
+div.ctrl .ctplay{display:inline-block;text-indent:-999px;background:url(https://www.goobnemall.com/static-root/resources/pc/img/2018_main/icon_ctr_play.png)no-repeat 16px 15px;width:25px;vertical-align:middle;border-left:1px solid rgba(39, 34, 34, .15);cursor:pointer;}/*180530추가*/
+div.ctrl span{padding-right:8px;}
+/*180413 메인배너 컨트롤러 추가 끝*/
+
+/* 배너영역 201701 뷰티라이프 추가 */
+.mainBanner02 {/*height:130px;*/margin-top:30px;}/* 170207수정 */
+.mainBanner02 .mainContBox {}
+.mainBanner03 {/*height:130px;*/margin-top:40px;}
+.mainBanner03 .mainContBox {}
+.mainCast {/*height:600px;*/margin-top:40px; }
+.mainCast .mainContBox {}
+
+/* 타임세일 */
+.timeSale {background:#77cded;}
+.timeSale a {display:table;width:1040px;height:95px;table-layout:fixed;}
+.timeSale a > span {display:table-cell;vertical-align:middle;}
+.timeSale a .tit {width:370px;}
+.timeSale a .time {width:320px;height:95px;}
+.timeSale a .time .timeCounter {margin-left:10px;}
+.timeSale a .bnnr, .timeSale a .bnnr img {width:350px;height:95px;}
+
+.timeCounter {overflow:hidden;width:auto;height:30px;}
+.timeCounter > span {display:block;float:left;overflow:hidden;width:36px;height:36px;margin-left:2px;background:url("../img/main/img_time.png") no-repeat 0 0;font-size:0;text-indent:999px;}/* 180119수정 */
+.timeCounter span:first-child {margin-left:0;}
+.timeCounter span.colon {width:12px;background-position:1px 0;}
+.timeCounter span.num0 {background-position:0 -40px;}
+.timeCounter span.num1 {background-position:-40px -40px;}
+.timeCounter span.num2 {background-position:-80px -40px;}
+.timeCounter span.num3 {background-position:-120px -40px;}
+.timeCounter span.num4 {background-position:-160px -40px;}
+.timeCounter span.num5 {background-position:-200px -40px;}
+.timeCounter span.num6 {background-position:-240px -40px;}
+.timeCounter span.num7 {background-position:-280px -40px;}
+.timeCounter span.num8 {background-position:-320px -40px;}
+.timeCounter span.num9 {background-position:-360px -40px;}
+.timeCounter span.day {background-color:#f9f9f9; background-image:none; width:30px; font-size:28px; color:#222; text-indent:0; line-height:1.3;} /* 180117추가 */
+
+
+
+/* 정기배송 서비스 배너 */
+.mainBanner04 {margin-top:40px;}
+
+/* 레시피 */
+.recipeWrap {overflow:hidden;}
+.recipeWrap:after {content:'';display:block;clear:both;}
+
+.recipeMain {float:left;position:relative;width:520px;height:520px;border:1px solid #ddd;}/*180413 수정*/
+.recipeMain .img {position:absolute;top:0;left:0;}
+.recipeMain .img img {width:520px;height:520px;}/*180413 수정*/
+.recipeMain .recip_vd{width:520px;height:520px;}/*180413 추가*/
+.recipeMain .txt {display:table-cell;position:absolute;bottom:0;left:0;width:518px;height:110px;background:url("../img/main/bg_recipe.png") repeat-x 0 100%;}
+.recipeMain .txt .tit {margin-top:60px;margin-left:20px;color:#fff;font-size:14px;font-weight:bold;vertical-align:bottom;}
+.recipeMain .txt .cmnt {margin-left:20px;color:#fff;font-size:12px;vertical-align:bottom;}
+
+.recipeCont {position:relative;float:left;width:259px;height:308px;border:1px solid #ddd;border-left:none;}
+.recipeCont dl dt {background:#f5f5f5;border-bottom:1px solid #e5e5e5;}
+.recipeCont dl dt .tit {padding:8px 14px;color:#333;font-size:14px;font-weight:bold;}
+.recipeCont dl dt .imgInfo {position:absolute;top:8px;right:14px;width:90px;height:20px;text-align:right;}
+.recipeCont dl dt .imgInfo .pageW {display:inline-block;margin-right:5px;color:#333;vertical-align:middle;}
+.recipeCont dl dt .imgInfo .pageW span {color:#f78330}
+.recipeCont dl dt .imgInfo .pageW span:first-child {color:#333}
+.recipeCont dl dt .imgInfo .btnW {overflow:hidden;display:inline-block;vertical-align:middle;}
+.recipeCont dl dt .imgInfo .btnW .btnImg {float:left;}
+.recipeCont dl dt .imgInfo .btnW .btnImg.btnPrev {width:19px;height:17px;background-position:-200px -35px;}
+.recipeCont dl dt .imgInfo .btnW .btnImg.btnPrev:hover {background-position:-240px -35px;}
+.recipeCont dl dt .imgInfo .btnW .btnImg.btnNext {width:18px;height:17px;background-position:-219px -35px;}
+.recipeCont dl dt .imgInfo .btnW .btnImg.btnNext:hover {background-position:-259px -35px;}
+
+
+.recipeCont dl dd .relatedPrdt {}
+.recipeCont .btnImg.btnMore {position:absolute;top:-25px;right:0;}
+
+.relatedPrdt .itemWrap {display:none;padding:20px 10px 0px 10px;}
+.relatedPrdt .itemWrap.on {display:block;}
+.relatedPrdt .itemWrap .itemImg {display:block;text-align:center;}
+.relatedPrdt .itemWrap .itemImg img {display:block;margin:0 auto;width:172px;height:172px;}
+.relatedPrdt .itemWrap .itemTit {width:232px;margin:17px auto 0;}
+.relatedPrdt .itemWrap .itemTit p.name a {color:#333;font-size:15px;line-height:17px;font-weight:600;}
+.relatedPrdt .itemWrap .itemTit p.name a:hover {text-decoration:underline;}
+
+.relatedPrdt .itemWrap .itemPrice {overflow:hidden;width:234px;margin:5px auto 0;}
+.relatedPrdt .itemWrap .itemPrice > div {float:left;vertical-align:bottom;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap {position:relative;margin-left:3px;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap span {display:inline-block;line-height:1.2;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap span.primecost {top:3px;color:#999;font-size:11px;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap span.primecost strong {font-weight:normal;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap span.price {top:15px;color:#333;font-size:13px;}
+.relatedPrdt .itemWrap .itemPrice div.priceWrap span.price strong {font-size:17px;}
+
+.myRecipe {padding:20px 15px 0 15px;}
+.myRecipe img {width:227px;height:135px;border:1px solid #e5e5e5;}
+.myRecipe .tit {margin-top:15px;}
+.myRecipe .tit a {color:#333;font-size:14px;font-weight:bold;}
+.myRecipe .tit a:hover {text-decoration:underline;}
+.myRecipe .cmnt {overflow:hidden;max-height:35px;margin-top:3px;color:#999;font-size:12px;}
+.myRecipe .info {margin-top:4px;color:#999;}
+.myRecipe .info span.date {display:inline-block;margin-left:8px;padding-left:10px;background:url("../img/common/icon_vBar03.png") no-repeat 0px 50%;}
+
+/* 레시피 리스트 : contents.css */
+.recipeList {padding:0;}
+.recipeList ul {overflow:hidden;width:1040px;}/*180413수정*/
+.recipeList li {float:left;padding:14px;/*margin-right:7px;*/margin-bottom:10px;/*border:1px solid #e5e5e5;*/background:#fff;}/*180413 수정*/
+.recipeList li .img {position:relative;margin-bottom:8px;}
+/*.recipeList li .img img {width:225px;height:133px;}*/
+.recipeList li .info {position:relative;height:55px;}
+.recipeList li .info p {margin-top:5px;color:#999;font-size:12px;line-height:1.25;}
+.recipeList li .info .sTit {overflow:hidden;width:225px;height:16px;margin-top:5px;color:#272222;font-size:15px;line-height:1.25;text-overflow:ellipsis;white-space:nowrap;}/*180413수정*/
+.recipeList li .info .tit a {display:block;overflow:hidden;width:225px;color:#333;font-size:13px;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;}
+.recipeList li .info .tit a:hover {text-decoration:underline;}
+.recipeList li .info span.date {display:inline-block;margin-left:8px;padding-left:10px;background:url("../img/common/icon_vBar03.png") no-repeat 0px 50%;}
+.recipeList li .info .recom {position:absolute;top:18px;right:0;}
+button.recommend {display:block;overflow:hidden;width:75px;height:30px;background:url("../img/prdt/img_recipe.png") no-repeat 0 0;}
+button.recommend {text-align:right;line-height:30px;}
+button.recommend strong {margin-right:7px;}
+button.recommend.on {background-position:-75px 0;}
+.rcpIcon {display:inline-block;overflow:hidden;background:url("../img/prdt/img_recipe.png") no-repeat 0 0;vertical-align:middle;}
+.rcpIcon span {display:block;overflow:hidden;width:0;height:0;font-size:0;line-height:0;}
+.rcpIcon.hit {width:19px;height:13px;margin-right:5px;background-position:-160px 0;}
+
+/* 셰프의 레시피 */
+.recipeList.chef ul {width:520px;}
+.recipeList.chef li {margin-left:5px;margin-right:0px;}
+.recipeList.chef li .info {height:139px;}
+.recipeList.chef li .info .tit {margin-top:2px;}
+.recipeList.chef li .info .tit a {font-size:15px;font-weight:600;}
+.recipeList.chef li .info .cmnt {overflow:hidden;width:225px;height:45px;margin-top:8px;margin-bottom:15px;color:#333;word-break:break-all;line-height:15px;}
+.recipeList.chef li .info .cmnt + p {margin-top:25px;}
+.recipeList.chef li .info .recom {top:99px;right:0;}
+
+/*180413 굽식당레시피 추가*/
+.recipeList.recip_pd {float:right;}
+.recipeList.recip_pd ul{width:498px;height:520px;box-sizing:border-box;}
+.recipeList.recip_pd ul li {padding:39px 25px 39px;border:1px solid #e5e5e5;}
+.recipeList.recip_pd li .img {position:relative;margin-bottom:0;margin-right:20px;}
+.recipeList.recip_pd li .img img{width:45px;height:45px;}
+.recipeList.recip_pd li .img img.main_recip{width:175px;height:175px;}/*180514추가*/
+.recipeList.recip_pd li .recip_cart {width:45px;height:45px;position:absolute; bottom:0; right:0;}
+.recipeList.recip_pd li .img .discountThumb {display:block;width:47px;height:52px;background:url("../img/2018_main/icon_sale.png") no-repeat 0 0;color:#fff; position:absolute; top:0; left:0;} /*180413수정*/
+.recip_pd .info {margin-top:20px;}
+.recip_pd .info .priceWrap .price {font-size:13px;color:#272222;}
+.recip_pd .info .priceWrap .price strong{font-size:21px;font-weight:600;}
+.recip_pd .info .priceWrap .primecost strong{font-size:14px;color:#888;font-weight:400;}
+.recip_pd .info .priceWrap .unit{color:#888;display:block;}
+.recip_pd .info .priceWrap .unit strong{font-weight:400;}
+.recip_pd .info .cmnt {font-size:14px; color:#666; width:250px;height:50px;overflow:hidden;line-height:1.4em;margin-top:20px;}
+/*180413 굽식당레시피 추가 끝*/
+
+/* 나만의 레시피, 시식후기 */
+.mainContBox2 {position:relative;width:515px;}
+.myRecipeWrap {float:left;}
+.reviewWrap {float:right;}
+
+.mainContBox2 .titWrap {margin:35px 0 20px;padding-bottom:15px;border-bottom:1px solid #333;}
+.mainContBox2 .btnImg.btnMore {position:absolute;top:50px;right:0;}
+
+/* 나만의 레시피 */
+.myRecipeWrap .recipeList ul {width:520px;}
+.myRecipeWrap .recipeList li {float:left;padding:14px;margin-left:0;margin-right:5px;margin-bottom:0;border:1px solid #e5e5e5;background:#fff;}
+
+/*
+.mainContBox2 .contWrap .img {float:left;width:165px;height:150px;margin-bottom:20px;}
+.mainContBox2 .contWrap .img a {display:block;overflow:hidden;width:148px;height:148px;border:1px solid #dfdfdf;}
+.mainContBox2 .contWrap .img a img {width:148px;height:148px;}
+
+.mainContBox2.dietWrap .contWrap .img a span.dietImg {float:left;}
+.mainContBox2.dietWrap .contWrap .img a span.dietImg img {width:74px;height:148px;}
+
+.mainContBox2 .contWrap .info {float:right;width:335px;}
+.mainContBox2 .contWrap .info .tit a {color:#333;font-size:14px;font-weight:600;}
+.mainContBox2 .contWrap .info .tit a:hover {text-decoration:underline;}
+.mainContBox2 .contWrap .info .cmnt {color:#999;line-height:1.23;}
+.mainContBox2 .contWrap .info dl {margin-top:10px;}
+.mainContBox2 .contWrap .info dl dt {display:inline-block;width:55px;height:16px;margin:3px 0;padding-left:10px;background:url("../img/common/blt_icon03.png") no-repeat 0 50%;color:#333;line-height:16px;vertical-align:middle;}
+.mainContBox2 .contWrap .info dl dd {display:inline-block;overflow:hidden;width:245px;height:16px;margin:3px 0;padding-left:12px;background:url("../img/common/icon_vBar.png") no-repeat 0 50%;line-height:16px;vertical-align:middle;}
+.mainContBox2 .contWrap .list {clear:both;padding:15px 0;border:1px solid #ddd;border-width:1px 0;}
+.mainContBox2 .contWrap .list ul li {display:table;width:100%;padding-top:1px;padding-bottom:1px;}
+.mainContBox2 .contWrap .list ul li p {display:table-cell;color:#999;font-size:12px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p i.icon {display:inline-block;margin-right:5px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p a {color:#333;display:inline-block;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p a:hover {text-decoration:underline;}
+.mainContBox2 .contWrap .list ul li p.name {width:60px;}
+.mainContBox2 .contWrap .list ul li p.date {width:80px;padding-left:10px;background:url("../img/common/icon_vBar03.png") no-repeat 0 50%;}
+.mainContBox2 .contWrap .list ul li p.tit {width:235px;padding-left:15px;}
+.mainContBox2 .contWrap .list ul li p.tit img {margin-left:5px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p.scoreW {width:100px;}
+*/
+/*
+.mainContBox2 .starScore {display:inline-block;position:relative;overflow:hidden;width:100px;height:16px;background:url("../img/common/img_common.png") no-repeat -50px -230px;line-height:16px;}
+.mainContBox2 .starScore span.score {display:block;position:absolute;top:0;left:0;overflow:hidden;background:url("../img/common/img_common.png") no-repeat -50px -250px;text-indent:-999px;}
+
+.mainContBox2.dietWrap .contWrap .info dl {width:160px;display:inline-block;}
+.mainContBox2.dietWrap .contWrap .info dl dt {width:60px;}
+.mainContBox2.dietWrap .contWrap .info dl dd {width:70px;}
+.mainContBox2.dietWrap .contWrap .list ul li p.tit {width:335px;}
+.mainContBox2.dietWrap .contWrap .list ul li p a {max-width:300px;}
+*/
+
+/* 포토후기 */
+.photoListWrap {position:relative;height:84px;margin:0;padding:10px 19px;border:1px solid #e5e5e5;}
+.photoList {position:relative;overflow:hidden;width:475px;height:84px;margin-left:7px;padding:0;background:url("../img/main/bg_reviewPhotoList.png") repeat-x 0 0;}
+.photoList ul {position:absolute;left:0px;top:0;width:475px;padding:0;}
+.photoList li {float:left;width:84px;height:84px;margin:0 11px 10px 0;}
+.photoList li img {width:84px;height:84px;}
+.photoListWrap .btnPrev {position:absolute;top:50%;left:-1px;margin-top:-10px;}
+.photoListWrap .btnNext {position:absolute;top:50%;right:-1px;margin-top:-10px;}
+
+.mainContBox2 .contWrap .list {clear:both;padding:15px 0;border-bottom:1px solid #ddd;}
+.mainContBox2 .contWrap .list ul li {display:table;width:100%;padding-top:2px;padding-bottom:2px;}
+.mainContBox2 .contWrap .list ul li p {display:table-cell;color:#999;font-size:12px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p i.icon {display:inline-block;margin-right:5px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p a {color:#333;display:inline-block;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p a:hover {text-decoration:underline;}
+.mainContBox2 .contWrap .list ul li p.name {width:60px;}
+.mainContBox2 .contWrap .list ul li p.date {width:80px;padding-left:10px;background:url("../img/common/icon_vBar03.png") no-repeat 0 50%;}
+.mainContBox2 .contWrap .list ul li p.tit {width:270px;padding-left:15px;}
+.mainContBox2 .contWrap .list ul li p.tit img {margin-left:3px;vertical-align:middle;}
+.mainContBox2 .contWrap .list ul li p.scoreW {width:65px;}
+
+
+.healthWrap {padding:18px 0;border:1px solid #e5e5e5;margin-bottom:30px;}/*180413 수정*/
+.healthWrap ul {display:table;width:100%;}
+.healthWrap ul li {display:table-cell;width:130px;padding:0;border-left:1px dotted #e5e5e5;text-align:center;}
+.healthWrap ul li:first-child {border-left:none;}
+.healthWrap ul li div {color:#999;}
+.healthWrap ul li div strong {display:block;color:#333;}
+
+
+/* 201701 기획컨텐츠 배너 */
+.contentWrap {width:1040px; height:400px; border:1px solid #e5e5e5; box-sizing:border-box; margin:40px 0;}
+
+/* 201701 기획세트 배너 추가 */
+.set_bn {widht:518px; height:398px;float:left; border-right:1px solid #e5e5e5; }
+
+/* 201701 정기배송 배너 추가 */
+.delivery_bn {width:519px;heihgt:199px;float:right;}
+
+/* 201701 고객후기 레시피 추가 */
+.Recipe_bn {width:519px;heihgt:199px; float:right;border-top:1px solid #e5e5e5;}
+
+.Recipe_bn .rR_img {position:relative;width:260px;float:left;margin:23px 23px 20px 23px;border:1px solid #e5e5e5;}
+.Recipe_bn .rR_img img {width:260px; height:154px;}
+.Recipe_bn .rR_img .iconBest02 {position:absolute;top:0;left:0;}
+.Recipe_bn .rR_img span.txt_style {font-size:0;}
+.Recipe_bn .rR_tit {width:185px;float:right; margin-top:40px;margin-right:25px;}
+.Recipe_bn .rR_tit .rR_txt {width:185px;font-size:13px;}
+.Recipe_bn .rR_tit .rR_txt .tit_txt {font-size:23px;display:block; line-height:1.2; height:55px; overflow:hidden;}/* 171026수정 */
+/* 201702 뷰티라이프 추가 */
+.bl_news li {display:inline-block;width:245px;height:230px;margin-left:16px;background:#fff; vertical-align:top;} /* 170626수정 */
+.bl_news li.firstLi {margin-left:0;}
+.bl_news li img {width:245px; height:140px;}
+.bl_news a:hover {display:inline-block;text-decoration:underline; vertical-align:top;} /* 170626수정 */
+.bl_news li strong {font-size:16px; color:#333;line-height:20px; font-weight:600; display:block; padding:14px 13px 5px;}
+.bl_news li span {display:inline-block;font-size:12px;color:#555;line-height:1; padding:0 13px; width:90%; height:15px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}/* 170210수정 */
+
+
+/* quick menu 201701 수정 */
+/* .quick {position:absolute;left:50%;top:600px;width:90px;z-index:300;} 170831 수정*/
+.qLeft {margin-left:-640px;}
+.qRight {margin-left:540px;width:90px;}/*190313수정*/
+.quick.fixed .qInner {position:fixed;top:85px;width:90px;}/*190313수정*/
+
+.qRight.quick .qInner {width:90px;/*background:#fff;*/}/*190313수정*/
+
+/* 왼쪽 201701 수정 */
+.qLeft .qInner {}
+.qLeft .qInner > div {margin-bottom:10px;/*background:#fff;*/text-align:center;}
+
+.quick .btnImg {display:inline-block;margin:0;vertical-align:middle;}
+.quick .btnImg.btnPrev {width:15px;height:15px;background-position:-285px -35px;}
+.quick .btnImg.btnPrev:hover {background-position:-315px -35px;}
+.quick .btnImg.btnNext {width:15px;height:15px;background-position:-300px -35px;}
+.quick .btnImg.btnNext:hover {background-position:-330px -35px;}
+
+.quick .historyWrap .btnImg.btnPrev {background-position:-170px -180px;}
+.quick .historyWrap .btnImg.btnPrev:hover {background-position:-200px -180px;}
+.quick .historyWrap .btnImg.btnNext {background-position:-185px -180px;}
+.quick .historyWrap .btnImg.btnNext:hover {background-position:-215px -180px;}
+.quick .historyWrap .btnImg.btnPrev.off {background-position:-170px -180px;opacity:0.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";cursor:default;}
+.quick .historyWrap .btnImg.btnNext.off {background-position:-185px -180px;opacity:0.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";cursor:default;}
+
+/* 로그인 연동 170714추가 */
+.spPop_main {width:100%; height:225px; background:#f3f3f3 url(../img/2017/img_splogin_pop.png) no-repeat 18px 20px; padding:20px; box-sizing:border-box; border:1px dotted #bbb;}
+.spPop_mainTit {float:left; color:#333; font-size:17px; font-weight:600;}
+.spPop_mainTxt {margin-top:20px; text-align:center;}
+.spPop_mainTxt > strong {font-size:16px; color:#333; padding-bottom:5px; display:block; font-weight:600;}
+/* 로그인연동 메인 170907추가 */
+.simple_coupon {width:494px; height:219px; background:#f3f3f3 url(../img/2017/img_spLogin.png) no-repeat 33px 27px; padding:127px 33px 27px; box-sizing:border-box; border:1px dotted #bbb;}
+.simple_coupon > strong {font-size:15px; color:#333; font-weight:600; display:block;}
+.simple_coupon1 {width:340px; height:110px; background:#f3f3f3 url(../img/2017/img_spLogin10000.png) no-repeat 20px 15px; padding:20px 15px 15px 170px; box-sizing:border-box; border:1px dotted #bbb; margin:10px 0; font-weight:bold; color:#f9732e; font-size:14px; letter-spacing:-1px;}
+.simple_login {float:right; width:420px; margin:10px -10px 0 0;}
+.spLogin {position:relative; padding-bottom:20px; border-bottom:1px solid #e4e3e4;}
+.spLogin .btnLgn {position:absolute;top:0;right:0;width:115px; height:100px;background:#f9732e;color:#fff;font-size:18px;font-weight:600;}
+.spInput {padding-top:8px;}
+.spInput > a {position:absolute; left:240px; font-size:11px; color:#888; vertical-align:middle;}
+.spInput > strong {color:#333; font-size:14px; vertical-align:middle;}
+.spPop dl {width:100%; display:table; border-bottom:1px solid #eaeaea; padding:10px 0;}
+.spPop dl > dt {display:inline-block; width:25%; font-weight:600; color:#333; vertical-align:top;}
+.spPop dl > dd {display:inline-block; width:75%;}
+.spPop dl > dd > span {font-size:11px; display:block; margin-top:5px; color:#777;}
+.spPop_txt {border-bottom:1px solid #eaeaea; padding:15px 0;}
+.spPop_txt:after {content:''; display:block; clear:both;}
+.spPop_result {background:url(../img/2017/img_unused.jpg) no-repeat left 20px; padding:27px 0 35px 90px; border-bottom:1px solid #eaeaea;}
+.spPop_result > span {font-size:18px; color:#f9732e; display:block; font-weight:600;}
+.spPop_terms {overflow:hidden; padding:10px 0; border-bottom:1px solid #eaeaea;}
+.spQuick {border:1px solid #e5e5e5; box-sizing:border-box; text-align:center; padding:7px; margin-bottom:10px; font-weight:500; line-height:1.4; letter-spacing:-0.5px; background-color:#fff;} /* 180515수정 */
+.spQuick > strong {display:block; color:#272222; font-size:15px; margin-bottom:3px; height:20px; overflow:hidden;}/* 181019수정 */
+.spQuick > a {display:block; color:#fff; font-weight:600; text-align:left; padding:4px 7px; margin-top:5px; background:#272222 url(../img/2017/icon_splogin_more.png) no-repeat 75px 8px;} /* 180515수정 */
+.spQuick > span {color:#ff4949;font-weight:700;}/* 180515추가 */
+
+
+/*레이어팝업*/
+#main_layerPop {position:fixed; right:17%; bottom:8%; width:190px;height:255px;z-index:350;} /* 2020-07-23 */
+.btn_layer_close {position:absolute; right:0; top:5px; cursor:pointer;}/* 2020-06-04 */
+.layerPopToday {width:80px; line-height:1.8; font-size:10.5px; letter-spacing:-1px; color:#333; display:block; text-align:center; cursor:pointer; background-color:#fff; border:1px solid #ddd; margin:-5px auto ;}/* 2020-04-21수정 */
+
+/*180413 인스타 오늘도 굽네 추가*/
+.tit i{background:url(../img/2018_main/icon_tit_insta.png)no-repeat;display:inline-block;width:31px;height:31px;margin-right:5px;vertical-align:top;}
+.recipeList.insta li{float:left;padding:0;margin-right:20px;border:0;position:relative;}
+.recipeList.insta ul li:hover .img{width:245px;height:245px;background:rgba(0,0,0,0.8) url('../img/2018_main/icon_insta.png')no-repeat 205px 205px;position:absolute;top:0;left:0;cursor:pointer;}
+.recipeList.insta ul li img{width:245px;height:245px;}
+.recipeList.insta li .img {position:relative;margin-bottom:0px;}/*180413수정*/
+
+/*180413 중간롤링배너 추가 180515수정*/
+#mainBanner03 {width:100%;margin:0 auto;position:relative;z-index:0;margin-top:60px;}
+#rollingbox {width:100%;height:140px;position:relative;min-width:1040px;height:140px;margin:0 auto;}
+/*#slides {width:100% !important;height:140px;margin:0 auto;}*/
+/*#slides .next,#slides .prev {position:absolute;top:107px;left:-39px;width:24px;height:43px;display:block;z-index:101;}
+#slides .next {left:585px;}*/
+.slides_container{position:relative;width:100%;height:140px;overflow:hidden;}
+.slides_container ul.slides_img li{position: absolute;left:0;top:0;width:100%;height:140px;}
+.slides_container ul.slides_img li a{display:block;width:1040px;height:140px;margin:0 auto;}
+
+.pagination{margin:0 auto;width:1040px;position:relative;}
+.pagination ul.sliderNav {display:inline-block;position:absolute;right:10px;top:-125px;z-index:100;}
+.pagination ul.sliderNav li {float:left;margin-right:5px;width:12px;height:12px;z-index:10;}
+.pagination ul.sliderNav li a {display:block;background:url("../img/2018_main/pagination.png") no-repeat 0 0;width:12px;height:12px;color:#333;font-size:13px;text-indent:-9999;line-height:15px;text-align:center;}
+.pagination ul.sliderNav li.select a {background:url("../img/2018_main/pagination.png") no-repeat 0 100%;width:12px;height:12px;font-weight:600;border-radius:50%;}
+.pagination ul.sliderNav li.select a:visited{background:url("../img/2018_main/pagination.png") no-repeat 0 100%;width:12px;height:12px;text-decoration:none;border-radius:50%;}
+.pagination ul.sliderNav li.select a:active {background:url("../img/2018_main/pagination.png") no-repeat 0 100%;width:12px;height:12px;border-radius:50%;}
+/*180413 중간롤링배너 추가 180515수정 끝*/

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="videoBoard">
+
+<select id="getMaxNum" parameterType="String" resultType="int">
+	select nvl(max(num),0) from cyvideo where userId=#{userId}
+</select>
+
+<insert id="insertData" parameterType="com.cyworld.dto.CyVideoDTO">
+	insert into cyvideo(num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalVideoNum,created)
+	values(#{num},#{subject},#{userId},#{folderName},#{userName},#{content},#{saveFileName},#{originalFileName},0,#{owner},#{originalVideoNum}, sysdate)
+</insert>
+
+<select id="getAllData" parameterType="map" resultType="com.cyworld.dto.CyVideoDTO">
+	select * from
+	(select rownum rnum,data.* from
+	(select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalVideoNum from cyvideo
+	where userId=#{userId} and folderName=#{folderName} order by num desc) data)
+<![CDATA[
+	where rnum>=#{start} and rnum<=#{end}
+]]>
+</select>
+
+<select id="getRealAllData" parameterType="map" resultType="com.cyworld.dto.CyVideoDTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalVideoNum from cyvideo
+	where userId=#{userId} and folderName=#{folderName}
+
+</select>
+
+<select id="getTotalData" parameterType="map" resultType="int">
+	select nvl(count(*),0) from cyvideo where userId=#{userId} and folderName=#{folderName}
+</select>
+
+<select id="getOneData" parameterType="map" resultType="com.cyworld.dto.CyVideoDTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalVideoNum from cyvideo
+	where userId=#{userId} and num=#{num}
+</select>
+
+<update id="updateWithoutVideo" parameterType="com.cyworld.dto.CyVideoDTO">
+	update cyvideo set subject=#{subject},content=#{content} where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updateWithVideo" parameterType="com.cyworld.dto.CyVideoDTO">
+	update cyvideo set subject=#{subject},content=#{content},saveFileName=#{saveFileName},originalFileName=#{originalFileName}
+	where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updateFolderNameInTableCyVideo" parameterType="map">
+	update cyvideo set folderName=#{editedFolderName} where userId=#{userId} and folderName=#{originalFolderNameToBeEdited}
+</update>
+
+<delete id="deleteOneData" parameterType="com.cyworld.dto.CyVideoDTO">
+	delete from cyvideo where userId=#{userId} and num=#{num}
+</delete>
+
+<delete id="deleteAllVideosOfOneFolder" parameterType="map">
+	delete from cyvideo where userId=#{userId} and folderName=#{folderName}
+</delete>
+
+<select id="getMenu" parameterType="String" resultType="com.cyworld.dto.CyVideoMenuDTO">
+	select userId,groupName,groupOrder,folderName,folderOrder,privacy from cyvideoboard
+	where userId=#{userId} order by groupOrder asc,folderOrder asc
+</select>
+
+<select id="getMaxFolderOrder" resultType="int">
+	select nvl(max(folderOrder),0) from cyvideoboard where userId=#{userId}
+</select>
+
+<insert id="insertFolderData" parameterType="com.cyworld.dto.CyVideoMenuDTO">
+	insert into cyvideoboard(userId,groupName,groupOrder,folderName,folderOrder,privacy)
+	values(#{userId},#{groupName},#{groupOrder},#{folderName},#{folderOrder},#{privacy})
+</insert>
+
+<select id="getTotalFolderData" parameterType="String" resultType="int">
+	select nvl(count(*),0) from cyvideoboard where userId=#{userId}
+</select>
+
+<update id="updateFolderNameInTableCyVideoBoard" parameterType="map">
+	update cyvideoboard set folderName=#{editedFolderName} where userId=#{userId} and folderName=#{originalFolderNameToBeEdited}
+</update>
+
+<update id="updateFolderMoving" parameterType="map">
+	update cyvideo set num=#{maxNum},folderName=#{folderName} where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updateVideoNumByFolderMoving" parameterType="map">
+	update cyvideoreple set videoNum=#{maxNum} where userId=#{userId} and videoNum=#{num}
+</update>
+
+<delete id="deleteOneFolder" parameterType="map">
+	delete from cyvideoboard where userId=#{userId} and folderName=#{folderName}
+</delete>
+
+<select id="getMaxRepleNum" parameterType="String" resultType="int">
+	select nvl(max(num),0) from cyvideoreple where userId=#{userId}
+</select>
+
+<select id="getMaxRepleOrderNum" parameterType="map" resultType="int">
+	select nvl(max(orderNum),0) from cyvideoreple where userId=#{userId} and videoNum=#{videoNum}
+</select>
+
+<select id="getTotalRepleData" parameterType="map" resultType="int">
+	select nvl(count(*),0) from cyvideoreple where userId=#{userId} and videoNum=#{videoNum}
+</select>
+
+<insert id="insertRepleData" parameterType="com.cyworld.dto.CyVideoRepleDTO">
+	insert into cyvideoreple(num,videoNum,userId,userName,replierId,replierName,groupNum,orderNum,content)
+	values(#{num},#{videoNum},#{userId},#{userName},#{replierId},#{replierName},#{groupNum},#{orderNum},#{content})
+</insert>
+
+<select id="getRepleList" parameterType="map" resultType="com.cyworld.dto.CyVideoRepleDTO">
+	select * from
+	(select rownum rnum,data.* from
+	(select num,videoNum,userId,userName,replierId,replierName,groupNum,orderNum,content from cyvideoreple
+	where userId=#{userId} and videoNum=#{videoNum} order by orderNum desc) data)
+<![CDATA[
+	where rnum>=#{start} and rnum<=#{end}
+]]>
+</select>
+
+<delete id="deleteRepleData" parameterType="map">
+	delete from cyvideoreple where userId=#{userId} and videoNum=#{videoNum}
+</delete>
+
+<delete id="deleteOneRepleData" parameterType="map">
+	delete from cyvideoreple where userId=#{userId} and num=#{num}
+</delete>
+
+
+<delete id="deleteOneDataWithAllScrap" parameterType="map">
+	delete from cyvideo where owner=#{owner} and originalVideoNum=#{originalVideoNum}
+</delete>
+
+<select id="selectOneDataWithAllScrap" parameterType="map" resultType="com.cyworld.dto.CyVideoDTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalVideoNum from cyvideo
+	where owner=#{owner} and originalVideoNum=#{originalVideoNum}
+</select>
+
+<update id="updateScrap" parameterType="map">
+	update cyvideo set scrap=scrap+1 where userId=#{userId} and num=#{num}
+</update>
+
+<!-- 1-16 예리 추가 -->
+
+<select id="getUserMenu" parameterType="map" resultType="com.cyworld.dto.CyVideoMenuDTO">
+	select userId,groupName,groupOrder,folderName,folderOrder,privacy from cyvideoboard
+	<![CDATA[
+	where userId=#{userId} and privacy<>0 and privacy>=#{privacy} order by groupOrder asc,folderOrder asc
+	]]>
+</select>
+
+<!-- 승현 -->
+
+<select id="getNowDayCount" parameterType="map" resultType="Integer">
+	select nvl(count(*),0) from cyvideo A inner join (select FOLDERNAME from cyvideoBoard where userid=#{userId} and <![CDATA[PRIVACY >= #{type}]]>) B on (A.folderName = B.folderName) and (A.created >= #{nowDay}) and (A.userId = #{userId})
+</select>
+
+<select id="getTotalDayCount" parameterType="map" resultType="Integer">
+	select nvl(count(*),0) from cyvideo A inner join (select FOLDERNAME from cyvideoBoard where userid=#{userId} and <![CDATA[PRIVACY >= #{type}]]>) B on (A.folderName = B.folderName) and (A.userId = #{userId})
+</select>
+
+</mapper>

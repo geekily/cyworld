@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.guest">	
+	
+	<select id="getMyDataList" parameterType="map" resultType="com.cyworld.dto.CyGuestDTO">
+		select num,userId,memberId,memberValue,memberName,content, to_char(created,'YYYY-MM-DD HH24:mm') as created, secret from 
+		(select A.num, A.userId, A.memberId, A.memberValue, A.memberName, A.content, A.created,secret, ROW_NUMBER() OVER(order by A.created desc) as rnum from cyguestbook A where userId = #{userId})
+		where rnum between #{start} and #{end}
+	</select>
+	
+	<select id="getUserDataList" parameterType="map" resultType="com.cyworld.dto.CyGuestDTO">
+		select num,userId,memberId,memberValue,memberName,content, to_char(created,'YYYY-MM-DD HH24:mm') as created, secret from 
+		(select A.num, A.userId, A.memberId, A.memberValue, A.memberName, A.content, A.created, secret, ROW_NUMBER() OVER(order by A.created desc) as rnum from cyguestbook A where (userId = #{userId} and secret = 0) or (userId = #{userId} and memberId = #{memberId} and secret = 1))
+		where rnum between #{start} and #{end}
+	</select>	
+	
+	<select id="getMyTotalData" parameterType="String" resultType="Integer">
+		select nvl(count(*),0) from cyguestbook where userId = #{userId}
+	</select> 
+	
+	<select id="getUserTotalData" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyguestbook where (userId = #{userId} and secret = 0) or (userId = #{userId} and memberId = #{memberId} and secret = 1)
+	</select> 
+	
+	<select id="getMaxNum" resultType="Integer">
+		select nvl(max(num),0) from cyguestbook
+	</select>
+	
+	<delete id="deleteData" parameterType="Integer">
+		delete cyguestbook where num = #{num}
+	</delete>
+	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyGuestDTO">
+		insert into cyguestbook (num, userId, memberId, memberValue, memberName, content, created, secret) values 
+		(#{num},#{userId},#{memberId},#{memberValue}, #{memberName}, #{content}, sysdate , #{secret})
+	</insert>
+	
+	<update id="setSecret" parameterType="Integer">
+		update cyguestbook set secret = 1 where num = #{num}
+	</update>
+	
+	<select id="getNowCount" parameterType="map" resultType="Integer">
+		select nvl(count(*),0) from cyguestbook where userId = #{userId} and created >= #{nowDay}
+	</select>
+	
+	<select id="getTotalCount" parameterType="String" resultType="Integer">
+		select nvl(count(*),0) from cyguestbook where userId = #{userId}
+	</select>	
+</mapper>

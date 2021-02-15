@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyworld.intro">	
+	<select id="getTitle" resultType="String" parameterType="String">
+		select title from cyintro where userId = #{userId}
+	</select>
+	
+	<select id="getIntroData" parameterType="String" resultType="com.cyworld.dto.CyIntroDTO">
+		select userId, saveFileName, originalFileName, intro, today, title from cyintro where userId = #{userId}
+	</select>
+	
+	<select id="getToday" resultType="String" parameterType="String">
+		select today from cyintro where userId = #{userId}
+	</select>
+	
+	<select id="getInfo" resultType="String" parameterType="String">
+		select intro from cyintro where userId = #{userId}
+	</select>	
+	
+	<update id="updateTitle" parameterType="map">
+		update cyintro set title = #{newTitle} where userId = #{userId}
+	</update>
+	
+	<update id="updateToday" parameterType="map">
+		update cyintro set today = #{newToday} where userId = #{userId}
+	</update>
+	
+	<update id="updateInfo" parameterType="map">
+		update cyintro set intro = #{newInfo} where userId = #{userId}
+	</update>	
+	
+	<update id="updatePic" parameterType="map">
+		update cyintro set SAVEFILENAME = #{fileName}, ORIGINALFILENAME = #{fileName} where userId = #{userId}
+	</update>
+	
+	<insert id="insertData" parameterType="com.cyworld.dto.CyIntroDTO">
+		insert into cyIntro (userId, saveFileName, originalFileName, intro, today, title) values (#{userId}, #{saveFileName}, #{originalFileName}, #{intro}, #{today}, #{title})
+	</insert>
+</mapper>

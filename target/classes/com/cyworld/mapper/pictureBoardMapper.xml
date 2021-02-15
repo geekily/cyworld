@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pictureBoard">
+
+<select id="getMaxNum" parameterType="String" resultType="int">
+	select nvl(max(num),0) from cypicture where userId=#{userId}
+</select>
+
+<insert id="insertData" parameterType="com.cyworld.dto.Cyworld_pic_DTO">
+	insert into cypicture(num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalPicNum, created)
+	values(#{num},#{subject},#{userId},#{folderName},#{userName},#{content},#{saveFileName},#{originalFileName},0,#{owner},#{originalPicNum},sysdate)
+</insert>
+
+<select id="getAllData" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_DTO">
+	select * from
+	(select rownum rnum,data.* from
+	(select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalPicNum from cypicture
+	where userId=#{userId} and folderName=#{folderName} order by num desc) data)
+<![CDATA[
+	where rnum>=#{start} and rnum<=#{end}
+]]>
+</select>
+
+<select id="getRealAllData" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_DTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalPicNum from cypicture
+	where userId=#{userId} and folderName=#{folderName}
+
+</select>
+
+<select id="getTotalData" parameterType="map" resultType="int">
+	select nvl(count(*),0) from cypicture where userId=#{userId} and folderName=#{folderName}
+</select>
+
+<select id="getOneData" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_DTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalPicNum from cypicture
+	where userId=#{userId} and num=#{num}
+</select>
+
+<update id="updateWithoutPic" parameterType="com.cyworld.dto.Cyworld_pic_DTO">
+	update cypicture set subject=#{subject},content=#{content} where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updateWithPic" parameterType="com.cyworld.dto.Cyworld_pic_DTO">
+	update cypicture set subject=#{subject},content=#{content},saveFileName=#{saveFileName},originalFileName=#{originalFileName}
+	where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updateFolderNameInTableCyPicture" parameterType="map">
+	update cypicture set folderName=#{editedFolderName} where userId=#{userId} and folderName=#{originalFolderNameToBeEdited}
+</update>
+
+<delete id="deleteOneData" parameterType="com.cyworld.dto.Cyworld_pic_DTO">
+	delete from cypicture where userId=#{userId} and num=#{num}
+</delete>
+
+<delete id="deleteAllPicsOfOneFolder" parameterType="map">
+	delete from cypicture where userId=#{userId} and folderName=#{folderName}
+</delete>
+
+<select id="getMenu" parameterType="String" resultType="com.cyworld.dto.Cyworld_pic_menu_DTO">
+	select userId,groupName,groupOrder,folderName,folderOrder,privacy from cypictureboard
+	where userId=#{userId} order by groupOrder asc,folderOrder asc
+</select>
+
+<select id="getMaxFolderOrder" resultType="int">
+	select nvl(max(folderOrder),0) from cypictureboard where userId=#{userId}
+</select>
+
+<insert id="insertFolderData" parameterType="com.cyworld.dto.Cyworld_pic_menu_DTO">
+	insert into cypictureboard(userId,groupName,groupOrder,folderName,folderOrder,privacy)
+	values(#{userId},#{groupName},#{groupOrder},#{folderName},#{folderOrder},#{privacy})
+</insert>
+
+<select id="getTotalFolderData" parameterType="String" resultType="int">
+	select nvl(count(*),0) from cypictureboard where userId=#{userId}
+</select>
+
+<update id="updateFolderNameInTableCyPictureBoard" parameterType="map">
+	update cypictureboard set folderName=#{editedFolderName},privacy=#{editedPrivacy } where userId=#{userId} and folderName=#{originalFolderNameToBeEdited}
+</update>
+
+
+<update id="updateFolderMoving" parameterType="map">
+	update cypicture set num=#{maxNum},folderName=#{folderName},originalPicNum=${maxNum} where userId=#{userId} and num=#{num}
+</update>
+
+<update id="updatePicNumByFolderMoving" parameterType="map">
+	update cypicreple set picNum=#{maxNum} where userId=#{userId} and picNum=#{num}
+</update>
+
+<delete id="deleteOneFolder" parameterType="map">
+	delete from cypictureboard where userId=#{userId} and folderName=#{folderName}
+</delete>
+
+<select id="getMaxRepleNum" parameterType="String" resultType="int">
+	select nvl(max(num),0) from cypicreple where userId=#{userId}
+</select>
+
+<select id="getMaxRepleOrderNum" parameterType="map" resultType="int">
+	select nvl(max(orderNum),0) from cypicreple where userId=#{userId} and picNum=#{picNum}
+</select>
+
+<select id="getTotalRepleData" parameterType="map" resultType="int">
+	select nvl(count(*),0) from cypicreple where userId=#{userId} and picNum=#{picNum}
+</select>
+
+<insert id="insertRepleData" parameterType="com.cyworld.dto.Cyworld_pic_reple_DTO">
+	insert into cypicreple(num,picNum,userId,userName,replierId,replierName,groupNum,orderNum,content)
+	values(#{num},#{picNum},#{userId},#{userName},#{replierId},#{replierName},#{groupNum},#{orderNum},#{content})
+</insert>
+
+<select id="getRepleList" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_reple_DTO">
+	select * from
+	(select rownum rnum,data.* from
+	(select num,picNum,userId,userName,replierId,replierName,groupNum,orderNum,content from cypicreple
+	where userId=#{userId} and picNum=#{picNum} order by orderNum desc) data)
+<![CDATA[
+	where rnum>=#{start} and rnum<=#{end}
+]]>
+</select>
+
+<delete id="deleteRepleData" parameterType="map">
+	delete from cypicreple where userId=#{userId} and picNum=#{picNum}
+</delete>
+
+<delete id="deleteOneRepleData" parameterType="map">
+	delete from cypicreple where userId=#{userId} and num=#{num}
+</delete>
+
+
+<delete id="deleteOneDataWithAllScrap" parameterType="map">
+	delete from cypicture where owner=#{owner} and originalPicNum=#{originalPicNum}
+</delete>
+
+<select id="selectOneDataWithAllScrap" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_DTO">
+	select num,subject,userId,folderName,userName,content,saveFileName,originalFileName,scrap,owner,originalPicNum from cypicture
+	where owner=#{owner} and originalPicNum=#{originalPicNum}
+</select>
+
+<update id="updateScrap" parameterType="map">
+	update cypicture set scrap=scrap+1 where userId=#{userId} and num=#{num}
+</update>
+
+<select id="getUserMenu" parameterType="map" resultType="com.cyworld.dto.Cyworld_pic_menu_DTO">
+	select userId,groupName,groupOrder,folderName,folderOrder,privacy from cypictureboard
+	<![CDATA[
+	where userId=#{userId} and privacy<>0 and privacy>=#{privacy} order by groupOrder asc,folderOrder asc
+	]]>
+</select>
+
+<!-- 승현 -->
+
+<select id="getNowDayCount" parameterType="map" resultType="Integer">
+	select nvl(count(*),0) from cypicture A inner join (select FOLDERNAME from cypictureBoard where userid=#{userId} and <![CDATA[PRIVACY >= #{type}]]>) B on (A.folderName = B.folderName) and (A.created >= #{nowDay}) and (A.userId = #{userId})
+</select>
+
+<select id="getTotalDayCount" parameterType="map" resultType="Integer">
+	select nvl(count(*),0) from cypicture A inner join (select FOLDERNAME from cypictureBoard where userid=#{userId} and <![CDATA[PRIVACY >= #{type}]]>) B on A.folderName = B.folderName and A.userId = #{userId}
+</select>
+
+
+
+</mapper>
