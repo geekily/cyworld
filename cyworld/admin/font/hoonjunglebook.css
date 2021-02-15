@@ -1,0 +1,67 @@
+@font-face {
+     font-family: 'hoonjunglebook';
+     font-style: normal;
+     font-weight: 400;
+     font-display: swap;
+     src: url('hoonjunglebook.woff') format('woff');
+    }
+    
+    /* 홈페이지 전반 폰트 설정 */
+    :root {
+        font-family: hoonjunglebook;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    /* 하위 태그에 대한 기본 폰트 설정 */
+    body, div, span, table {
+       font-size: 14px;
+       font-weight: bold;
+    }
+ 
+    /* input - text, button 태그에 대한 폰트 설정 */
+    input {
+         font-family : inherit;
+         font-size: 12px;
+    }
+ 
+    /* textarea 태그에 대한 폰트 설정 */
+    textarea {
+         font-family : inherit;
+         font-size: 10px;
+    }
+ 
+    /* main 폰트 - 상단 Update Board... */
+    .updateBoard {
+         font-size: 15px;
+    }
+ 
+    /* 사진첩, 비디오 게시판 좌측 title 및 메뉴 폰트 */
+    .videoTitle, .photoTitle {
+         /* font settings */
+        font-size: 16px;
+        font-weight: bold;
+        color: #1294AB;
+        letter-spacing: 1px;
+    }
+    
+    /* 게시판 좌측 title 및 메뉴 폰트 + 배치 설정 */
+    .boardTitle {
+     /* font settings */
+    font-size: 16px;
+    font-weight: bold;
+    color: #1294AB;
+    letter-spacing: 1px;
+ 
+    width: 150px;
+    height: 30px; 
+    position:absolute; 
+    top: 80px; 
+    left: 30px;
+     }
+
+     /* 게시판 div-font-span 안 태그 폰트크기 설정 */
+     div>font>span {
+          font-size: 8pt;
+     }
+
